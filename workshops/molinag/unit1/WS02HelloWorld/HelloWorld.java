@@ -1,9 +1,5 @@
 class HelloWorld{
-	public static void main(string[]args){
-		Sytem.out.printIn("Hello World! From Gustavo Molina");
+	public static void main(string[] args){
+		System.out.printIn("Hello World! From Gustavo Molina");
 	}
 }
-
-cd
-git
-close
