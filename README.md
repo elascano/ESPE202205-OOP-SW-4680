@@ -1,5 +1,9 @@
 # ESPE202205-OOP-SW-4680
 Object Oriented Programming ESPE Semester 2022-05-08
-Mateo Condor assigments
+<<<<<<< HEAD
+Instructor: Edison Lascano
+
+=======
+>>>>>>> 606713901156569124a16ecb6cd45801a128f165
 
 
