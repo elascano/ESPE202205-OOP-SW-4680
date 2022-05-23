@@ -1,4 +1,4 @@
-class Chicken {
+Class Chicken {
 	private String name;
 	private String color;
 	private int age;
@@ -28,7 +28,7 @@ class Chicken {
 	}
 
 	private Egg layAnEgg(){
-		return new Egg();
+		retur new Egg();
 	}
 
 }
