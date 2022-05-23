@@ -1,7 +1,7 @@
 Class chicken{
 	private String name;
 	private String color;
-        private int age;
+    private int age;
 	private booLeon molting;
 
 	public void doStuff(){
@@ -31,6 +31,7 @@ Class chicken{
 	}
 
 	Private Egg IayAnEgg(){
+		returnt new egg();
 
 	}
 
