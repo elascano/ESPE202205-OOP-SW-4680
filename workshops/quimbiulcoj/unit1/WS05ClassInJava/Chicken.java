@@ -1,11 +1,10 @@
-Class Chicken {
+class Chicken {
 	private String name;
 	private String color;
 	private int age;
 	private boolean molting;
 
 	public void doStuff(){
-
 	}
 
 	private void cluck(){
@@ -29,7 +28,7 @@ Class Chicken {
 	}
 
 	private Egg layAnEgg(){
-		retur new Egg();
+		return new Egg();
 	}
 
 }
