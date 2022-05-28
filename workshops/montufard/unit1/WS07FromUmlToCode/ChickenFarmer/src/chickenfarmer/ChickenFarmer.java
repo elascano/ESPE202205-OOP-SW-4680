@@ -2,13 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package chickenfarmer;
+package antsimulator;
 
 /**
  *
- * @author David Montufar, BettaCoders-DCCO-ESPE
+ * @author David Montufar, DCCO-ESPE
  */
-public class ChickenFarmer {
+public class AntSimulator {
 
     /**
      * @param args the command line arguments
