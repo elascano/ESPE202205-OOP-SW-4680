@@ -1,3 +1,0 @@
-piblic Class Poop {
-	
-}
