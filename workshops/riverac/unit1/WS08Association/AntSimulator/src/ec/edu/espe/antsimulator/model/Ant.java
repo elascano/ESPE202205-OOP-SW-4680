@@ -4,7 +4,7 @@ package ec.edu.espe.antsimulator.model;
  *
  * @author Carlos Rivera, DCCO-ESPE, CODEX++
  */
-    public class Ant {
+public class Ant {
     private Cell position;
     private int weight;
     
@@ -52,5 +52,4 @@ package ec.edu.espe.antsimulator.model;
     }
 
 
-}
 }
