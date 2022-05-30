@@ -13,7 +13,7 @@ public class Cell {
 
     @Override
     public String toString() {
-        return "Cell{" + "row=" + row + ", col=" + col + ", pheromoneDrops=" + pheromoneDrops + '}';
+        return "Cell{" + "row=" + row + ", col=" + col + ", pheromoneDrops=" + pheromoneDrops + "}\n";
     }
     
     
