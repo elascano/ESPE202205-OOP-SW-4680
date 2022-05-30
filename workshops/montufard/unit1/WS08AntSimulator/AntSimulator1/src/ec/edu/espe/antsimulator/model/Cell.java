@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author David Montufar, DCCO- ESPE, 
+ * @author David Montufar, DCCO- ESPE,
  */
 public class Cell {
     private int row;
@@ -17,7 +17,7 @@ public class Cell {
 
     @Override
     public String toString() {
-        return "Cell{" + "row=" + row + ", col=" + col + ", pheromoneDrops=" + pheromoneDrops + '}';
+        return "Cell{" + "row=" + row + ", col=" + col + ", pheromoneDrops=" + pheromoneDrops + "}\n";
     }
     
     

@@ -4,31 +4,30 @@
  */
 package ec.edu.espe.antsimulator.model;
 
-import java.util.ArrayList;
-
 /**
  *
- * @author David Montufar, DCCO- ESPE, 
+ * @author David Montufar, DCCO- ESPE
+ *
  */
-public class Nest {
-    
+public class Ant {
     private Cell position;
-    private ArrayList<Food> food;
+    private int weight;
+    
+    
+    public void run(){
+        System.out.println("aunt is running");
+    }
 
-    public Nest(Cell position, ArrayList<Food> food) {
+    public Ant(Cell position, int weight) {
         this.position = position;
-        this.food = food;
+        this.weight = weight;
     }
 
     @Override
     public String toString() {
-        return "Nest{" + "position=" + position + ", food=" + food + '}';
+        return "Ant{" + "position=" + getPosition() + ", weight=" + getWeight() + '}';
     }
 
-    
-    
-    
-    
     /**
      * @return the position
      */
@@ -44,18 +43,18 @@ public class Nest {
     }
 
     /**
-     * @return the food
+     * @return the weight
      */
-    public ArrayList<Food> getFood() {
-        return food;
+    public int getWeight() {
+        return weight;
     }
 
     /**
-     * @param food the food to set
+     * @param weight the weight to set
      */
-    public void setFood(ArrayList<Food> food) {
-        this.food = food;
+    public void setWeight(int weight) {
+        this.weight = weight;
     }
-    
-    
+
+
 }

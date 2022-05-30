@@ -6,7 +6,8 @@ package ec.edu.espe.antsimulator.model;
 
 /**
  *
- * @author David Montufar, DCCO- ESPE, 
+ * @author David Montufar, DCCO- ESPE,
+ * 
  */
 public class Food {
     private int amount;
@@ -15,13 +16,12 @@ public class Food {
         this.amount = amount;
     }
 
+    
     @Override
     public String toString() {
         return "Food{" + "amount=" + amount + '}';
     }
 
-    
-    
     /**
      * @return the amount
      */

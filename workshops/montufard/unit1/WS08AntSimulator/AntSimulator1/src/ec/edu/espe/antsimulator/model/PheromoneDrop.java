@@ -6,12 +6,12 @@ package ec.edu.espe.antsimulator.model;
 
 /**
  *
- * @author David Montufar, DCCO- ESPE, 
- * 
+ * @author David Montufar, DCCO- ESPE
  */
 public class PheromoneDrop {
     
     private int currentLevel;
+    
 
     public PheromoneDrop(int currentLevel) {
         this.currentLevel = currentLevel;
@@ -25,7 +25,7 @@ public class PheromoneDrop {
     
     
     public void run(){
-        
+        System.out.println("Running with the PheromoneDrop");
     }
 
     /**

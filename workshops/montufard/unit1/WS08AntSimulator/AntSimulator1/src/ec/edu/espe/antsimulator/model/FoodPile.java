@@ -6,12 +6,17 @@ package ec.edu.espe.antsimulator.model;
 
 /**
  *
- * @author David Montufar, DCCO- ESPE, 
- * 
+ * @author David Montufar, DCCO- ESPE,
  */
-public class Colony {
-    public void run(){
-        
+public class FoodPile {
+    
+    int pileAmount;
+    Cell position;
+
+    public Food yielfFood(int amount){
+        Food food;
+        food = new Food(amount);
+        return food;
     }
     
 }
