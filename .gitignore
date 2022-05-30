@@ -126,10 +126,19 @@ hs_err_pid*
 =======
 /workshops/arguelloj/unit1/WS07FromUmlToCode/ChickenFarmer/build/
 /workshops/arguelloj/unit1/WS07FromUmlToCode/ChickenFarmer/nbproject/private/
+<<<<<<< HEAD
+/workshops/bedonr/unit1/WS08Asosation/AntSimulator/nbproject/private/
+/workshops/bedonr/unit1/WS08Asosation/AntSimulator/build/
+=======
 >>>>>>> 9d7c6aa35547accc651a19d621dd10bfdb882120
 <<<<<<< HEAD
 =======
 >>>>>>> 4fbc193a461ee135d59835aacd8b18d158128412
+<<<<<<< HEAD
+/workshops/burbanol/unit1/WS07FromUmlToCode/AntSimulator/nbproject/private/
+/workshops/burbanol/unit1/WS08AntSimulator/AntSimulator/nbproject/private/
+/workshops/burbanol/unit1/WS08AntSimulator/AntSimulator/build/
+=======
 /workshops/riverac/unit1/WS07FromUmlToCode/Chicken Farmer/nbproject/private/
 /workshops/riverac/unit1/WS07FromUmlToCode/Chicken Farmer/build/
 <<<<<<< HEAD
@@ -149,7 +158,12 @@ hs_err_pid*
 =======
 /workshops/grandac/unit1/WS07FromUmlToCode/ChickenFarmer/nbproject/private/
 /workshops/grandac/unit1/WS07FromUmlToCode/ChickenFarmer/build/
+<<<<<<< HEAD
+/workshops/silvar/unit1/WS08Associations/AntSimulator/nbproject/private/
+=======
 >>>>>>> e68e238aa2450a97334a843ff02d5e27631b5b09
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 /workshops/mendozam/unit1/WS08 Association/AntSimulator/build/
 =======
@@ -165,3 +179,6 @@ hs_err_pid*
 >>>>>>> 25b2dd7285ad844a2b23fea24f38b9fd27c758d7
 /assignments/pozos/unit1/HW05AntSimulatorCode/AntSimulator1/nbproject/private/
 >>>>>>> f56f92c288b65221332552a25fc7db12400dc22b
+>>>>>>> 85676bc60b7adb35d406b7c2b03f056b05b5c52b
+>>>>>>> 5b2401dda171ad119f20f7eea38f97628560a9ef
+>>>>>>> ae24906d493b97182632f75aa16b621a54c06649
