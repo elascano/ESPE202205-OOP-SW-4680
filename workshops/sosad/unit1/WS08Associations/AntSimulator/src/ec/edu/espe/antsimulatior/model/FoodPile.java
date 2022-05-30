@@ -9,5 +9,12 @@ package ec.edu.espe.antsimulatior.model;
  * @author Diana Sosa, DCCO-ESPE MyWayCode
  */
 public class FoodPile {
+    int pileAmount;
+    Cell position;
     
+    public Food yileFood(int amount){
+        Food food;
+        food = new Food(amount);
+        return food;
+    }
 }
