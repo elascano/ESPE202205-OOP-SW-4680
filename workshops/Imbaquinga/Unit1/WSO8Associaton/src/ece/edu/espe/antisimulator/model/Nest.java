@@ -5,10 +5,14 @@
  */
 package ece.edu.espe.antisimulator.model;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Jose Imbaquinga,DCCO-ESPE, DEES Syntaxi Error
  */
 public class Nest {
+    Cell position;
+    ArrayList<Food> foods;
     
 }
