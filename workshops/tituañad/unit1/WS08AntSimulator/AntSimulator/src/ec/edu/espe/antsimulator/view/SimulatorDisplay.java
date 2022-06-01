@@ -57,9 +57,14 @@ public class SimulatorDisplay {
         
         area = new Area(width, height, numberOfPilesOfood, tickDuration, cells, colonies, foodPiles, antEaters);
         
+<<<<<<< HEAD:workshops/moreirae/unit1/WS08Associations/AntSimulator/src/ec/edu/espe/antsimulator/view/SimulatorDisplay.java
+        System.out.println("Area --> " + area);
+        
+=======
         System.out.println("Area -->" + area);
         
     
+>>>>>>> 13447b64cac4824c712959c6739d75d3d1f1f091:workshops/tituañad/unit1/WS08AntSimulator/AntSimulator/src/ec/edu/espe/antsimulator/view/SimulatorDisplay.java
     }
 }
 
