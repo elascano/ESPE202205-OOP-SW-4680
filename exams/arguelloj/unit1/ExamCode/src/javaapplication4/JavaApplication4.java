@@ -1,16 +1,15 @@
-package exam.arguello.j.pkg4680;
+package javaapplication4;
 
 import java.awt.print.Book;
 import java.util.ArrayList;
-
 
 /**
  *
  * @author Joel Arguello, DCCO-ESPE, BETTACODDERS
  */
-public class ExamArguelloJ4680 {
+public class JavaApplication4 {
 
-    public static void main(String[] args) {
+    public static void main(String[] args){
         ArrayList<Book> books;
         int sizeBooks;
         books = new ArrayList<>(); 
@@ -21,8 +20,7 @@ public class ExamArguelloJ4680 {
         for(Book printf: books){
             System.out.println(printf);
         }
-    System.out.println("Books in the library: "+sizeBooks)
+        System.out.println("Books in the library: "+sizeBooks);
     }
     
-     
-    
+}
