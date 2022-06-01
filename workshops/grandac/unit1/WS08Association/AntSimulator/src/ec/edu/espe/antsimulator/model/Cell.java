@@ -15,7 +15,7 @@ public class Cell {
 
     @Override
     public String toString() {
-        return "Cell{" + "row=" + row + ", col=" + col + ", pheromoneDrops=" + pheromoneDrops + '}';
+        return "Cell{" + "row=" + row + ", col=" + col + ", pheromoneDrops=" + pheromoneDrops + "}\n";
     }
     
     public Cell(int row, int col, ArrayList<PheromoneDrop> pheromoneDrops) {
