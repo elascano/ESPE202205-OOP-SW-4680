@@ -10,5 +10,23 @@ package ece.edu.espe.antisimulator.model;
  * @author Jose Imbaquinga,DCCO-ESPE, DEES Syntaxi Error
  */
 public class Food {
-    
+  int amount;
+
+    public Food(int amount) {
+        this.amount = amount;
+    }
+
+    public int getAmount() {
+        return amount;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
+
+    @Override
+    public String toString() {
+        return "Food{" + "amount=" + amount + '}';
+    }
+  
 }
