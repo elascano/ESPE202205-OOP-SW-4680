@@ -16,7 +16,7 @@ public class SimulatroDisplay {
         ArrayList<Book> books;
         books = new ArrayList<>();
         
-        books.add(new Book("Algebra","Stanley","Baldor",2018));
+        books.add(new Book("Qumica","Escobar","Mendeley",2014));
     }
     
 }
