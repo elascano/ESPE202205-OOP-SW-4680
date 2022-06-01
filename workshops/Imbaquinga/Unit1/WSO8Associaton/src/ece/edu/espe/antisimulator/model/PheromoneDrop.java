@@ -10,5 +10,26 @@ package ece.edu.espe.antisimulator.model;
  * @author Jose Imbaquinga,DCCO-ESPE, DEES Syntaxi Error
  */
 public class PheromoneDrop {
+   int currentLevel;
+    public void run(){
+           System.out.println("Running with PheromoneDrop");
+    }
+
+    public PheromoneDrop() {
+    }
+
+    public PheromoneDrop(int currentLevel) {
+        this.currentLevel = currentLevel;
+    }
+
+    public int getCurrentLevel() {
+        return currentLevel;
+    }
+
+    public void setCurrentLevel(int currentLevel) {
+        this.currentLevel = currentLevel;
+    }
+
+   
     
 }
