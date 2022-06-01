@@ -30,9 +30,6 @@ public class Area {
         this.limitNumberOfFoodPiles = limitNumberOfFoodPiles;
         this.tickDuration = tickDuration;
     }
-    
-   
-   
    public void setup(){
        
    }

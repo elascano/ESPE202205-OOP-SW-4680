@@ -10,5 +10,12 @@ package ece.edu.espe.antisimulator.model;
  * @author Jose Imbaquinga,DCCO-ESPE, DEES Syntaxi Error
  */
 public class FoodPile {
+    int pileAmount;
+    Cell position;
     
+    public Food yiledFood(int amount){
+        Food food;
+        food = new Food(amount);
+        return food;
+    }
 }

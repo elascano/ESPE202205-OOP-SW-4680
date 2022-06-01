@@ -12,20 +12,20 @@ import java.util.ArrayList;
  * @author Jose Imbaquinga,DCCO-ESPE, DEES Syntaxi Error
  */
 public class Cell {
-    private int row;
-    private int col;
-    //PheromoneDrop[]phermoneDrop;
-    private ArrayList<PheromoneDrop> pheromoneDrops;
-
-    public Cell(int i, int i0) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        private int row;
+         private int col;
+    
+    private ArrayList <PheromoneDrop> pheromoneDrops;
+    
+    public void receivePheromone(PheromoneDrop pheromoneDrop){
+    
     }
-    public void receivePheromone(PheromoneDrop pheromonDrop){
+    
+    public ArrayList<Ant> getAnts(){
         
-    }
-    public ArrayList<Ant>getAnts(){
-        ArrayList<Ant>ants=new ArrayList<>();
+        ArrayList<Ant> ants = new ArrayList<>();
         return ants;
+        
     }
 
     /**
@@ -59,14 +59,20 @@ public class Cell {
     /**
      * @return the pheromoneDrops
      */
-    public ArrayList<PheromoneDrop> getPheromoneDrops() {
+    public ArrayList <PheromoneDrop> getPheromoneDrops() {
         return pheromoneDrops;
     }
 
     /**
      * @param pheromoneDrops the pheromoneDrops to set
      */
-    public void setPheromoneDrops(ArrayList<PheromoneDrop> pheromoneDrops) {
+    public void setPheromoneDrops(ArrayList <PheromoneDrop> pheromoneDrops) {
+        this.pheromoneDrops = pheromoneDrops;
+    }
+
+    public Cell(int row, int col, ArrayList<PheromoneDrop> pheromoneDrops) {
+        this.row = row;
+        this.col = col;
         this.pheromoneDrops = pheromoneDrops;
     }
 

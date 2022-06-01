@@ -4,10 +4,19 @@
  */
 package ec.edu.espe.antsimulator.model;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Roberto Bedon, DCCO-ESPE,BettaCoders
  */
 public class Nest {
+    Cell position;
+    ArrayList<Food> foods;
+
+    public Nest(Cell position, ArrayList<Food> foods) {
+        this.position = position;
+        this.foods = foods;
+    }
     
 }
