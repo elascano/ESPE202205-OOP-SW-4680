@@ -11,6 +11,11 @@ package ec.edu.espe.antsimulator.model;
 public class Ant {
     private Cell position;
     private int weight;
+    
+    
+    public void run(){
+        System.out.println("aunt is running");
+    }
 
     public Ant(Cell position, int weight) {
         this.position = position;
@@ -19,13 +24,7 @@ public class Ant {
 
     @Override
     public String toString() {
-        return "Ant{" + "position=" + position + ", weight=" + weight + '}';
-    }
-    
-    
-    
-    public void run(){
-        
+        return "Ant{" + "position=" + getPosition() + ", weight=" + getWeight() + '}';
     }
 
     /**
@@ -55,4 +54,6 @@ public class Ant {
     public void setWeight(int weight) {
         this.weight = weight;
     }
+
+
 }

@@ -6,15 +6,16 @@ package ec.edu.espe.antsimulator.model;
 
 /**
  *
- * @author Juan Quimbiulco, DCCO-ESPE, CODEX++
+ * @author Juan Quimbiulco, DCCO-ESPE CODEX++
  */
 public class FoodPile {
+
     int pileAmount;
     Cell position;
-    
-    public Food yiledFood(int amount){
+
+    public Food yileFood(int amount) {
         Food food;
-        
+        food = new Food(amount);
+        return food;
     }
-    
 }

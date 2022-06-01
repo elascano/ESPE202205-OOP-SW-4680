@@ -1,19 +1,14 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package ec.edu.espe.antsimulator.model;
 
 import java.util.ArrayList;
 
 /**
  *
- * @author Juan Quimbiulco, DCCO-ESPE, CODEX++
+ * @author Juan Quimbiulco, DCCO-ESPE CODEX++
  */
 public class Nest {
-    Cell position;
-    ArrayList<Ant> ants;
-    ArrayList<Food> foods;
+    private Cell position;
+    private ArrayList<Food> foods;
 
     public Nest(Cell position, ArrayList<Food> foods) {
         this.position = position;
@@ -22,8 +17,35 @@ public class Nest {
 
     @Override
     public String toString() {
-        return "Nest{" + "position=" + position + ", foods=" + foods + '}';
+        return "Nest{" + "position=" + getPosition() + ", foods=" + getFoods() + '}';
     }
-    
+
+    /**
+     * @return the position
+     */
+    private Cell getPosition() {
+        return position;
+    }
+
+    /**
+     * @param position the position to set
+     */
+    private void setPosition(Cell position) {
+        this.position = position;
+    }
+
+    /**
+     * @return the foods
+     */
+    private ArrayList<Food> getFoods() {
+        return foods;
+    }
+
+    /**
+     * @param foods the foods to set
+     */
+    private void setFoods(ArrayList<Food> foods) {
+        this.foods = foods;
+    }
     
 }

@@ -4,184 +4,190 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Juan Quimbiulco, DCCO-ESPE, CODEX++
+ * @author Juan Quimbiulco, DCCO-ESPE CODEX++
  */
 public class Area {
-   private int width;
-   private int height;
-   private int limitNumberOfFoodPiles;
-   private int tickDuration;
-   private ArrayList<Cell> cells;
-   private ArrayList<Colony> colonies;
-   private ArrayList<FoodPile> foodPiles;
-   private ArrayList<AntEater> antEaters;
-   private ArrayList<PheromoneDrop> pheromoneDrops;
-   
-   
+
+    private int width;
+    private int heigth;
+    private int inItNumberOfFoodPies;
+    private int tickDuration;
+    private ArrayList<Cell> cells;
+    private ArrayList<Colony> colonies;
+    private ArrayList<FoodPile> foodPiles;
+    private ArrayList<AntEater> antEaters;
+
+    public void setup() {
+
+    }
+
+    //POLYMORPHISMO - Polimorfismo
+    //OVERLOADING - Sobre carga de funciones
+    
+    public void add(Colony colony) {
+        colonies.add(colony);
+    }
+
+    public void add(AntEater antEater) {
+        antEaters.add(antEater);
+    }
+    
+    public boolean isAnyFoodRemaining(){
+        //Todo code to determine if here is no food
+        //if (conditional)
+        //for/foreach/while/do-while (loop)
+        return false;
+    }
+    
+    public Cell getcell(int row, int col){
+        ArrayList<PheromoneDrop> pheromoneDrops;
+        pheromoneDrops = new ArrayList<>();
+        Cell cell = new Cell(row, col, pheromoneDrops);
+        return cell;
+    }
+
     @Override
     public String toString() {
         return "Area{" + "width=" + width + 
-                ", height=" + height + 
-                ", limitNumberOfFoodPiles=" + limitNumberOfFoodPiles + 
-                ", tickDuration=" + tickDuration + '}';
+                ", heigth=" + heigth + ", inItNumberOfFoodPies=" + inItNumberOfFoodPies + 
+                ", tickDuration=" + tickDuration + ", cells=" + cells + 
+                ", colonies=" + colonies + ", foodPiles=" + foodPiles + 
+                ", antEaters=" + antEaters + '}';
     }
-    
-    public Area(){
-        width=0;
-        height=0;
-        limitNumberOfFoodPiles=0;
-        tickDuration=0;
+  
+   
+    public Area() {
+        width = 0;
+        heigth = 0;
+        inItNumberOfFoodPies = 0;
+        tickDuration = 0;
         cells = new ArrayList<>();
         colonies = new ArrayList<>();
         foodPiles = new ArrayList<>();
         antEaters = new ArrayList<>();
     }
-        
 
-   
-   
-    public Area(int width, int height, int limitNumberOfFoodPiles, int tickDuration) {
+    public Area(int width, int heigth, int inItNumberOfFoodPies, int tickDuration, ArrayList<Cell> cells, ArrayList<Colony> colonies, ArrayList<FoodPile> foodPiles, ArrayList<AntEater> antEaters) {
         this.width = width;
-        this.height = height;
-        this.limitNumberOfFoodPiles = limitNumberOfFoodPiles;
+        this.heigth = heigth;
+        this.inItNumberOfFoodPies = inItNumberOfFoodPies;
         this.tickDuration = tickDuration;
+        this.cells = cells;
+        this.colonies = colonies;
+        this.foodPiles = foodPiles;
+        this.antEaters = antEaters;
     }
-    
-   
-   
-   public void setup(){
-       
-   }
-   public void addColony(Colony colony){
-       colonies.add(colony);
-   }
-   public void addAntEater(AntEater antEater){
-       antEaters.add(antEater);
-   }
-   public boolean isAnyFoodRemaining(){
-       return false;
-   }
-   public Cell getCell(int row, int col ){
-       ArrayList<PheromoneDrop> pheromoneDrops;
-       
-       pheromoneDrops = new ArrayList<>();
-       Cell cell = new Cell(row, col , pheromoneDrops);
-       
-       
-       return cell;
-       
-   }
 
     /**
      * @return the width
      */
-    public int getWidth() {
+    private int getWidth() {
         return width;
     }
 
     /**
      * @param width the width to set
      */
-    public void setWidth(int width) {
+    private void setWidth(int width) {
         this.width = width;
     }
 
     /**
-     * @return the height
+     * @return the heigth
      */
-    public int getHeight() {
-        return height;
+    private int getHeigth() {
+        return heigth;
     }
 
     /**
-     * @param height the height to set
+     * @param heigth the heigth to set
      */
-    public void setHeight(int height) {
-        this.height = height;
+    private void setHeigth(int heigth) {
+        this.heigth = heigth;
     }
 
     /**
-     * @return the limitNumberOfFoodPiles
+     * @return the inItNumberOfFoodPies
      */
-    public int getLimitNumberOfFoodPiles() {
-        return limitNumberOfFoodPiles;
+    private int getInItNumberOfFoodPies() {
+        return inItNumberOfFoodPies;
     }
 
     /**
-     * @param limitNumberOfFoodPiles the limitNumberOfFoodPiles to set
+     * @param inItNumberOfFoodPies the inItNumberOfFoodPies to set
      */
-    public void setLimitNumberOfFoodPiles(int limitNumberOfFoodPiles) {
-        this.limitNumberOfFoodPiles = limitNumberOfFoodPiles;
+    private void setInItNumberOfFoodPies(int inItNumberOfFoodPies) {
+        this.inItNumberOfFoodPies = inItNumberOfFoodPies;
     }
 
     /**
      * @return the tickDuration
      */
-    public int getTickDuration() {
+    private int getTickDuration() {
         return tickDuration;
     }
 
     /**
      * @param tickDuration the tickDuration to set
      */
-    public void setTickDuration(int tickDuration) {
+    private void setTickDuration(int tickDuration) {
         this.tickDuration = tickDuration;
     }
 
     /**
      * @return the cells
      */
-    public ArrayList<Cell> getCells() {
+    private ArrayList<Cell> getCells() {
         return cells;
     }
 
     /**
      * @param cells the cells to set
      */
-    public void setCells(ArrayList<Cell> cells) {
+    private void setCells(ArrayList<Cell> cells) {
         this.cells = cells;
     }
 
     /**
      * @return the colonies
      */
-    public ArrayList<Colony> getColonies() {
+    private ArrayList<Colony> getColonies() {
         return colonies;
     }
 
     /**
      * @param colonies the colonies to set
      */
-    public void setColonies(ArrayList<Colony> colonies) {
+    private void setColonies(ArrayList<Colony> colonies) {
         this.colonies = colonies;
     }
 
     /**
      * @return the foodPiles
      */
-    public ArrayList<FoodPile> getFoodPiles() {
+    private ArrayList<FoodPile> getFoodPiles() {
         return foodPiles;
     }
 
     /**
      * @param foodPiles the foodPiles to set
      */
-    public void setFoodPiles(ArrayList<FoodPile> foodPiles) {
+    private void setFoodPiles(ArrayList<FoodPile> foodPiles) {
         this.foodPiles = foodPiles;
     }
 
     /**
      * @return the antEaters
      */
-    public ArrayList<AntEater> getAntEaters() {
+    private ArrayList<AntEater> getAntEaters() {
         return antEaters;
     }
 
     /**
      * @param antEaters the antEaters to set
      */
-    public void setAntEaters(ArrayList<AntEater> antEaters) {
+    private void setAntEaters(ArrayList<AntEater> antEaters) {
         this.antEaters = antEaters;
     }
-    
+
 }
