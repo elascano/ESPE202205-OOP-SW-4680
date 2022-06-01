@@ -59,5 +59,6 @@ public class SimulatorDisplay {
         area = new Area(width, height, numberOfPilesOfFood, tickDuration, cells, colonies, foodPiles, antEaters);
         
         System.out.println("Area --> " + area);
+        
     }
 }
