@@ -9,5 +9,6 @@ package ec.edu.espe.antsimulator.model;
  * @author Diego Ponce, DCCO-ESPE, Dev's Developers
  */
 public class Food {
+    int amount;
     
 }
