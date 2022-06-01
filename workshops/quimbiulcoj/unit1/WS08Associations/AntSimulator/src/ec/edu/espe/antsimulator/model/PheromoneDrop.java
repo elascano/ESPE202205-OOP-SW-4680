@@ -2,32 +2,37 @@ package ec.edu.espe.antsimulator.model;
 
 /**
  *
- * @author Juan Quimbiulco, DCCO-ESPE, CODEX++
+ * @author Juan Quimbiulco, DCCO-ESPE CODEX++
  */
 public class PheromoneDrop {
-    private int currenteLevel;
-    
-    public void run(){
-        System.out.println("Runnig with the pheromone drop");
+   private int currentLevel;
+   
+   public void run(){
+       System.out.println("Running with PheromoneDrop");
+   }
+
+    public PheromoneDrop(int currentLevel) {
+        this.currentLevel = currentLevel;
     }
 
-    public PheromoneDrop(int currenteLevel) {
-        this.currenteLevel = currenteLevel;
-    }
-
-    /**
-     * @return the currenteLevel
-     */
-    public int getCurrenteLevel() {
-        return currenteLevel;
+    @Override
+    public String toString() {
+        return "PheromoneDrop{" + "currentLevel=" + getCurrentLevel() + '}';
     }
 
     /**
-     * @param currenteLevel the currenteLevel to set
+     * @return the currentLevel
      */
-    public void setCurrenteLevel(int currenteLevel) {
-        this.currenteLevel = currenteLevel;
+    private int getCurrentLevel() {
+        return currentLevel;
     }
-    
-    
+
+    /**
+     * @param currentLevel the currentLevel to set
+     */
+    private void setCurrentLevel(int currentLevel) {
+        this.currentLevel = currentLevel;
+    }
+   
 }
+

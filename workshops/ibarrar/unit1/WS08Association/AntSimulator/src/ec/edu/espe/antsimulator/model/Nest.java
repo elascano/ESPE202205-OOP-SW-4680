@@ -21,10 +21,6 @@ public class Nest {
         return "Nest{" + "position=" + position + ", food=" + food + '}';
     }
 
-    
-    
-    
-    
     /**
      * @return the position
      */
