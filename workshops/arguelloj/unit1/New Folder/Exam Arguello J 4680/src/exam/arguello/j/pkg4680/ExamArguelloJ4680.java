@@ -1,6 +1,8 @@
 package exam.arguello.j.pkg4680;
 
 import java.awt.print.Book;
+import java.util.ArrayList;
+
 
 /**
  *
@@ -8,17 +10,19 @@ import java.awt.print.Book;
  */
 public class ExamArguelloJ4680 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-       Book book;
-        Book book = new Animal("Falco");
-        miAnimal.setEdad(3);
-        //Mostraremos el nombre del animal por pantalla
-        System.out.println("El nombre es: " + miAnimal.getNombre());
-        //Mostramos la edad del animal por pantalla
-        System.out.println(" y tiene " + miAnimal.getEdad() + " años");
+        ArrayList<Book> books;
+        int sizeBooks;
+        books = new ArrayList<>(); 
+        for(int i=0; i<10;i++){
+            books.add(i, new Book("Title/Book", "Author/Book", "Editorial/Book", "Publication year"));
+        }
+        sizeBooks= books.size();
+        for(Book printf: books){
+            System.out.println(printf);
+        }
+    System.out.println("Books in the library: "+sizeBooks)
     }
     
-}
+     
+    
