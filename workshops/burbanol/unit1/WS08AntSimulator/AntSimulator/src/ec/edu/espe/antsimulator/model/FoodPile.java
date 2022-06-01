@@ -17,6 +17,8 @@ public class FoodPile {
         this.pileAmount = pileAmount;
         this.position = position;
     }
+    
+    
 
     @Override
     public String toString() {
