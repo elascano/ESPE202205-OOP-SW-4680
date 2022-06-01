@@ -5,6 +5,7 @@ import ec.edu.espe.antsimulator.model.Area;
 import ec.edu.espe.antsimulator.model.Cell;
 import ec.edu.espe.antsimulator.model.Colony;
 import ec.edu.espe.antsimulator.model.FoodPile;
+import ec.edu.espe.antsimulator.model.Leaf;
 import ec.edu.espe.antsimulator.model.PheromoneDrop;
 import java.util.ArrayList;
 
@@ -52,5 +53,16 @@ public class SimulatorDisplay {
 
         area = new Area(width, height, numerOPiles, tickDuration, cells, colonies, foodPiles, antEaters);
         System.out.println("Area-->" + area);
+        
+        short numberOfVehicles;
+        short numberOfTires;
+        numberOfVehicles = 20000;
+        numberOfTires = 20000;
+        short total = (short)(numberOfVehicles + numberOfTires);
+        System.out.println("total-->" + total);
+        
+        Leaf leaf;
+        leaf = new Leaf();
+        System.out.println("leaf -->" + leaf);
     }
 }
