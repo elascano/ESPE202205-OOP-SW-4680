@@ -1,26 +1,24 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package ec.edu.espe.antsimulator.model;
 
 import java.util.ArrayList;
 
 /**
  *
- * @author Quilumbaquin Jairo, DCCO-ESPE, CODEX++
+ * @author Juan Quimbiulco, DCCO-ESPE CODEX++
  */
 public class Cell {
     private int row;
     private int col;
-    //PheromoneDrop   [] pheromoneDrop;
+    //PheromoneDrop [] pheromoneDrop;
     private ArrayList<PheromoneDrop> pheromoneDrops;
-    public void receivePheromone(PheromoneDrop pheromoneDrop){
+
+    Cell() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
     public String toString() {
-        return "Cell{" + "row=" + row + ", col=" + col + ", pheromoneDrops=" + pheromoneDrops + '}';
+        return "Cell{" + "row=" + row + ", col=" + col + ", pheromoneDrops=" + pheromoneDrops + "}\n";
     }
     
     public Cell(int row, int col, ArrayList<PheromoneDrop> pheromoneDrops) {
@@ -29,9 +27,10 @@ public class Cell {
         this.pheromoneDrops = pheromoneDrops;
     }
     
+    public void recivePheromone(PheromoneDrop pheromoneDrop){
+    }
     public ArrayList<Ant> getAnts(){
         ArrayList<Ant> ants = new ArrayList<>();
-        
         return ants;
     }
 
@@ -77,7 +76,5 @@ public class Cell {
         this.pheromoneDrops = pheromoneDrops;
     }
     
-}  
-            
-          
+}
 

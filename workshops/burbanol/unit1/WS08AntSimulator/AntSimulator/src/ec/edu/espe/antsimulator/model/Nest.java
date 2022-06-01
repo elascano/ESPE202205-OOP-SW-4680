@@ -17,7 +17,7 @@ public class Nest {
 
     public Nest(Cell position, ArrayList<Food> food) {
         this.position = position;
-        this.food = food;
+        ArrayList<Food> foods;  
     }
 
     @Override

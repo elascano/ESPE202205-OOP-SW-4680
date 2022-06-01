@@ -60,6 +60,16 @@ public class SimulatorDisplay {
         
         area = new Area(width, height, numberOfPiles, tickDuration, cells, colonies, foodPiles, antEaters);
         
-        System.out.println("Area -->" + area);      
+        System.out.println("Area -->" + area);   
+        
+        short numberOfVehicles;
+        short numberOfTires;
+        numberOfVehicles = 20000;
+        numberOfTires = 20000;
+        short total = (short) (numberOfVehicles + numberOfTires);
+        
+        int value;
+        value = numberOfVehicles;
+        
    }
 }
