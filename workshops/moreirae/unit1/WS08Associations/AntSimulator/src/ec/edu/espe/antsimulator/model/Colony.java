@@ -1,18 +1,21 @@
-
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package ec.edu.espe.antsimulator.model;
 
 import java.util.ArrayList;
 
 /**
  *
- * @author Erick Moreira, DCCO-ESPE DEES Developers
+ * @author Steven Pozo, DCCO- ESPE, DAMAGE SE
  */
 public class Colony {
     
     private Nest nest;
     private ArrayList<Ant> ants;
     public void run(){
-        System.out.println("The colony is runing");
+        System.out.println("The colony is running");
     }
 
     public Colony(Nest nest, ArrayList<Ant> ants) {
@@ -22,10 +25,9 @@ public class Colony {
 
     @Override
     public String toString() {
-        return "Colony{" + "nest=" + getNest() + ", ants=" + getAnts() + '}';
+        return "Colony{" + "nest=" + nest + ", ants=" + ants + '}';
     }
 
-    
 
     /**
      * @return the nest
@@ -54,5 +56,6 @@ public class Colony {
     public void setAnts(ArrayList<Ant> ants) {
         this.ants = ants;
     }
+    
     
 }

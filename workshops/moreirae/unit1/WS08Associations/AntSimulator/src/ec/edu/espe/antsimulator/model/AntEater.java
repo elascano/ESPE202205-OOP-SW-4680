@@ -1,13 +1,17 @@
-
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package ec.edu.espe.antsimulator.model;
 
 /**
  *
- * @author Erick Moreira, DCCO-ESPE DEES Developers
+ * @author Steven Pozo, DCCO- ESPE, DAMAGE SE
  */
 public class AntEater {
+
     private Cell position;
-    private int antEaterCounter;
+    private int antEaterCouner;
     private int runCounter;
     private int state;
     
@@ -15,16 +19,16 @@ public class AntEater {
         System.out.println("AntEater is running");
     }
 
-    public AntEater(Cell position, int antEaterCounter, int runCounter, int state) {
+    public AntEater(Cell position, int antEaterCouner, int runCounter, int state) {
         this.position = position;
-        this.antEaterCounter = antEaterCounter;
+        this.antEaterCouner = antEaterCouner;
         this.runCounter = runCounter;
         this.state = state;
     }
 
     @Override
     public String toString() {
-        return "AntEater{" + "position=" + getPosition() + ", antEaterCounter=" + getAntEaterCounter() + ", runCounter=" + getRunCounter() + ", state=" + getState() + '}';
+        return "AntEater{" + "position=" + getPosition() + ", antEaterCouner=" + getAntEaterCouner() + ", runCounter=" + getRunCounter() + ", state=" + getState() + '}';
     }
 
     /**
@@ -42,17 +46,17 @@ public class AntEater {
     }
 
     /**
-     * @return the antEaterCounter
+     * @return the antEaterCouner
      */
-    public int getAntEaterCounter() {
-        return antEaterCounter;
+    public int getAntEaterCouner() {
+        return antEaterCouner;
     }
 
     /**
-     * @param antEaterCounter the antEaterCounter to set
+     * @param antEaterCouner the antEaterCouner to set
      */
-    public void setAntEaterCounter(int antEaterCounter) {
-        this.antEaterCounter = antEaterCounter;
+    public void setAntEaterCouner(int antEaterCouner) {
+        this.antEaterCouner = antEaterCouner;
     }
 
     /**
@@ -82,5 +86,6 @@ public class AntEater {
     public void setState(int state) {
         this.state = state;
     }
+
     
 }

@@ -1,17 +1,20 @@
-
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package ec.edu.espe.antsimulator.model;
 
 /**
  *
- * @author Erick Moreira, DCCO-ESPE DEES Developers
+ * @author Steven Pozo, DCCO- ESPE, DAMAGE SE
  */
 public class Ant {
-    
     private Cell position;
     private int weight;
     
+    
     public void run(){
-        System.out.println("Ant is running");
+        System.out.println("aunt is running");
     }
 
     public Ant(Cell position, int weight) {
@@ -51,5 +54,6 @@ public class Ant {
     public void setWeight(int weight) {
         this.weight = weight;
     }
-    
+
+
 }

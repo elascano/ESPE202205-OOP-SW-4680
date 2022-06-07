@@ -10,7 +10,7 @@ public class Ant {
     
     
     public void run(){
-        System.out.println("aunt is running");
+        System.out.println("Ant is running");
     }
 
     public Ant(Cell position, int weight) {

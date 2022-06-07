@@ -1,76 +1,75 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package ec.edu.espe.antsimulator.model;
 
 import java.util.ArrayList;
 
 /**
  *
- * @author Erick Moreira, DCCO-ESPE DEES Developers
+ * @author Steven Pozo, DCCO- ESPE, DAMAGE SE
  */
 public class Area {
+   private int width;
+   private int height;
+   private int limitNumberOfFoodPiles;
+   private int tickDuration;
+   private ArrayList<Cell> cells;
+   private ArrayList<Colony> colonies;
+   private ArrayList<FoodPile> foodPiles;
+   private ArrayList<AntEater> antEaters;
+   
 
-    private int width;
-    private int height;
-    private int initNumberOfFoodPiles;
-    private int tickDuration;
-    private ArrayList<Cell> cells;
-    private ArrayList<Colony> colonies;
-    private ArrayList<FoodPile> foodPiles;
-    private ArrayList<AntEater> antEaters;
-
-    public void setup(){
-        
-    }
-    
-    //POLYMORPHISM - Polimorfismo
-    //OVERLOADING - Sobre carga de funciones
-    
-    public void add(Colony colony){
-        colonies.add(colony);
-    }
-    
-    public void add(AntEater antEater){
-        antEaters.add(antEater);
-    }
-    
-    public boolean isAnyFoodRemaining(){
-        //TODO code to determine if there is no food
-        // if (conditional)
-        // for/foreach/while/do-while (loop)
-        return false;
-    }
-    
-    public Cell getCell(int row, int col){
-        ArrayList<PheromoneDrop> pheromoneDrops;
-        pheromoneDrops = new ArrayList<>();
-        
-        Cell cell = new Cell(row, col, pheromoneDrops);
-        return cell;
-    }
+   
+   public void setup(){
+       
+   }
+   
+   public void add(Colony colony){
+       colonies.add(colony);
+   }
+   
+   public void add(AntEater antEater){
+       antEaters.add(antEater);
+   }
+   
+   public boolean isAnyFoodRemaining(){
+       
+       return false;
+   }
 
     @Override
     public String toString() {
-        return "Area{" + "width=" + width + 
-                ", height=" + height + 
-                ", initNumberOfFoodPiles=" + initNumberOfFoodPiles + 
-                ", tickDuration=" + tickDuration + ", cells=" + cells + ", colonies=" + colonies + ", foodPiles=" + foodPiles + ", antEaters=" + antEaters + '}';
+        return "Area{" + "width=" + width + ", height=" + height + ", limitNumberOfFoodPiles=" + limitNumberOfFoodPiles + ", tickDuration=" + tickDuration + ", cells=" + cells + ", colonies=" + colonies + ", foodPiles=" + foodPiles + ", antEaters=" + antEaters + '}';
     }
-    
-    
-    public Area() {
-        width = 0;
-        height = 0;
-        initNumberOfFoodPiles = 0;
-        tickDuration = 0;
-        cells = new ArrayList<>();
-        colonies = new ArrayList<>();
-        foodPiles = new ArrayList<>();
-        antEaters = new ArrayList<>();
-    }
+   
+   
+   
+   public Cell getCell(int row, int col){
+       ArrayList<PheromoneDrop> pheromoneDrops;
+       pheromoneDrops = new ArrayList<>();
+       Cell cell = new Cell(row,col,pheromoneDrops);
+       return cell;
+   }
+   
+   
+   public Area(){
+   width = 0;
+   height = 0;
+   limitNumberOfFoodPiles = 0;
+   tickDuration = 0;
+   cells = new ArrayList<>();
+   colonies = new ArrayList<>();
+   foodPiles = new ArrayList<>();
+   antEaters = new ArrayList<>(); 
+       
+   }
 
-    public Area(int width, int height, int initNumberOfFoodPiles, int tickDuration, ArrayList<Cell> cells, ArrayList<Colony> colonies, ArrayList<FoodPile> foodPiles, ArrayList<AntEater> antEaters) {
+    public Area(int width, int height, int limitNumberOfFoodPiles, int tickDuration, ArrayList<Cell> cells, ArrayList<Colony> colonies, ArrayList<FoodPile> foodPiles, ArrayList<AntEater> antEaters) {
         this.width = width;
         this.height = height;
-        this.initNumberOfFoodPiles = initNumberOfFoodPiles;
+        this.limitNumberOfFoodPiles = limitNumberOfFoodPiles;
         this.tickDuration = tickDuration;
         this.cells = cells;
         this.colonies = colonies;
@@ -107,17 +106,17 @@ public class Area {
     }
 
     /**
-     * @return the initNumberOfFoodPiles
+     * @return the limitNumberOfFoodPiles
      */
-    public int getInitNumberOfFoodPiles() {
-        return initNumberOfFoodPiles;
+    public int getLimitNumberOfFoodPiles() {
+        return limitNumberOfFoodPiles;
     }
 
     /**
-     * @param initNumberOfFoodPiles the initNumberOfFoodPiles to set
+     * @param limitNumberOfFoodPiles the limitNumberOfFoodPiles to set
      */
-    public void setInitNumberOfFoodPiles(int initNumberOfFoodPiles) {
-        this.initNumberOfFoodPiles = initNumberOfFoodPiles;
+    public void setLimitNumberOfFoodPiles(int limitNumberOfFoodPiles) {
+        this.limitNumberOfFoodPiles = limitNumberOfFoodPiles;
     }
 
     /**
@@ -189,5 +188,7 @@ public class Area {
     public void setAntEaters(ArrayList<AntEater> antEaters) {
         this.antEaters = antEaters;
     }
-        
+   
+    
+    
 }

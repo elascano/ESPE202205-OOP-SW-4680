@@ -1,4 +1,7 @@
-
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package ec.edu.espe.antsimulator.view;
 
 import ec.edu.espe.antsimulator.model.AntEater;
@@ -11,11 +14,11 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Erick Moreira, DCCO-ESPE DEES Developers
+ * @author Steven Pozo, DCCO- ESPE, DAMAGE SE
  */
 public class SimulatorDisplay {
     public static void main(String[] args) {
-        System.out.println("This is the Ant Simulator");
+        System.out.println("This is the AntSimulator");
         
         Area area;
         
@@ -24,40 +27,40 @@ public class SimulatorDisplay {
         int height;
         int width;
         
-
+        width = 20;
+        height = 10;
+        int numberOfPiles = 2;
+        int tickDuration = 20000;
         ArrayList<Cell> cells;
         ArrayList<Colony> colonies;
         ArrayList<FoodPile> foodPiles;
-        ArrayList<AntEater> antEaters;
+        ArrayList<AntEater> antEaters; 
         int totalCells;
-        width = 20;
-        height = 10;
-        int numberOfPilesOfFood = 2;
-        int tickDuration = 20000;
         
-        totalCells = width * height;
+        totalCells = width + height;
         Cell cell;
         ArrayList<PheromoneDrop> pheromoneDrops;
         pheromoneDrops = new ArrayList<>();
         cell = new Cell(3,4,pheromoneDrops);
         
+        
         cells = new ArrayList<>();
-        for (int i =0; i < height; i++ ){
-            for(int j = 0; j < width; j++ ){
-                    cells.add(new Cell(i,j,null));
+        for(int i = 0 ; i < height ; i++){
+            for(int j = 0 ; j < width ; j++){
+                cells.add(new Cell(i,j,null));  
             }
         }
         
         colonies = new ArrayList<>();
-       
-        foodPiles = new ArrayList<>();
+        
+        foodPiles = new ArrayList <>();
         
         antEaters = new ArrayList<>();
         
         System.out.println("cell --> " + cell);
         
-        area = new Area(width, height, numberOfPilesOfFood, tickDuration, cells, colonies, foodPiles, antEaters);
+        area = new Area(width, height, numberOfPiles, tickDuration, cells, colonies, foodPiles, antEaters);
         
-        System.out.println("Area --> " + area);
+        System.out.println("Area -->" + area);
     }
 }

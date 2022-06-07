@@ -1,9 +1,12 @@
-
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package ec.edu.espe.antsimulator.model;
 
 /**
  *
- * @author Erick Moreira, DCCO-ESPE DEES Developers
+ * @author Steven Pozo, DCCO- ESPE, DAMAGE SE
  */
 public class Food {
     private int amount;
@@ -12,9 +15,10 @@ public class Food {
         this.amount = amount;
     }
 
+    
     @Override
     public String toString() {
-        return "Food{" + "amount=" + getAmount() + '}';
+        return "Food{" + "amount=" + amount + '}';
     }
 
     /**
@@ -30,5 +34,6 @@ public class Food {
     public void setAmount(int amount) {
         this.amount = amount;
     }
+    
     
 }

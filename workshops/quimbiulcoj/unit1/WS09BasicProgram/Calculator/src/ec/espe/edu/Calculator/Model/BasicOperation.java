@@ -1,0 +1,182 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package ec.espe.edu.Calculator.Model;
+
+/**
+ *
+ * @author Juan Quimbiulco, DCCO-ESPE, CODEX++
+ */
+public class BasicOperation {
+    private int addend1;
+    private int addend2;
+    private int minuend;
+    private float divisor;
+    private int sum;
+    private int difference;
+    private int product;
+    private float quotient;
+
+    public int add(int addend1,int addend2){
+        //TODO THE ACTUAL ALGORITHYM
+        sum = addend1 + addend2; 
+        
+        return getSum();
+    }
+    
+        public int subtract(int minuend,int subtrahend){
+        //TODO THE ACTUAL ALGORITHYM
+        difference = minuend - subtrahend; 
+        
+        return getDifference();
+    }
+        
+        public int multiply(int multiplicand,int multiplier){
+            //TODO THE ACTUAL ALGORITHYM
+            product = multiplicand * multiplier;
+            return product;
+        } 
+        
+        public float divide(float dividend,float divisor){
+            //TODO THE ACTUAL ALGORITHYM
+            quotient = dividend/divisor;
+            return quotient;
+        } 
+        
+    public BasicOperation() {
+        this.addend1 = 0;
+        this.addend2 = 0;
+        this.minuend = 0;
+        this.divisor = 0;
+        this.sum = 0;
+        this.difference = 0;
+        this.product = 0;
+        this.quotient = 0;
+    }
+    
+    public BasicOperation(int addend1, int addend2, int minuend, float divisor, int sum, int difference, int product, float quotient) {
+        this.addend1 = addend1;
+        this.addend2 = addend2;
+        this.minuend = minuend;
+        this.divisor = divisor;
+        this.sum = sum;
+        this.difference = difference;
+        this.product = product;
+        this.quotient = quotient;
+    }
+
+    /**
+     * @return the addend1
+     */
+    public int getAddend1() {
+        return addend1;
+    }
+
+    /**
+     * @param addend1 the addend1 to set
+     */
+    public void setAddend1(int addend1) {
+        this.addend1 = addend1;
+    }
+
+    /**
+     * @return the addend2
+     */
+    public int getAddend2() {
+        return addend2;
+    }
+
+    /**
+     * @param addend2 the addend2 to set
+     */
+    public void setAddend2(int addend2) {
+        this.addend2 = addend2;
+    }
+
+    /**
+     * @return the minuend
+     */
+    public int getMinuend() {
+        return minuend;
+    }
+
+    /**
+     * @param minuend the minuend to set
+     */
+    public void setMinuend(int minuend) {
+        this.minuend = minuend;
+    }
+
+    /**
+     * @return the divisor
+     */
+    public float getDivisor() {
+        return divisor;
+    }
+
+    /**
+     * @param divisor the divisor to set
+     */
+    public void setDivisor(float divisor) {
+        this.divisor = divisor;
+    }
+
+    /**
+     * @return the sum
+     */
+    public int getSum() {
+        return sum;
+    }
+
+    /**
+     * @param sum the sum to set
+     */
+    public void setSum(int sum) {
+        this.sum = sum;
+    }
+
+    /**
+     * @return the difference
+     */
+    public int getDifference() {
+        return difference;
+    }
+
+    /**
+     * @param difference the difference to set
+     */
+    public void setDifference(int difference) {
+        this.difference = difference;
+    }
+
+    /**
+     * @return the product
+     */
+    public int getProduct() {
+        return product;
+    }
+
+    /**
+     * @param product the product to set
+     */
+    public void setProduct(int product) {
+        this.product = product;
+    }
+
+    /**
+     * @return the quotient
+     */
+    public float getQuotient() {
+        return quotient;
+    }
+
+    /**
+     * @param quotient the quotient to set
+     */
+    public void setQuotient(float quotient) {
+        this.quotient = quotient;
+    }
+    
+    
+}

@@ -1,39 +1,42 @@
-
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package ec.edu.espe.antsimulator.model;
 
 import java.util.ArrayList;
 
 /**
  *
- * @author Erick Moreira, DCCO-ESPE DEES Developers
+ * @author Steven Pozo, DCCO- ESPE, DAMAGE SE
  */
 public class Cell {
     private int row;
     private int col;
-    //PheromoneDrop [] pheromoneDrop;
     private ArrayList<PheromoneDrop> pheromoneDrops;
 
     @Override
     public String toString() {
         return "Cell{" + "row=" + row + ", col=" + col + ", pheromoneDrops=" + pheromoneDrops + "}\n";
     }
+    
+    
 
-    
-    
     public Cell(int row, int col, ArrayList<PheromoneDrop> pheromoneDrops) {
         this.row = row;
         this.col = col;
         this.pheromoneDrops = pheromoneDrops;
     }
     
+    
+    
     public void receivePheromone(PheromoneDrop pheromoneDrop){
         
     }
-    
     public ArrayList<Ant> getAnts(){
-        ArrayList<Ant> ants = new ArrayList<>();
-        
+        ArrayList<Ant> ants= new ArrayList<>();
         return ants;
+        
     }
 
     /**
@@ -77,7 +80,5 @@ public class Cell {
     public void setPheromoneDrops(ArrayList<PheromoneDrop> pheromoneDrops) {
         this.pheromoneDrops = pheromoneDrops;
     }
-    
-    
     
 }
