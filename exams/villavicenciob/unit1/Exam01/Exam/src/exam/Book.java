@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package exam;
 
 /**
@@ -12,23 +9,20 @@ public class Book {
     private String title;
     private String author;
     private String publisher;
-    private String yearPublication;
+    private String yearOfPublication;
 
     public Book(String title, String author, String publisher, String yearPublication) {
         this.title = title;
         this.author = author;
         this.publisher = publisher;
-        this.yearPublication = yearPublication;
+        this.yearOfPublication = yearPublication;
     }
 
     @Override
     public String toString() {
-        return "Book{" + "title=" + title + ", author=" + author + ", publisher=" + publisher + ", yearPublication=" + yearPublication + '}';
+        return "Book{" + "title=" + title + ", author=" + author + ", publisher=" + publisher + ", yearPublication=" + yearOfPublication + '}';
     }
 
-    
-    
-    
     /**
      * @return the title
      */
@@ -75,14 +69,14 @@ public class Book {
      * @return the yearPublication
      */
     public String getYearPublication() {
-        return yearPublication;
+        return yearOfPublication;
     }
 
     /**
      * @param yearPublication the yearPublication to set
      */
     public void setYearPublication(String yearPublication) {
-        this.yearPublication = yearPublication;
+        this.yearOfPublication = yearPublication;
     }
     
     
