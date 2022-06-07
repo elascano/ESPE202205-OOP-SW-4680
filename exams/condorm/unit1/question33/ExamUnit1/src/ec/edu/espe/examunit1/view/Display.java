@@ -15,24 +15,20 @@ public class Display {
     public static void main(String[] args) {
         System.out.println("this program is running");
         
-        int sizeBooks;
+        
         ArrayList<Book> books;
         
         books = new ArrayList<>();
-        Book book;
+        int sizeBooks = 0;
          
-        book = new Book("Amanecer rojo","Pierce Brown","editorial1","publishingdate1");
-        book = new Book("Saltamontes va de viaje","Arnold Lobel","Kalandraka","publishingdate2");
-        book = new Book("La merienda del parque","Pablo Albo y Cecilia Moreno","Narval editores ","publishingdate3");
-        book = new Book("Empanada de mamut","Jeanne Willis y Tony Ross","Libros del Zorro Rojo ","publishingdate4");
+        books.add(new Book("Amanecer rojo","Pierce Brown","editorial1","publishingdate1"));
+        books.add(new Book("Saltamontes va de viaje","Arnold Lobel","Kalandraka","publishingdate2"));
+        books.add(new Book("La merienda del parque","Pablo Albo y Cecilia Moreno","Narval editores ","publishingdate3"));
+        books.add(new Book("Empanada de mamut","Jeanne Willis y Tony Ross","Libros del Zorro Rojo ","publishingdate4"));
         
-        for(int i=0;i<5;i++){
-          books.add(new Book("Amanecer rojo","Pierce Brown","editorial1","publishingdate1"));
+        sizeBooks = books.size();
+        for(int i=0;i<sizeBooks;i++){
+            System.out.println("book -->"+ books.get(i));
         }
-        sizeBooks= books.size();
-        for(Book printf: books){
-            System.out.println(printf);
-        }
-        System.out.println("Number of books: "+ sizeBooks);
     }
 }
