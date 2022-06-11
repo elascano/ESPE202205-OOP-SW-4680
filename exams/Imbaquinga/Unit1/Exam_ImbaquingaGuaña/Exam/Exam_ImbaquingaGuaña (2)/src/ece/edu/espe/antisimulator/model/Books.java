@@ -5,6 +5,8 @@
  */
 package ece.edu.espe.antisimulator.model;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Jose Imbaquinga,DCCO-ESPE, DEES Syntaxi Error
@@ -14,6 +16,10 @@ public class Books {
     private String title;
     private String editorial;
     private String autor;
+
+    public Books(int i, String the_Adventures_of_Pinochio, String string, String carlo_Collodi, ArrayList<Books> pinocho) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
     public int getYear() {
         return year;

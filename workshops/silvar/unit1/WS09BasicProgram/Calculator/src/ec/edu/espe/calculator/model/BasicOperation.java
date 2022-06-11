@@ -29,7 +29,7 @@ public class BasicOperation {
     }
     
     public int multiply(int multiplicand, int multiplicator){
-        setProduct(multiplicand & multiplicator);
+        setProduct(multiplicand * multiplicator);
         return getProduct();
     }  
 
