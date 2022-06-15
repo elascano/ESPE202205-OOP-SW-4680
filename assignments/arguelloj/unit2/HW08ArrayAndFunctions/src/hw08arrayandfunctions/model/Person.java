@@ -1,10 +1,10 @@
-
-package hw08arrayandfunctions;
+package hw08arrayandfunctions.model;
 
 /**
  *
- * @author David Montufar, DCCO- ESPE, GADC.MSI
+ * @author Joel Arguello, DCCO-ESPE, BETTACODDERS
  */
+
 public class Person {
     private String name;
     private int number;

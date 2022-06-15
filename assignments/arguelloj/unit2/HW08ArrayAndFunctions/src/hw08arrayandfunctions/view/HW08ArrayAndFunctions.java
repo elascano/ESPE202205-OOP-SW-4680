@@ -1,11 +1,11 @@
+package hw08arrayandfunctions.view;
 
-package hw08arrayandfunctions;
-
+import hw08arrayandfunctions.model.Person;
 import java.util.ArrayList;
 
 /**
  *
- * @author David Montufar, DCCO- ESPE, GADC.MSI
+ * @author Joel Arguello, DCCO-ESPE, BETTACODDERS
  */
 public class HW08ArrayAndFunctions {
 
@@ -14,12 +14,13 @@ public class HW08ArrayAndFunctions {
         
         
         
-        ArrayList<Person> persons;
+        ArrayList<Person> people;
         int numbersOfArray[];
         Person person;
        
-        persons = new ArrayList<>();
+        people = new ArrayList<>();
         numbersOfArray= new int[10];
+        
         
         //Arrays of primitive types
         for (int i = 0; i < 10; i++) {
@@ -36,17 +37,20 @@ public class HW08ArrayAndFunctions {
          for (int i : numbersOfArray) {
             System.out.println(i);
         }
+         
         //Arrays of objetc types
         for (int i = 0; i < 4; i++) {
-            person = new Person("Luis " + i , 2355);
-            persons.add(person);
+            person = new Person("Joel " + i , 2355);
+            people.add(person);
         }
-        System.out.println("Unmodified");
-        System.out.println(persons);
-        System.out.println("Modified");
-        changeValueObjectPerson(persons.get(1));
         
-        System.out.println(persons);
+        
+        System.out.println("Unmodified");
+        System.out.println(people);
+        System.out.println("Modified");
+        changeValueObjectPerson(people.get(1));
+        
+        System.out.println(people);
         
         
         
@@ -55,8 +59,9 @@ public class HW08ArrayAndFunctions {
     public static int changeValueArrayInt(int number){
         return number+10;
     }
+    
     public static void changeValueObjectPerson(Person person){
-        person.setName(person.getName()+" has been modificated!");
+        person.setName(person.getName()+" has been modificated");
     }
     
 }
