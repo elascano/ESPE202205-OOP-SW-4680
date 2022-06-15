@@ -1,5 +1,5 @@
 
-package hw08arrayandfunctions;
+package HW08Array;
 
 /**
  *
