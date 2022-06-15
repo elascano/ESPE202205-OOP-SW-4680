@@ -11,10 +11,17 @@ import ec.edu.espe.utils.FileManager;
  * @author Juan Quimbiulco, DCCO-ESPE, CODEX++
  */
 public class University {
+    
     public static void main(String[] args) {
-        FileManager filemanager = new FileManger();
+        //FileManager fileManager = new FileManager();
         
-        System.out.println("data recovered from File Manager"+fileManager);
+        System.out.println("Data recovered from File Manager -> "+FileManager.readFile(" students.json"));
+        
+        int addend1= 5;
+        int addend2 = 46;
+        int sum;
+        sum = FileManager.add(addend1, addend2);
+        System.out.println("the adition is ->" +sum);
     }
     
 }
