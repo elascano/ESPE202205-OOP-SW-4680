@@ -13,7 +13,8 @@ public class University {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       Person[] people=new Person[23];
+       /*
+        Person[] people=new Person[23];
  
        
         people[0]=new Person(1, "Anibal Roguiguez","OOP");
@@ -23,14 +24,23 @@ public class University {
         for (int i = 0; i < 23; i++){
             System.out.println("Person (" + (i+1)+")\t-> "+people[i]);
         }
-        
- 
+                
+       */
+    }
+    public static void rellenarArreglo(int numeros[]){
        
- 
+        
+        
+        
+        
         
     }
+       
+        
+       
+    }
  
-}
+
     
     
 
