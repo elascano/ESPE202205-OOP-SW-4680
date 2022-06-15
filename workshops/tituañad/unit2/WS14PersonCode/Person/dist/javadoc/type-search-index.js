@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"ec.edu.arrays.model","l":"Person"},{"p":"ec.edu.arrays.view","l":"University"}];updateSearchResults();
