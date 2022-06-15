@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Luis Burbano, DCCO- ESPE, BettaCoders
+ * @author Widinson Caiza, DCCO- ESPE, BettaCoders
  */
 public class Pruebas {
 
