@@ -417,9 +417,17 @@ hs_err_pid*
 >>>>>>> 50e39ba898aa025f7d41b470ab12f39928febe49
 >>>>>>> 838d0558820e493aea7dda649832d9708a7f040c
 >>>>>>> 4048ae345a6a3923734d08c22b3fca7948cb60b3
+<<<<<<< HEAD
+/workshops/quimbiulcoj/unit2/WS16Libraries/FileManager/build/
+/workshops/quimbiulcoj/unit2/WS16Libraries/FileManager/dist/
+=======
 >>>>>>> 6e1c2f361746ba8feb116cdb259ac97b83d31837
 >>>>>>> e0cbf138a40e5624da10d445cdfbad3f9b3fc05c
+<<<<<<< HEAD
 /workshops/mendozam/unit2/WS16Libraries/FileManager/nbproject/private/
 /workshops/mendozam/unit2/WS16Libraries/FileManager/build/
 /workshops/mendozam/unit2/WS16Libraries/University/nbproject/private/
 /workshops/mendozam/unit2/WS16Libraries/University/build/
+=======
+>>>>>>> cf04b1581e3adb026bb0b169add8c80c2727013e
+>>>>>>> f0457dfc7815ee4e5dbbffc8a282450a5f73ba68

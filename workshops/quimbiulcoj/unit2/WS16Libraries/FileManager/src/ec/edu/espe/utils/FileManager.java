@@ -10,9 +10,9 @@ package ec.edu.espe.utils;
  */
 public class FileManager {
     
-    public String readFile (String fileName){
+    public static String readFile(String fileName){
         //code to read from file
-        String data = "{\"name\":\"Juan\"}";
+        String data ="From"+fileName+ "{\"name\":\"Diego\"}";
         return data;
     }
     
@@ -21,5 +21,5 @@ public class FileManager {
         sum = addend1+addend2;
         return sum;
     }
-    
 }
+
