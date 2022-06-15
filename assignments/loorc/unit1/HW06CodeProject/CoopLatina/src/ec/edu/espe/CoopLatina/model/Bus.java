@@ -24,7 +24,9 @@ public class Bus {
         return "Bus{" + "matricule=" + matricule + ", nameChofer=" + nameChofer + ", route=" + route + ", dailyGain=" + dailyGain + '}';
     }
 
-    
+    public String toStringData() {
+        return "Bus{" + "" + matricule + "," + nameChofer + "," + route + ", " + dailyGain + '}';
+    }
     
     /**
      * @return the matricule
