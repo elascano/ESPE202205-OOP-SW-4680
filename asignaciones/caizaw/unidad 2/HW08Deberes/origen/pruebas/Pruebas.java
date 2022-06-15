@@ -11,9 +11,8 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 /**
- *
- * @author Luis Burbano, DCCO- ESPE, BettaCoders
- */
+
+Widinson Caiza, DCCO- ESPE, BettaCoders */
 public class Pruebas {
 
     /**
