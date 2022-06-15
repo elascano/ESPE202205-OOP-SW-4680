@@ -8,23 +8,38 @@ package ec.edu.espe.CoopLatina.model;
 public class Routes {
     
     
+    
     private String nameRoute;
     private int idRoute;
     private boolean availableRoute;
     private int distanceKm;
+    private float priceOfRoute;
 
-    public Routes(String nameRoute, int idRoute, boolean availableRoute, int distanceKm) {
+    
+    
+    
+    
+    
+    
+    public Routes(String nameRoute, int idRoute, boolean availableRoute, int distanceKm, float priceOfRoute) {
         this.nameRoute = nameRoute;
         this.idRoute = idRoute;
         this.availableRoute = availableRoute;
         this.distanceKm = distanceKm;
+        this.priceOfRoute = priceOfRoute;
     }
 
     @Override
     public String toString() {
-        return "Routes{" + "nameRoute=" + nameRoute + ", idRoute=" + idRoute + ", availableRoute=" + availableRoute + ", distanceKm=" + distanceKm + '}';
+        return "Routes{" + "nameRoute=" + nameRoute + ", idRoute=" + idRoute + ", availableRoute=" + availableRoute + ", distanceKm=" + distanceKm + ", priceOfRoute=" + priceOfRoute + '}';
+    }
+    
+ 
+    public String toStringData() {
+        return "Routes{" + "nameRoute=" + nameRoute + ", idRoute=" + idRoute + ", availableRoute=" + availableRoute + ", distanceKm=" + distanceKm + ", priceOfRoute=" + priceOfRoute + '}';
     }
 
+   
     
     
     
@@ -82,6 +97,20 @@ public class Routes {
      */
     public void setDistanceKm(int distanceKm) {
         this.distanceKm = distanceKm;
+    }
+
+    /**
+     * @return the priceOfRoute
+     */
+    public float getPriceOfRoute() {
+        return priceOfRoute;
+    }
+
+    /**
+     * @param priceOfRoute the priceOfRoute to set
+     */
+    public void setPriceOfRoute(float priceOfRoute) {
+        this.priceOfRoute = priceOfRoute;
     }
     
     
