@@ -23,23 +23,8 @@ public class SquareParts {
     public String toString() {
         return "SquareParts{" + "name=" + name + ", price=" + price + ", wear=" + wear + ", stock=" + stock + '}';
     }
-  
-   
-    
-    
-    public void pay(){
-        
-    }
-    public void addProduct(){
-        
-    }
-    public void removeProduct(){
-        
-    }
-    public void BuyProduct(){
-        
-    }
-
+ 
+ 
     
     /**
      * @return the name
