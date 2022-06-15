@@ -7,15 +7,15 @@ import ec.edu.espe.arrays.model.Person;
  *
  * @author Roberto Bedon, DCCO-ESPE, BettaCoders
  */
-public class University {
+public class Universiti {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       /*
+       
         Person[] people=new Person[23];
- 
+       /*
        
         people[0]=new Person(1, "Anibal Roguiguez","OOP");
         people[1]=new Person(2, "Juan Montalvo","OOP");
@@ -27,7 +27,7 @@ public class University {
                 
        */
     }
-    public static void rellenarArreglo(int numeros[]){
+    public static void rellenarArreglo(int people[]){
        
         
         
