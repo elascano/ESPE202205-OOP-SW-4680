@@ -2,9 +2,17 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
+        <group/>
+=======
+<<<<<<< HEAD
+        <group/>
+=======
         <group>
-            <file>file:/C:/Users/Compus/Desktop/u/POO/02Code/ESPE202205-OOP-SW-4680/exams/molinag/unit1/POOExam_MolinaGustavo/Books/src/ec/edu/espe/ExamPoo/model/Books.java</file>
-            <file>file:/C:/Users/Compus/Desktop/u/POO/02Code/ESPE202205-OOP-SW-4680/exams/molinag/unit1/POOExam_MolinaGustavo/Books/src/ec/edu/espe/ExamPoo/view/BookControl.java</file>
+            <file>file:/C:/Users/ASUS/Desktop/POO/ESPE202205-OOP-SW-4680/exams/molinag/unit1/POOExam_MolinaGustavo/Books/src/ec/edu/espe/ExamPoo/view/BookControl.java</file>
+            <file>file:/C:/Users/ASUS/Desktop/POO/ESPE202205-OOP-SW-4680/exams/molinag/unit1/POOExam_MolinaGustavo/Books/src/ec/edu/espe/ExamPoo/model/Books.java</file>
         </group>
+>>>>>>> 2346c499ad21766f3f2b4bf2b95b62681918a225
+>>>>>>> 2818930ab866188f676d571c228688f5b2dcda0c
     </open-files>
 </project-private>
