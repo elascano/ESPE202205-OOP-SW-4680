@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package ec.edu.espe.utils;
 
 /**
@@ -10,9 +6,9 @@ package ec.edu.espe.utils;
  */
 public class FileManager {
     
-    public String readFile (String fileName){
+    public static String readFile(String fileName){
         //code to read from file
-        String data = "{\"name\":\"Juan\"}";
+        String data ="From"+fileName+ "{\"name\":\"Diego\"}";
         return data;
     }
     
@@ -21,5 +17,5 @@ public class FileManager {
         sum = addend1+addend2;
         return sum;
     }
-    
 }
+
