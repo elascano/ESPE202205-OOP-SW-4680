@@ -2,20 +2,19 @@ package ec.edu.espe.utils;
 
 /**
  *
- * @author Juan Quimbiulco, DCCO-ESPE, CODEX++
+ * @author Daniela Tituaña, DCCO-ESPE, MyWayCode
  */
 public class FileManager {
     
     public static String readFile(String fileName){
         //code to read from file
-        String data ="From"+fileName+ "{\"name\":\"Diego\"}";
+        String data = "From " +fileName + "--> {\"name\":\"Daniela\"}";
         return data;
     }
     
     public static int add(int addend1, int addend2){
-        int sum;
-        sum = addend1+addend2;
-        return sum;
+        int suma;
+        suma = addend1+addend2;
+        return suma;
     }
 }
-
