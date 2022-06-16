@@ -5,7 +5,7 @@ import ec.edu.espe.utils.FileManager;
 
 /**
  *
- * @author Jose Imbaquinga,DCCO-ESPE, DEES Syntaxi Error
+ * @author Carlos Granda,DCCO-ESPE, DEES Syntaxi Error
  */
 public class University {
 
