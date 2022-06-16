@@ -17,11 +17,19 @@ public class ExamBooks {
         int sizeBooks;
         books = new ArrayList<>();
         
+        int author;
+        int Book ;
+        int Title;
+        int year;
         
         for(int i=0; i<5; i++){
             books.add(i, new Book (Book))
             
+                    
+         
         }
+       
+        System.out.println("Books library: "+ sizeBooks);
     
     
 }
