@@ -1,1 +1,0 @@
-/*crear un programa que genere*/
