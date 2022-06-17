@@ -1,12 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package ec.edu.espe.utils.json;
 
 /**
  *
- * @author Juan Quimbiulco, DCCO-ESPE, CODEX++
+ * @author Daniela Tituaña, DCCO-ESPE, MyWayCode
  */
 public class Person {
     private int id;
