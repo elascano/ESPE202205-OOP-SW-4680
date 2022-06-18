@@ -1,0 +1,8 @@
+{
+    "nombre" : "Gustavo",
+    "edad" : 20,
+    "aficiones" : [
+        "Jugar",
+        "Ver videos"
+    ]
+}
