@@ -4,6 +4,8 @@ import ec.edu.espe.utils.FileManager;
 
 
 
+
+
 /**
  *
  * @author Steven Pozo, DCCO-ESPE, DEES Developers
@@ -11,7 +13,7 @@ import ec.edu.espe.utils.FileManager;
 public class University {
     public static void main(String[] args) {
       //  FileManager fileManager=new FileManager();
-        System.out.println("data recoverd from File Manager -->"+FileManager.readFile("que mas mi pes"));
+        System.out.println("data recoverd from File Manager -->"+FileManager.readFile("File Manager"));
         
         int addend1=5;
         int addend2=4;
