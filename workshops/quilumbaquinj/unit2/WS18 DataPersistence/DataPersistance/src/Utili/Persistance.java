@@ -8,6 +8,6 @@ package Utili;
  *
  * @author QUILUMBAQUIN JAIRO, DCC0-ESPE: CODEX++
  */
-public class Persistance {
-    
+public abstract class Persistance {
+    public abstract void insert();
 }
