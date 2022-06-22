@@ -9,5 +9,5 @@ package Utils;
  * @author Juan Quimbiulco, DCCO-ESPE, CODEX++
  */
 public abstract class Persistence {
-    public abstract void insert();
+    
 }
