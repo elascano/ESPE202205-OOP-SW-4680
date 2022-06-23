@@ -6,4 +6,5 @@ package utils;
  */
 public abstract class Persistence {
     public abstract void insert();
+    
 }
