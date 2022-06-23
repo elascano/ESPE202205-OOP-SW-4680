@@ -6,8 +6,5 @@ package utils;
  */
 public class MongoDbManager extends SqlManager {
     
-    @Override
-    public void insert(){
-        
-    }
+    
 }
