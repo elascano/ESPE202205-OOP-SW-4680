@@ -6,9 +6,5 @@ package Utils;
  */
 public class MongoDBManager extends NoSqlManager{
 
-    @Override
-    public void insert() {
-        
-    }
     
 }
