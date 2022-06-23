@@ -4,27 +4,48 @@
  */
 package Utils;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.util.ArrayList;
 
 /**
  *
  * @author Mateo Condor, DCCO-ESPE, DAMAGE SE Team
  */
-public class CsvManager extends FileManager{
+public class CsvManager extends FileManager {
 
-        @Override
+    @Override
     public void insert() {
-        
+
     }
 
     @Override
     public boolean write(String fileName, String data) {
-        return true;
+        File file;
+        file = new File(fileName);
+        try ( FileWriter fileW = new FileWriter(fileName, true);) {
+            fileW.write(data);
+        } catch (Exception e) {
+            System.out.println("An error has occurred");
+        }
+
+        return file.exists();
     }
 
     @Override
     public ArrayList<String> read(String fileName) {
-        return null;
+        try ( BufferedReader fileR = new BufferedReader(new FileReader(fileName));) {
+            String readerBooks;
+            System.out.println("Los libros registrados son:\n");
+            while ((readerBooks = fileR.readLine()) != null) {
+                System.out.println(readerBooks);
+            }
+        } catch (Exception e) {
+            System.out.println("An error has occurred");
+        }
+        return null;   
     }
 
     @Override
@@ -34,6 +55,16 @@ public class CsvManager extends FileManager{
 
     @Override
     public ArrayList<String> find(String fileName, String criterion) {
+        try ( BufferedReader fileF = new BufferedReader(new FileReader(fileName));) {
+            String findBooks;
+            while ((findBooks = fileF.readLine()) != null) {
+                if(findBooks.contains(criterion)){
+                    System.out.println("si se encontro el libro: \n" + findBooks);
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("An error has occurred");
+        }
         return null;
     }
 
@@ -41,5 +72,5 @@ public class CsvManager extends FileManager{
     public boolean update(String fileName, String criterion, String newData) {
         return false;
     }
-    
+
 }
