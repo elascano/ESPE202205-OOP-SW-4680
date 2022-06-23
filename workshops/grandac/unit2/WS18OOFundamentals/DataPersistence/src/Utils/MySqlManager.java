@@ -6,9 +6,6 @@ package Utils;
  */
 public class MySqlManager extends SqlManager{
 
-    @Override
-    public void insert() {
-        
-    }
+    
     
 }

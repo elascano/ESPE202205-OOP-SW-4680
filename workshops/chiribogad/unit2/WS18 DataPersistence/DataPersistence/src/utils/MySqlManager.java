@@ -8,7 +8,7 @@ public class MySqlManager extends SqlManager{
 
     @Override
     public void insert() {
-      
+   
     }
-    
+
 }
