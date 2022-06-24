@@ -10,4 +10,5 @@ package Utils;
  */
 public abstract class SqlManager extends DBManager{
     
+    String table;
 }
