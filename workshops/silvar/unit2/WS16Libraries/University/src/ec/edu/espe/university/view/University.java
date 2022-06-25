@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+>>>>>>> 6c10277bb0a3b48c5730e68190daeee0dc448b0d
 package ec.edu.espe.university.view;
 
 import ec.edu.espe.utils.FileManager;
@@ -6,6 +13,7 @@ import ec.edu.espe.utils.FileManager;
  * @author Raul Silva, DCCO-ESPE, CODEX++
  */
 public class University {
+<<<<<<< HEAD
     public static void main(String[] args) {
         //FileManager fileManager = new FileManager();
         
@@ -16,5 +24,11 @@ public class University {
         int sum;
         sum = FileManager.add(addend1, addend2);
         System.out.println("the adition is ->" +sum);
+=======
+    public static void main(String[] args){
+        FileManager fileManager = new fileManager();
+        
+        
+>>>>>>> 6c10277bb0a3b48c5730e68190daeee0dc448b0d
     }
 }
