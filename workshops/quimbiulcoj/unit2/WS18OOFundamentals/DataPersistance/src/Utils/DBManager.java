@@ -10,4 +10,9 @@ package Utils;
  */
 public abstract class DBManager extends Persistence {
     
+    public abstract void create();
+    public abstract void read();
+    public abstract void update();
+    public abstract void delete();
+    
 }
