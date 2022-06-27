@@ -6,7 +6,7 @@ package utils;
 
 /**
  *
- * @author Steven Pozo, DCCO-ESPE, DEES Developers
+ * @author David Montufar, DCCO-ESPE, GADC.msi
  */
 public class MongoDBManager extends NoSqlManager {
     String collection;

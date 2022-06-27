@@ -9,6 +9,8 @@ import java.util.ArrayList;
  */
 public abstract class FileManager extends Persistence {
     private String fileManager;
+    private String fileName;
+    
 
     public abstract boolean write(String fileName,String data);
     public abstract ArrayList<String> read(String fileName);
@@ -27,6 +29,20 @@ public abstract class FileManager extends Persistence {
      */
     public void setFileManager(String fileManager) {
         this.fileManager = fileManager;
+    }
+
+    /**
+     * @return the fileName
+     */
+    public String getFileName() {
+        return fileName;
+    }
+
+    /**
+     * @param fileName the fileName to set
+     */
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
     }
     
 }
