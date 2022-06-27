@@ -38,7 +38,7 @@ public class HW08ArrayAndFunctions {
         }
         //Arrays of objetc types
         for (int i = 0; i < 4; i++) {
-            person = new Person("Ronny" + i , 2355);
+            person = new Person("Ronny"  + i , 2355);
             persons.add(person);
         }
         System.out.println("Unmodified");
