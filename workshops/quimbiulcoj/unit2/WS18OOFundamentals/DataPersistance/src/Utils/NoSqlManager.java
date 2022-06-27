@@ -10,4 +10,5 @@ package Utils;
  */
 public abstract class NoSqlManager extends DBManager {
     
+    
 }
