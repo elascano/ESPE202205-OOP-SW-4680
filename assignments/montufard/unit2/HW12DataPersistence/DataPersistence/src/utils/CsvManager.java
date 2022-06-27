@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Steven Pozo, DCCO-ESPE, DEES Developers
+ * @author David Montufar, DCCO-ESPE, GADC.msi
  */
 public class CsvManager extends FileManager {
 
