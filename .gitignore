@@ -22,6 +22,7 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 /workshops/toapantam/unit1/WS07FromUMLToCod/ChickenFarmer/nbproject/private/
@@ -511,10 +512,6 @@ hs_err_pid*
 >>>>>>> 93eb9f901f5b212588a103f155c0e3b025565126
 >>>>>>> 5bd73e4910519705287ad5034f88c89c3386b5f5
 >>>>>>> bebe7dcbce193e826e796edab809484cc92626a7
-<<<<<<< HEAD
-/workshops/burbanol/unit2/WS16FileManager/PruebaMongoDb/nbproject/private/
-/workshops/burbanol/unit2/WS16FileManager/PruebaMongoDb/build/
-=======
 >>>>>>> 032fd80fbc89c207436054b09fb5762658c3a0dd
 >>>>>>> dee9f9b7386cbcf030ce84726a089b3a71f60696
 <<<<<<< HEAD
@@ -560,25 +557,18 @@ hs_err_pid*
 /workshops/quilumbaquinj/unit2/WS18 DataPersistence/DataPersistence/nbproject/private/
 =======
 >>>>>>> d01bf6351eccf63e78f33a291c8ef57ffc486380
+<<<<<<< HEAD
+/workshops/riverac/unit2/New Folder/FileManager/nbproject/private/
+/workshops/riverac/unit2/New Folder/ZooWithInterface/nbproject/private/
+/workshops/riverac/unit2/WS20Interface/ZooWithInterface/nbproject/private/
+/workshops/riverac/unit2/WS19FileManager/FileManager/nbproject/private/
+=======
 >>>>>>> e9c7273c107230a62672ec655ad8d0805dfd4682
-<<<<<<< HEAD
-<<<<<<< HEAD
-/workshops/imbaquingaj/Imbaquinga/Unit2/WSOO18Fundaments/DataPersistence/dist/
-/workshops/imbaquingaj/Imbaquinga/Unit2/WSOO18Fundaments/DataPersistence/build/
-/workshops/imbaquingaj/Imbaquinga/Unit2/WSOO18Fundaments/LibraryJson/nbproject/private/
-/workshops/imbaquingaj/Imbaquinga/Unit2/WSOO18Fundaments/LibraryJson/dist/
-/workshops/imbaquingaj/Imbaquinga/Unit2/WSOO18Fundaments/LibraryJson/build/
-=======
->>>>>>> 80fd4efbd160cd651c2cf5aec500622a9ed0aed9
->>>>>>> 56c5929aebe24466e78776c20b761ac44f80e678
->>>>>>> fe89ebf7800919465e051391cce03f3d42e1f7c4
->>>>>>> b054af857060ce2c48b05b0bc4edafeafa567bec
-/assignments/caizaw/unit2/MongoDb/nbproject/private/
-/assignments/caizaw/unit2/HW13MongoDb/nbproject/private/
-/assignments/caizaw/unit2/HW13MongoDb/build/
-=======
 /assignments/arguelloj/unit2/WS/nbproject/private/
 >>>>>>> 718105a6992b15f93dcb80a7386128b5c4a8615b
 >>>>>>> f1f3b99acdc46c2f84762fe3e6481bbf1b451faa
->>>>>>> 28d853fef3405c11c119eb31e03aade53cb29adb
->>>>>>> c74220ed7d4e0fb9032cdb6fbb71d0b366474c92
+/workshops/quilumbaquinj/unit2/WS20 ZooSimulator/ZooSimulator/nbproject/private/
+/workshops/quilumbaquinj/unit2/WS20 ZooSimulator/Zoo With Interfaces/nbproject/private/
+=======
+>>>>>>> 22d62f3ce9b3a45e90c0f658720e4ea9283d8f50
+>>>>>>> b63f191000332cd2dccda5e5c8a37cecd4dfc018
