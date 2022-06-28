@@ -22,6 +22,7 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 /workshops/toapantam/unit1/WS07FromUMLToCod/ChickenFarmer/nbproject/private/
@@ -514,6 +515,11 @@ hs_err_pid*
 >>>>>>> 032fd80fbc89c207436054b09fb5762658c3a0dd
 >>>>>>> dee9f9b7386cbcf030ce84726a089b3a71f60696
 <<<<<<< HEAD
+/workshops/molinag/unit2/WS18OOFundamentals/DataPersistence/nbproject/private/
+/workshops/molinag/unit2/WS18OOFundamentals/DataPersistence/build/
+/workshops/molinag/unit2/WS18OOFundamentals/DataPersistence/dist/
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 /workshops/riverac/unit2/New Folder/cHESS/nbproject/private/
 /workshops/riverac/unit2/New Folder/Chess 1/nbproject/private/
@@ -522,6 +528,9 @@ hs_err_pid*
 =======
 >>>>>>> d01bf6351eccf63e78f33a291c8ef57ffc486380
 /workshops/quimbiulcoj/unit2/WS18OOFundamentals/DataPersistance/nbproject/private/
+<<<<<<< HEAD
+/workshops/tituañad/unit2/WS18OOFundamentals/DataPersistance/build/
+=======
 <<<<<<< HEAD
 /workshops/quilumbaquinj/unit2/WS18 DataPersistence/DataPersistance/nbproject/private/
 =======
@@ -544,8 +553,22 @@ hs_err_pid*
 =======
 /workshops/arguelloj/unit2/WS18/DataPersistance/nbproject/private/
 >>>>>>> 4f40e7bbce180c5d655ed8ff3453962d6e3d7302
+<<<<<<< HEAD
+/workshops/quilumbaquinj/unit2/WS18 DataPersistence/DataPersistence/nbproject/private/
+=======
 >>>>>>> d01bf6351eccf63e78f33a291c8ef57ffc486380
+<<<<<<< HEAD
 /workshops/riverac/unit2/New Folder/FileManager/nbproject/private/
 /workshops/riverac/unit2/New Folder/ZooWithInterface/nbproject/private/
 /workshops/riverac/unit2/WS20Interface/ZooWithInterface/nbproject/private/
 /workshops/riverac/unit2/WS19FileManager/FileManager/nbproject/private/
+=======
+>>>>>>> e9c7273c107230a62672ec655ad8d0805dfd4682
+/assignments/arguelloj/unit2/WS/nbproject/private/
+>>>>>>> 718105a6992b15f93dcb80a7386128b5c4a8615b
+>>>>>>> f1f3b99acdc46c2f84762fe3e6481bbf1b451faa
+/workshops/quilumbaquinj/unit2/WS20 ZooSimulator/ZooSimulator/nbproject/private/
+/workshops/quilumbaquinj/unit2/WS20 ZooSimulator/Zoo With Interfaces/nbproject/private/
+=======
+>>>>>>> 22d62f3ce9b3a45e90c0f658720e4ea9283d8f50
+>>>>>>> b63f191000332cd2dccda5e5c8a37cecd4dfc018
