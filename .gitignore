@@ -22,6 +22,7 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 /workshops/toapantam/unit1/WS07FromUMLToCod/ChickenFarmer/nbproject/private/
@@ -562,3 +563,5 @@ hs_err_pid*
 >>>>>>> f1f3b99acdc46c2f84762fe3e6481bbf1b451faa
 /workshops/quilumbaquinj/unit2/WS20 ZooSimulator/ZooSimulator/nbproject/private/
 /workshops/quilumbaquinj/unit2/WS20 ZooSimulator/Zoo With Interfaces/nbproject/private/
+=======
+>>>>>>> 22d62f3ce9b3a45e90c0f658720e4ea9283d8f50
