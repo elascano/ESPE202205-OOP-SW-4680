@@ -1,14 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package ec.edu.espe.zoo.model;
+package ec.edu.espe.model1;
 
 import java.util.ArrayList;
 
 /**
  *
- * @author Juan Quimbiulco, DCCO-ESPE, CODEX++
+ * @author Daniel Chiriboga, DCCO-ESPE, DAMAGE SE
  */
 public class Zoo {
     private String name;
@@ -21,11 +17,9 @@ public class Zoo {
 
     @Override
     public String toString() {
-        return "Zoo{" + "name=" + name + ", animals=" + animals + '}';
+        return "Zoo{" + "name=" + getName() + ", animals=" + getAnimals() + '}';
     }
 
-
-    
     /**
      * @return the name
      */
@@ -53,6 +47,5 @@ public class Zoo {
     public void setAnimals(ArrayList<Animal> animals) {
         this.animals = animals;
     }
-    
     
 }
