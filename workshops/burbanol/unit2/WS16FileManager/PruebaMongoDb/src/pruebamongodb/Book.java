@@ -1,71 +1,41 @@
-
 package pruebamongodb;
+
+import org.bson.Document;
+import org.bson.types.ObjectId;
 
 /**
  *
  * @author Luis Burbano, DCCO- ESPE, BettaCoders
  */
 public class Book {
-    
+
     private String title;
-    private String author;
-    private String publisher;
+    private ObjectId _id;
 
-    public Book(String title, String author, String publisher) {
-        this.title = title;
-        this.author = author;
-        this.publisher = publisher;
+    public Book() {
+
     }
 
-    @Override
-    public String toString() {
-        return "Book --->" + "title=" + title + ", author=" + author + ", publisher=" + publisher;
+    public ObjectId getId() {
+        return _id;
     }
 
-    
-    
-    /**
-     * @return the title
-     */
+    public void setId(ObjectId _id) {
+        this._id = _id;
+    }
+
+    public Document buildDocument() {
+        Document bookDoc = new Document();
+        bookDoc.append("title", this.title);
+        return bookDoc;
+    }
+
     public String getTitle() {
         return title;
     }
 
-    /**
-     * @param title the title to set
-     */
     public void setTitle(String title) {
         this.title = title;
     }
 
-    /**
-     * @return the author
-     */
-    public String getAuthor() {
-        return author;
-    }
-
-    /**
-     * @param author the author to set
-     */
-    public void setAuthor(String author) {
-        this.author = author;
-    }
-
-    /**
-     * @return the publisher
-     */
-    public String getPublisher() {
-        return publisher;
-    }
-
-    /**
-     * @param publisher the publisher to set
-     */
-    public void setPublisher(String publisher) {
-        this.publisher = publisher;
-    }
-    
-    
-    
 }

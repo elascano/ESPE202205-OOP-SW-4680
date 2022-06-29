@@ -11,10 +11,14 @@ import org.bson.types.ObjectId;
 import com.mongodb.MongoException;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
-import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoDatabase;
-import com.mongodb.client.result.InsertOneResult;
 
+import com.mongodb.client.MongoDatabase;
+import static com.mongodb.MongoClientSettings.getDefaultCodecRegistry;
+import org.bson.codecs.configuration.CodecProvider;
+import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
+import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
+import org.bson.codecs.configuration.CodecRegistry;
+import org.bson.codecs.pojo.PojoCodecProvider;
 /**
  *
  * @author Luis Burbano, DCCO- ESPE, BettaCoders
@@ -22,22 +26,17 @@ import com.mongodb.client.result.InsertOneResult;
 public class Conexion {
 
     
-    String user="admin";
-    String password= "adminStylesIrealia";
-    String db="dbStylesIrelia";
-    String host="stylesirelia-shard-00-00.by7pr.mongodb.net:27017";
-    
-    
-    static String uri = "mongodb+srv://admin:adminStylesIrealia@stylesirelia.by7pr.mongodb.net/?retryWrites=true&w=majority";
-
-    public static void crearConexion() {
+    public static MongoDatabase mongoDB = null;
 
 
-    }
-
-    public static void insertCustomer() {
-
-       
+    public MongoDatabase obtenerConexion() {
+        if (Conexion.mongoDB == null) {
+            String db = "dbStylesIrelia";
+            String uri = "mongodb+srv://admin:adminStylesIrealia@stylesirelia.by7pr.mongodb.net/?retryWrites=true&w=majority";
+            MongoClient mongoClient = MongoClients.create(uri);
+            Conexion.mongoDB = mongoClient.getDatabase(db);
+        }
+        return Conexion.mongoDB;
 
     }
 
