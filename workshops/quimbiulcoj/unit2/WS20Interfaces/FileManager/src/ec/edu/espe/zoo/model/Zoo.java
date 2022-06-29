@@ -12,7 +12,6 @@ import java.util.ArrayList;
  */
 public class Zoo {
     private String name;
-    
     private ArrayList<Animal> animals;
 
     public Zoo(String name, ArrayList<Animal> animals) {
@@ -24,6 +23,7 @@ public class Zoo {
     public String toString() {
         return "Zoo{" + "name=" + name + ", animals=" + animals + '}';
     }
+
 
     
     /**
