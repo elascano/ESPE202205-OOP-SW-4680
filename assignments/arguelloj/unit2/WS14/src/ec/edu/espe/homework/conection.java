@@ -1,14 +1,15 @@
 package ec.edu.espe.homework;
 
-
 import java.util.ArrayList;
 
 import org.bson.Document;
 
 import com.mongodb.MongoCommandException;
+import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
+import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Filters;
 import static com.mongodb.client.model.Filters.eq;
 import static com.mongodb.client.model.Updates.set;
@@ -22,8 +23,22 @@ import org.bson.conversions.Bson;
  * @author Joel Arguello, DCCO-ESPE, BETTACODDERS
  */
 public class conection {
+
     public static void main(String args[]) throws IOException, InterruptedException {
+     
+        MongoClient mongoClient = MongoClients.create("mongodb+srv://joel:Cjoel2019@joel.crhww.mongodb.net/test");
         
+        MongoDatabase database = mongoClient.getDatabase("joel");
+        
+        MongoCollection < Document > collection = database.getCollection("Graphics Cards");
+        
+        try {
+            database.createCollection("Graphics Cards");
+            System.out.println("Collection created successfully");
+        } catch (MongoCommandException e) {
+            database.getCollection("Graphics Cards").drop();
+        }
+         
         int option;
         int id;
         boolean exit = false;
@@ -43,20 +58,9 @@ public class conection {
                    
             switch(option){
                case 1:
-                    try (var mongoClient = MongoClients.create("mongodb+srv://joel:Cjoel2019@joel.crhww.mongodb.net/test")) {
-
-                var database = mongoClient.getDatabase("joel");
-
-                    try {
-                        database.createCollection("Graphics Cards");
-                        System.out.println("Collection created successfully");
-                    } catch (MongoCommandException e) {
-                        database.getCollection("Graphics Cards").drop();
-                    }
-
+                   
                 var docs = new ArrayList < Document > ();
-
-                MongoCollection < Document > collection = database.getCollection("Graphics Cards");
+                
                 System.out.println("Insert the SKU ID: ");
                 id = sc.nextInt();
                 var d1 = new Document("_id", id);
@@ -110,16 +114,11 @@ public class conection {
                 docs.add(d4);
 
                 collection.insertMany(docs);
-                }
+      
                    break;
                case 2:
                    System.out.println("Read");
-                        try (var mongoClient = MongoClients.create("mongodb+srv://joel:Cjoel2019@joel.crhww.mongodb.net/test")) {
-
-                    var database = mongoClient.getDatabase("joel");
-                    
-                    MongoCollection < Document > collection = database.getCollection("Graphics Cards");
-                   
+             
                    try (MongoCursor < Document > cur = collection.find().iterator()) {
 
                 while (cur.hasNext()) {
@@ -127,47 +126,32 @@ public class conection {
                     var doc = cur.next();
                     var users = new ArrayList < > (doc.values());
 
-                    System.out.printf("Name: %s: GB: %s", users.get(1), users.get(2));
+                    System.out.printf("Name: %s: GB: %s\n", users.get(1), users.get(2));
                     }   
-                    }
-                   
-                   }
+                }
                    break;
                 case 4:
-                   System.out.println("Has seleccionado la opcion 3");
-                    try (var mongoClient = MongoClients.create("mongodb+srv://joel:Cjoel2019@joel.crhww.mongodb.net/test")) {
-
-                    var database = mongoClient.getDatabase("joel");
                     
-                    MongoCollection < Document > collection = database.getCollection("Graphics Cards");   
-                        System.out.println("Insert the name to delete: ");
-                        String firstName = sc.next();
-                        collection.deleteOne(Filters.eq("_firstName", firstName));
-                        System.out.println("Document deleted successfully...");
-                    }   
+                    System.out.println("Has seleccionado la opcion 3");
+                    System.out.println("Insert the name to delete: ");
+                    firstName = sc.next();
+                    collection.deleteOne(Filters.eq("_firstName", firstName));
+                    System.out.println("Document deleted successfully...");
+                       
                 break;
                 case 3:
-                    try (var mongoClient = MongoClients.create("mongodb+srv://joel:Cjoel2019@joel.crhww.mongodb.net/test")) {
-
-                    var database = mongoClient.getDatabase("joel");   
-                    
-                    MongoCollection < Document > collection = database.getCollection("Graphics Cards");
-                     
+                               
                     Bson filter = eq("_id", 1);
                     Bson updateOperation = set("_specification", "Joeasdl");
                     UpdateResult updateResult = collection.updateOne(filter, updateOperation);
                     System.out.println("=> Updating the doc with new specitication.");
-                
-                }
+
                 break;
                 case 5:
                 exit=true;
                 break;
                 default:
-                   System.out.println("Just number 1 to 5 ");
-           }
-       }
-
-       
+                   System.out.println("Just number 1 to 5 ");}
+            }
     }
 }
