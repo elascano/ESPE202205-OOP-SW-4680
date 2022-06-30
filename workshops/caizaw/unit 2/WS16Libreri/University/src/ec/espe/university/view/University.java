@@ -9,7 +9,7 @@ package ec.espe.university.view;
  *
  * @author Widinson Caiza, DCCO- ESPE, BettaCoders
  */
-import ec.espe.edu.utils
+import ec.edu.espe.utils.FileManager;
 public class University {
 
     /**
