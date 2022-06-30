@@ -2,25 +2,30 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-
-package ec.espe.university.view;
+package zoowhitch.interfaces;
+import ec.edu.espe.controller.IAnimal;
+import ec.edu.espe.model.Cow;
 
 /**
  *
  * @author Widinson Caiza, DCCO- ESPE, BettaCoders
  */
-import ec.edu.espe.utils.FileManager;
-public class University {
+public class ZoowhitchInterfaces {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        //leerdatos lerdt = new leerdatos;
+      IAnimal iAnimal;
+       
+       iAnimal = new Cow();
+       
+       iAnimal.feed();
+       
+        System.out.println("iAnimal -->" + iAnimal.getClass());
+       
+        System.out.println("cow " + iAnimal);
         
-        FileManager fileManager = new FileManager();
-        System.out.println("dat recoverd from filemanger"+fileManager.readFile(".json"));
-    }
-    
+       
+    }  
 }
