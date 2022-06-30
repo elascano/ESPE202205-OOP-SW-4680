@@ -9,6 +9,7 @@ import com.mongodb.MongoClientURI;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.model.Filters;
 import java.util.Iterator;
 import java.util.Scanner;
 import org.bson.Document;
@@ -106,7 +107,27 @@ String collection;
 
     @Override
     public void delete() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        MongoClient userDB;
+        MongoDatabase userdatabase;
+        MongoCollection userCollection;
+        Scanner input;
+        String delete;
+        MongoCollection<Document> collection;
+
+        userDB = Connection();
+        input = new Scanner(System.in);
+        userdatabase=userDB.getDatabase("Skateboard");
+        userCollection= userdatabase.getCollection("Deck");
+        
+        //Deleting a document
+        System.out.println("Enter the skate brand you want to delete: ");
+        delete=input.next();
+        
+        userCollection.deleteOne(Filters.eq("deckBrand", delete));
+        
+        System.out.println("Document deleted successfully...");
+        //Retrieving the documents after the delete operation
+        read();
     }
     
     public MongoClient Connection(){
