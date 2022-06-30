@@ -2,10 +2,10 @@ package ec.edu.espe.model;
 
 /**
  *
- * @author Carlos Rivera, DCCO-ESPE, CODEX++
+ * @author Raul Silva, DCCO-ESPE, CODEX++
  */
 public class ZooWithInterface {
-
+    
     /**
      * @param args the command line arguments
      */
@@ -14,3 +14,4 @@ public class ZooWithInterface {
     }
     
 }
+
