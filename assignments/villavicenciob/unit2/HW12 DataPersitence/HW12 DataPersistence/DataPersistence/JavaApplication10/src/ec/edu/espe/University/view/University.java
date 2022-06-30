@@ -18,7 +18,7 @@ import utils.JsonManager;
 
 /**
  *
- * @author Steven Pozo, DCCO-ESPE, DEES Developers
+ * @author Josue Villavicencio, DCCO - ESPE,MyWayCode
  */
 public class University {
     public static void main(String[] args) {
