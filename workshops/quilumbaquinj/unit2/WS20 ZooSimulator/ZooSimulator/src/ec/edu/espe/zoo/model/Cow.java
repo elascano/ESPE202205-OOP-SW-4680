@@ -12,6 +12,7 @@ public class Cow extends Mammal{
     private int litersPerDay;
 
     public Cow() {
+        
     }
 
     
