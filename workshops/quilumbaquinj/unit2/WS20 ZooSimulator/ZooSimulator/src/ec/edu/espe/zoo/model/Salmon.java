@@ -10,8 +10,8 @@ package ec.edu.espe.zoo.model;
  */
 public class Salmon extends Fish{
 
-    public Salmon() {
-        super();
+    public Salmon(int id, String description, String Cage) {
+        super(id, description, Cage);
     }
 
     
