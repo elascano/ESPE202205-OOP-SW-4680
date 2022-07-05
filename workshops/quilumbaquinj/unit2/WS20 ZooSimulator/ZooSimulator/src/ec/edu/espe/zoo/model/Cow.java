@@ -11,17 +11,14 @@ package ec.edu.espe.zoo.model;
 public class Cow extends Mammal{
     private int litersPerDay;
 
-    public Cow() {
-        
+    public Cow(int id, String description, String Cage) {
+        super(id, description, Cage);
     }
 
     
-    
-    public Cow(int litersPerDay,int id,String description,String Cage) {
+
+     
         
-        this.litersPerDay = litersPerDay;
-    }
-    
     @Override
     public void feed() {
         System.out.println("feeding a cow");
@@ -48,7 +45,7 @@ public class Cow extends Mammal{
 
     @Override
     public String toString() {
-        return "Cow{" + "litersPerDay=" + litersPerDay + '}';
+        return "Cow{" +super.toString()+ "litersPerDay=" + litersPerDay + '}';
     }
     
 }
