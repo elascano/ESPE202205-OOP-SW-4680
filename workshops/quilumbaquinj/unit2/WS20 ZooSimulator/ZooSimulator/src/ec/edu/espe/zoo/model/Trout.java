@@ -10,11 +10,11 @@ package ec.edu.espe.zoo.model;
  */
 public class Trout extends Fish{
 
-    public Trout() {
-        super();
+    public Trout(int id, String description, String Cage) {
+        super(id, description, Cage);
     }
 
-    
+       
     @Override
     public void feed() {
         System.out.println("feeding a trout");
