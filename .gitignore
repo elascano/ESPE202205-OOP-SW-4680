@@ -677,6 +677,11 @@ hs_err_pid*
 /workshops/quimbiulcoj/unit2/WS20Interfaces/WS20 ZooInterface/ZooInterface/ZooInterface/build/
 /workshops/quimbiulcoj/unit2/WS20Interfaces/WS20 ZooInterface/ZooInterface/ZooInterface/nbproject/private/
 /workshops/quimbiulcoj/unit2/WS20Interfaces/FileManagerOG/nbproject/private/
+<<<<<<< HEAD
+/workshops/quimbiulcoj/unit2/WS20Interfaces/FileManagerOG/build/
+/workshops/quimbiulcoj/unit2/WS22UnitTest/Areas/nbproject/private/
+/workshops/quimbiulcoj/unit2/WS22UnitTest/Areas/build/
+=======
 >>>>>>> b9d0e3d2bc4067eb73c17ab7b0d38e189e565cf5
 /assignments/quilumbaquinJ/unit2/HW15/HW15Pitfalls/nbproject/private/
 /assignments/quilumbaquinJ/unit2/HW15/HW15Pitfalls/build/
@@ -707,3 +712,4 @@ hs_err_pid*
 >>>>>>> 581eb6ff4c726bef487d30dec6760dced8695c8c
 >>>>>>> 2a2e2f72b108942524e272ec5996cf579e5ef284
 >>>>>>> ed34016334faca6dadb6d3780143dbbc63b40718
+>>>>>>> cdc6efb3710869a3f10ab4867de25e6db454d826
