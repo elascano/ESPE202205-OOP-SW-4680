@@ -3,7 +3,7 @@ import ec.edu.espe.areas.model.Triangle;
 
 /**
  *
- * @author Jose Imbaquinga, DCCO- ESPE, Syntax Error
+ * @author Jose Imbaquinga, DCCO-ESPE, Syntax Error
  */
 public class Areas {
 
