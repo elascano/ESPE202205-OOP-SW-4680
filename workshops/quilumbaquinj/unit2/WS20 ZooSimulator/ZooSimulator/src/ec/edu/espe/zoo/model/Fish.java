@@ -10,8 +10,10 @@ package ec.edu.espe.zoo.model;
  */
 public abstract class Fish extends Animal{
 
-    public Fish() {
+    
+    public Fish(int id, String description, String Cage) {
+        super(id, description, Cage);
     }
 
-        
+           
 }

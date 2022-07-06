@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package ec.edu.espe.zoo.model;
 
 import java.util.ArrayList;
@@ -13,16 +9,16 @@ import java.util.ArrayList;
 public class Zoo {
     
     
-    private ArrayList<Animal> animals;
     private String name;
+    private ArrayList<Animal> animals;
 
-    public Zoo() {
-    }
-
-    public Zoo(ArrayList<Animal> animals, String name) {
-        this.animals = animals;
+    public Zoo(String name, ArrayList<Animal> animals) {
         this.name = name;
+        this.animals = animals;
     }
+    
+
+    
 
     /**
      * @return the animals
