@@ -2,7 +2,7 @@ package ec.edu.espe.areas.model;
 
 /**
  *
- * @author Jose Imbaquinga, DCCO- ESPE, Syntax Error
+ * @author Jose Imbaquinga, DCCO-ESPE, Syntax Error
  */
 public class Triangle {
     
