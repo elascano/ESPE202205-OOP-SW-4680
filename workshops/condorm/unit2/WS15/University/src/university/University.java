@@ -10,11 +10,16 @@ package university;
  */
 public class University {
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+        FileManager fileManager=new FileManager();
+        System.out.println("data recoverd from File Manager -->"+FileManager.readFile("File Manager"));
+        
+        int addend1=5;
+        int addend2=4;
+        int sum;
+        sum=FileManager.add(addend1,addend2);
+        System.out.println("the addition is -->"+sum);
     }
     
 }

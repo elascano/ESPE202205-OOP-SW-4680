@@ -10,8 +10,9 @@ package ec.edu.espe.zoo.model;
  */
 public abstract class Mammal extends Animal {
 
-    public Mammal() {
+    public Mammal(int id, String description, String Cage) {
+        super(id, description, Cage);
     }
 
-        
+       
 }
