@@ -9,17 +9,19 @@ package ec.edu.espe.zoo.model;
  * @author QUILUMBAQUIN JAIRO, DCC0-ESPE: CODEX++
  */
 public class Pig extends Mammal {
+
+    
     private float weigth;
 
-    public Pig(float weigth) {
-        super();
+    public Pig(float weigth, int id, String description, String Cage) {
+        super(id, description, Cage);
         this.weigth = weigth;
     }
 
-    public Pig() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+    
+    
 
+    
     @Override
     public void feed() {
         System.out.println("feeding a pig");
@@ -32,7 +34,7 @@ public class Pig extends Mammal {
 
     @Override
     public String toString() {
-        return "Pig{" + "weigth=" + getWeigth() + '}';
+        return "Pig{"+super.toString() + "weigth=" + getWeigth() + '}';
     }
 
     /**
