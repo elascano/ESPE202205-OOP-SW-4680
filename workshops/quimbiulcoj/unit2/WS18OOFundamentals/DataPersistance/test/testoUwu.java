@@ -21,8 +21,9 @@ public class testoUwu {
     dbManager = new MongoDBManager();
     dbManager.Connection();
     //dbManager.create();
-    dbManager.update();
-    //dbManager.read();
+    //dbManager.update();
+    dbManager.read();
+    //dbManager.delete();
     
    }
 }
