@@ -1,15 +1,22 @@
+
 package utils;
 
 import java.util.ArrayList;
 
 /**
  *
- * @author Jose Imbaquinga,DCCO-ESPE, DEES Syntaxi Error
+ * @author Jose Imbaquinga, Carlos Granda,DCCO-ESPE, DEES Syntaxi Error
  */
 public class CsvManager extends FileManager {
+
+     @Override
+    public void insert() {
+       
+    }
+
     @Override
     public boolean write(String fileName, String data) {
-        return true;
+      return true;
     }
 
     @Override
@@ -23,12 +30,16 @@ public class CsvManager extends FileManager {
     }
 
     @Override
-    public ArrayList<String> find(String filename, String criterion) {
+    public ArrayList<String> find(String fileName, String criterion) {
+       
         return null;
+       
     }
 
     @Override
     public boolean update(String fileName, String criterion, String newData) {
+       
         return false;
-    } 
+       
+    }
 }

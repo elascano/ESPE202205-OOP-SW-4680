@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Andres/Desktop/HW13MongoDBDataPersistence/H13MongoDB/src/utils/NoSqlManager.java</file>
+            <file>file:/C:/Users/Andres/Desktop/HW13MongoDBDataPersistence/H13MongoDB/src/utils/Persistence.java</file>
+            <file>file:/C:/Users/Andres/Desktop/HW13MongoDBDataPersistence/H13MongoDB/src/utils/SqlManager.java</file>
+            <file>file:/C:/Users/Andres/Desktop/HW13MongoDBDataPersistence/H13MongoDB/src/utils/FileManager.java</file>
+            <file>file:/C:/Users/Andres/Desktop/HW13MongoDBDataPersistence/H13MongoDB/src/utils/DBManager.java</file>
+            <file>file:/C:/Users/Andres/Desktop/HW13MongoDBDataPersistence/H13MongoDB/src/utils/MongoDBManager.java</file>
+            <file>file:/C:/Users/Andres/Desktop/HW13MongoDBDataPersistence/H13MongoDB/src/utils/JsonManager.java</file>
+            <file>file:/C:/Users/Andres/Desktop/HW13MongoDBDataPersistence/H13MongoDB/src/utils/CsvManager.java</file>
+        </group>
+    </open-files>
+</project-private>
