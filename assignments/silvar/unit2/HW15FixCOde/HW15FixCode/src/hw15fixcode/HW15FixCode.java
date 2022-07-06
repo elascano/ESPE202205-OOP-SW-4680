@@ -10,7 +10,7 @@ public class HW15FixCode {
     
     public static void main(String[] args) {
         
-        System.out.println(intToEnglishValue(3));
+        System.out.println(intToEnglishValue(4));
         
         
     }
