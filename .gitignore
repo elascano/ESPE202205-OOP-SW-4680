@@ -588,12 +588,6 @@ hs_err_pid*
 >>>>>>> 718105a6992b15f93dcb80a7386128b5c4a8615b
 >>>>>>> f1f3b99acdc46c2f84762fe3e6481bbf1b451faa
 <<<<<<< HEAD
-/workshops/molinag/unit2/WS18OOFundamentals/Exercise/nbproject/private/
-/workshops/molinag/unit2/WS18OOFundamentals/Exercise/build/
-/workshops/molinag/unit2/WS22Unit_Test_CalculateArea/CalculatedArea/nbproject/private/
-/workshops/molinag/unit2/WS22Unit_Test_CalculateArea/CalculatedArea/build/
-=======
-<<<<<<< HEAD
 /assignments/quimbiulcoj/unit2/MogoCRUD/nbproject/private/
 /workshops/quimbiulcoj/unit2/WS20Interfaces/FileManager/nbproject/private/
 /workshops/quimbiulcoj/unit2/WS20Interfaces/FileManager/build/
@@ -608,17 +602,6 @@ hs_err_pid*
 =======
 <<<<<<< HEAD
 >>>>>>> 80fd4efbd160cd651c2cf5aec500622a9ed0aed9
-<<<<<<< HEAD
-/workshops/condorm/unit2/WS18OOFundamentals/MongoDBTrials/nbproject/private/
-/assignments/condorm/unit2/HW13ConectionDB/MongoDBTrials/nbproject/private/
-/workshops/condorm/unit2/WS18OOFundamentals/MongoTrials/nbproject/private/
-/assignments/condorm/unit2/HW13ConectionDB/MongoTrials/nbproject/private/
-/assignments/condorm/unit2/HW13ConectionDB/MongoTrials/build/
-/workshops/condorm/unit2/WS18OOFundamentals/TriangleArea/nbproject/private/
-/workshops/condorm/unit2/WS18OOFundamentals/TriangleArea/build/
-/assignments/condorm/unit2/HW18/RectangleArea/nbproject/private/
-/assignments/condorm/unit2/HW18/RectangleArea/build/
-=======
 >>>>>>> 56c5929aebe24466e78776c20b761ac44f80e678
 >>>>>>> fe89ebf7800919465e051391cce03f3d42e1f7c4
 >>>>>>> b054af857060ce2c48b05b0bc4edafeafa567bec
@@ -648,17 +631,6 @@ hs_err_pid*
 >>>>>>> 3bd7f4b876d19d89679ec0e64abd12e20b5f73cb
 >>>>>>> 797b8d082cc4c45a50781340ee5d0e6c4b1ef931
 >>>>>>> 8fdad54bb61c6b1df97ad1bed3c15f21dd19ad45
-<<<<<<< HEAD
-/workshops/riverac/unit2/WS22/ec.edu.espe.WS22/nbproject/private/
-/workshops/riverac/unit2/WS22/WS22/nbproject/private/
-/workshops/riverac/unit2/WS22/WS22/build/
-/workshops/riverac/unit2/WS22/WS22 V2/WS22_Area/nbproject/private/
-/workshops/riverac/unit2/WS22/WS22 V2/WS22_Area/build/
-/workshops/riverac/unit2/WS22/ws22 v1/Areas/nbproject/private/
-/workshops/riverac/unit2/WS22/ws22 v1/Areas/build/
-/workshops/riverac/unit2/WS22/Areas/nbproject/private/
-/workshops/riverac/unit2/WS22/Areas/build/
-=======
 >>>>>>> 66144c912a8ce0eb64b85a4c810e696e971845ad
 >>>>>>> 4ccc1dab1a10b8999f2fa9a64103176a932ae06f
 >>>>>>> 8927f1a96dd0e56d5f80f963df94b9022aa5322a
@@ -682,31 +654,16 @@ hs_err_pid*
 /assignments/quilumbaquinJ/unit2/HW15/HW15Pitfalls/build/
 /assignments/villavicenciob/unit2/HW15 Pitfalls/HW15Pitfalls/nbproject/private/
 /assignments/villavicenciob/unit2/HW15 Pitfalls/HW15Pitfalls/build/
-<<<<<<< HEAD
->>>>>>> 7b48b4fd1356df68820aad8d303b66e33b78a5a1
-/assignments/silvar/unit2/HW15FixCOde/HW15FixCode/nbproject/private/
-/workshops/silvar/unit2/WS18OOFundamentals/PitFallDuplicateCode/nbproject/private/
-/assignments/silvar/unit2/HW15FixCOde/HW15FixCode/build/
-/workshops/silvar/unit2/WS18OOFundamentals/PitFallDuplicateCode/build/
-/workshops/silvar/unit2/WS18OOFundamentals/PitFallDuplicateCode/dist/
-=======
-<<<<<<< HEAD
-/workshops/mendozam/unit2/New Folder/Area/target/
-=======
-<<<<<<< HEAD
-/assignments/bedonr/unit2/WH15FixCode/LongMethods/build/
->>>>>>> 9fc6088ca079729b04e35d8c7a23e30cb1c4c07a
-/workshops/quilumbaquinj/unit2/WS22UnitTest/Areas/nbproject/private/
-/workshops/quilumbaquinj/unit2/WS22UnitTest/Areas/build/
-=======
 /workshops/arguelloj/unit2/WS22/areas/nbproject/private/
 /workshops/arguelloj/unit2/WS22/areas/build/
+<<<<<<< HEAD
 >>>>>>> a2d97794290951311948c01fbaf8763bf17708b4
 >>>>>>> c8e54a8779a3c05da363a71bb56629eb692cb8e6
 >>>>>>> 4e20b5f1253862ecad5a2468f380d8d47ddd1b51
 >>>>>>> 581eb6ff4c726bef487d30dec6760dced8695c8c
 >>>>>>> 2a2e2f72b108942524e272ec5996cf579e5ef284
 >>>>>>> ed34016334faca6dadb6d3780143dbbc63b40718
+<<<<<<< HEAD
 /workshops/bedonr/unit2/WS18OOFundamentals/DataPersistence/nbproject/private/
 /assignments/bedonr/unit2/WH15FixCode/LongMethods/nbproject/private/
 /workshops/bedonr/unit2/Calculodepruebas/Equations/nbproject/private/
@@ -715,3 +672,12 @@ hs_err_pid*
 /workshops/bedonr/unit2/WS23TestProfileFunction/Equations/nbproject/private/
 /workshops/bedonr/unit2/WS24GUI/StylistIrelia/nbproject/private/
 /workshops/bedonr/unit2/WS24GUI/ProductApp/nbproject/private/
+=======
+>>>>>>> cdc6efb3710869a3f10ab4867de25e6db454d826
+/workshops/quilumbaquinj/unit2/WS22UnitTest/Equations/nbproject/private/
+/workshops/quilumbaquinj/unit2/WS23GraphicInterfaces/BookifyProject/nbproject/private/
+=======
+/workshops/arguelloj/unit2/New Folder/StylesIrelia/nbproject/private/
+/workshops/arguelloj/unit2/New Folder/StyliesIrealia/nbproject/private/
+>>>>>>> bdb1b5b1b71cdd7008816d0772f4b206f5f31728
+>>>>>>> 5ed8420fa59312a0c1817cc2d534fa5c8d33efc1
