@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="WS28 LeatherFlower">
+  <ClassDiagramComponents>
+    <Class name="CustomerController" package="ec.edu.espe.LeatherFlower.controller" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="persistence" type="Persistence" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="register" returnType="boolean" visibility="public">
+          <Argument type="Customer" name="customer"/>
+        </Method>
+        <Method name="update" returnType="boolean" visibility="public">
+          <Argument type="String" name="criterion"/>
+          <Argument type="Customer" name="customer"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ServiceController" package="ec.edu.espe.LeatherFlower.controller" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="Email" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="String" name="email"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="UserController" package="ec.edu.espe.LeatherFlower.controller" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="logIn" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Customer" package="ec.edu.espe.LeatherFlower.model" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="id" type="String" visibility="private"/>
+        <Field name="names" type="String" visibility="private"/>
+        <Field name="surnames" type="String" visibility="private"/>
+        <Field name="cellphone" type="String" visibility="private"/>
+        <Field name="email" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="id"/>
+          <Argument type="String" name="names"/>
+          <Argument type="String" name="surnames"/>
+          <Argument type="String" name="cellphone"/>
+          <Argument type="String" name="email"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="String" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="String" name="id"/>
+        </Method>
+        <Method name="getNames" returnType="String" visibility="public"/>
+        <Method name="setNames" returnType="void" visibility="public">
+          <Argument type="String" name="names"/>
+        </Method>
+        <Method name="getSurnames" returnType="String" visibility="public"/>
+        <Method name="setSurnames" returnType="void" visibility="public">
+          <Argument type="String" name="surnames"/>
+        </Method>
+        <Method name="getCellphone" returnType="String" visibility="public"/>
+        <Method name="setCellphone" returnType="void" visibility="public">
+          <Argument type="String" name="cellphone"/>
+        </Method>
+        <Method name="getEmail" returnType="String" visibility="public"/>
+        <Method name="setEmail" returnType="void" visibility="public">
+          <Argument type="String" name="email"/>
+        </Method>
+        <Method name="see" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="MongoDBConnection" package="ec.edu.espe.LeatherFlower.model" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="collection" type="String" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="conectionMongo" returnType="MongoClient" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Service" package="ec.edu.espe.LeatherFlower.model" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields>
+        <Field name="type" type="String" visibility="private"/>
+        <Field name="date" type="String" visibility="private"/>
+        <Field name="hourOfAttention" type="String" visibility="private"/>
+        <Field name="cost" type="float" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="type"/>
+          <Argument type="String" name="date"/>
+          <Argument type="String" name="hourOfAttention"/>
+          <Argument type="float" name="cost"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getType" returnType="String" visibility="public"/>
+        <Method name="setType" returnType="void" visibility="public">
+          <Argument type="String" name="type"/>
+        </Method>
+        <Method name="getDate" returnType="String" visibility="public"/>
+        <Method name="setDate" returnType="void" visibility="public">
+          <Argument type="String" name="date"/>
+        </Method>
+        <Method name="getHourOfAttention" returnType="String" visibility="public"/>
+        <Method name="setHourOfAttention" returnType="void" visibility="public">
+          <Argument type="String" name="hourOfAttention"/>
+        </Method>
+        <Method name="getCost" returnType="float" visibility="public"/>
+        <Method name="setCost" returnType="void" visibility="public">
+          <Argument type="float" name="cost"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="User" package="ec.edu.espe.LeatherFlower.model" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields>
+        <Field name="userName" type="String" visibility="private"/>
+        <Field name="password" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="userName"/>
+          <Argument type="String" name="password"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getUserName" returnType="String" visibility="public"/>
+        <Method name="setUserName" returnType="void" visibility="public">
+          <Argument type="String" name="userName"/>
+        </Method>
+        <Method name="getPassword" returnType="String" visibility="public"/>
+        <Method name="setPassword" returnType="void" visibility="public">
+          <Argument type="String" name="password"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="FrmCustomer" package="ec.edu.espe.LeatherFlower.view" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields>
+        <Field name="customer" type="Customer" visibility="private"/>
+        <Field name="customerController" type="CustomerController" visibility="package"/>
+        <Field name="persistence" type="Persistence" visibility="private"/>
+        <Field name="btn_add" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btn_delete" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btn_search" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btn_update" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="txtCellphone" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtEmail" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtId" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtName" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtSurnames" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="btn_addActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btn_updateActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="readFromInput" returnType="void" visibility="public"/>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmInformationDEES" package="ec.edu.espe.LeatherFlower.view" visibility="public" xPosition="20.0" yPosition="420.0">
+      <Fields>
+        <Field name="FrmSM" type="FrmSpaMenu" visibility="private"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel10" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel11" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel12" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel13" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel14" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel15" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel16" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel17" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel18" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="txtAbout" type="javax.swing.JTextArea" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="jButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmMenuPrincipal" package="ec.edu.espe.LeatherFlower.view" visibility="public" xPosition="320.0" yPosition="420.0">
+      <Fields>
+        <Field name="frmCustomer" type="FrmCustomer" visibility="private"/>
+        <Field name="FrmSM" type="FrmSpaMenu" visibility="private"/>
+        <Field name="btn_Exit" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btn_UpdateData" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton3" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton5" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="jButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton5ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btn_ExitActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmService" package="ec.edu.espe.LeatherFlower.view" visibility="public" xPosition="620.0" yPosition="420.0">
+      <Fields>
+        <Field name="frmCustomer" type="FrmCustomer" visibility="private"/>
+        <Field name="FrmMP" type="FrmMenuPrincipal" visibility="private"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton10" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton11" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton12" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton13" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton14" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton2" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton3" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton4" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton5" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton6" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton7" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton8" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton9" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel10" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel11" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel12" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel13" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel14" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="jButton7ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton14ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton3ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton4ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton5ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton6ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton8ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton9ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton10ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton11ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton12ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton13ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmSpaMenu" package="ec.edu.espe.LeatherFlower.view" visibility="public" xPosition="920.0" yPosition="420.0">
+      <Fields>
+        <Field name="frmUser" type="FrmUser" visibility="private"/>
+        <Field name="frmDEES" type="FrmInformationDEES" visibility="private"/>
+        <Field name="frmService" type="FrmService" visibility="private"/>
+        <Field name="jCheckBoxMenuItem1" type="javax.swing.JCheckBoxMenuItem" visibility="private"/>
+        <Field name="jCheckBoxMenuItem2" type="javax.swing.JCheckBoxMenuItem" visibility="private"/>
+        <Field name="jCheckBoxMenuItem3" type="javax.swing.JCheckBoxMenuItem" visibility="private"/>
+        <Field name="jCheckBoxMenuItem5" type="javax.swing.JCheckBoxMenuItem" visibility="private"/>
+        <Field name="jCheckBoxMenuItem6" type="javax.swing.JCheckBoxMenuItem" visibility="private"/>
+        <Field name="jDesktopPane2" type="javax.swing.JDesktopPane" visibility="private"/>
+        <Field name="jDialog1" type="javax.swing.JDialog" visibility="private"/>
+        <Field name="jDialog2" type="javax.swing.JDialog" visibility="private"/>
+        <Field name="jDialog3" type="javax.swing.JDialog" visibility="private"/>
+        <Field name="jDialog4" type="javax.swing.JDialog" visibility="private"/>
+        <Field name="jDialog5" type="javax.swing.JDialog" visibility="private"/>
+        <Field name="jDialog6" type="javax.swing.JDialog" visibility="private"/>
+        <Field name="jDialog7" type="javax.swing.JDialog" visibility="private"/>
+        <Field name="jFrame1" type="javax.swing.JFrame" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jMenu2" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jMenu3" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jMenu5" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jMenu6" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jMenu7" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jMenuBar1" type="javax.swing.JMenuBar" visibility="private"/>
+        <Field name="jMenuItem1" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuItem2" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuItem3" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuItem4" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuItem5" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jRadioButtonMenuItem1" type="javax.swing.JRadioButtonMenuItem" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="jCheckBoxMenuItem1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jCheckBoxMenuItem6ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jCheckBoxMenuItem2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jCheckBoxMenuItem3ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmUser" package="ec.edu.espe.LeatherFlower.view" visibility="public" xPosition="1220.0" yPosition="420.0">
+      <Fields>
+        <Field name="frmMenuPrincipal" type="FrmMenuPrincipal" visibility="private"/>
+        <Field name="FrmSM" type="FrmSpaMenu" visibility="private"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton2" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPassword" type="javax.swing.JPasswordField" visibility="private"/>
+        <Field name="txtUsername" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="jButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DatabaseManager" package="utils" visibility="public" xPosition="1520.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="read" returnType="String" visibility="public">
+          <Argument type="String" name="source"/>
+        </Method>
+        <Method name="create" returnType="boolean" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="Object" name="obejct"/>
+        </Method>
+        <Method name="update" returnType="boolean" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="String" name="criterion"/>
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="delete" returnType="boolean" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="String" name="criterion"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FileManager" package="utils" visibility="public" xPosition="1820.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="read" returnType="String" visibility="public">
+          <Argument type="String" name="source"/>
+        </Method>
+        <Method name="create" returnType="boolean" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="Object" name="obejct"/>
+        </Method>
+        <Method name="update" returnType="boolean" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="String" name="criterion"/>
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="delete" returnType="boolean" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="String" name="criterion"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="Persistence" package="utils" visibility="public" xPosition="2120.0" yPosition="420.0">
+      <Methods>
+        <Method name="read" returnType="String" visibility="public">
+          <Argument type="String" name="source"/>
+        </Method>
+        <Method name="create" returnType="boolean" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="Object" name="obejct"/>
+        </Method>
+        <Method name="update" returnType="boolean" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="String" name="criterion"/>
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="delete" returnType="boolean" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="String" name="criterion"/>
+        </Method>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="ec.edu.espe.LeatherFlower.controller.CustomerController" target="ec.edu.espe.LeatherFlower.model.Customer" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="frmCustomer" source="ec.edu.espe.LeatherFlower.view.FrmService" target="ec.edu.espe.LeatherFlower.view.FrmCustomer" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="utils.FileManager" target="utils.Persistence"/>
+    <HasRelation name="FrmSM" source="ec.edu.espe.LeatherFlower.view.FrmUser" target="ec.edu.espe.LeatherFlower.view.FrmSpaMenu" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="persistence" source="ec.edu.espe.LeatherFlower.view.FrmCustomer" target="utils.Persistence" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="FrmSM" source="ec.edu.espe.LeatherFlower.view.FrmMenuPrincipal" target="ec.edu.espe.LeatherFlower.view.FrmSpaMenu" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="frmCustomer" source="ec.edu.espe.LeatherFlower.view.FrmMenuPrincipal" target="ec.edu.espe.LeatherFlower.view.FrmCustomer" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="FrmMP" source="ec.edu.espe.LeatherFlower.view.FrmService" target="ec.edu.espe.LeatherFlower.view.FrmMenuPrincipal" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="frmUser" source="ec.edu.espe.LeatherFlower.view.FrmSpaMenu" target="ec.edu.espe.LeatherFlower.view.FrmUser" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="FrmSM" source="ec.edu.espe.LeatherFlower.view.FrmInformationDEES" target="ec.edu.espe.LeatherFlower.view.FrmSpaMenu" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="persistence" source="ec.edu.espe.LeatherFlower.controller.CustomerController" target="utils.Persistence" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="utils.DatabaseManager" target="utils.Persistence"/>
+    <HasRelation name="customer" source="ec.edu.espe.LeatherFlower.view.FrmCustomer" target="ec.edu.espe.LeatherFlower.model.Customer" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="frmService" source="ec.edu.espe.LeatherFlower.view.FrmSpaMenu" target="ec.edu.espe.LeatherFlower.view.FrmService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="frmDEES" source="ec.edu.espe.LeatherFlower.view.FrmSpaMenu" target="ec.edu.espe.LeatherFlower.view.FrmInformationDEES" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="customerController" source="ec.edu.espe.LeatherFlower.view.FrmCustomer" target="ec.edu.espe.LeatherFlower.controller.CustomerController" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="frmMenuPrincipal" source="ec.edu.espe.LeatherFlower.view.FrmUser" target="ec.edu.espe.LeatherFlower.view.FrmMenuPrincipal" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
