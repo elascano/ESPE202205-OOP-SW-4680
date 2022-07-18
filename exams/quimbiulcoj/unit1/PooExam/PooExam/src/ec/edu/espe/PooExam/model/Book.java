@@ -6,7 +6,7 @@ package ec.edu.espe.PooExam.model;
 
 /**
  *
- * @author Juan Quimbiulco, DCCO-ESPE, CODEX++
+ * @author Group 01 PITFALLS Embedded Types in Names, DCCO-ESPE
  */
 public class Book {
     private String title;
