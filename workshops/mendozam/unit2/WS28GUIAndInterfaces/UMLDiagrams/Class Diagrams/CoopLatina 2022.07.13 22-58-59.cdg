@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="CoopLatina">
+  <ClassDiagramComponents>
+    <Class name="Customer" package="ec.edu.espe.cooplatina.model" visibility="public" xPosition="74.0" yPosition="440.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="cellphone" type="float" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="String" name="name"/>
+          <Argument type="float" name="cellphone"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="see" returnType="void" visibility="public"/>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getCellphone" returnType="float" visibility="public"/>
+        <Method name="setCellphone" returnType="void" visibility="public">
+          <Argument type="float" name="cellphone"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmCustomer" package="ec.edu.espe.cooplatina.view" visibility="public" xPosition="412.0" yPosition="345.0">
+      <Fields>
+        <Field name="customer" type="Customer" visibility="private"/>
+        <Field name="persistence" type="Persistence" visibility="private"/>
+        <Field name="btnAdd" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnDelete" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnSearch" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnUpdate" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="txtCellphone" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtId" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtName" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="txtNameActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnUpdateActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnAddActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="readFromInput" returnType="void" visibility="public"/>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Database" package="utils" visibility="public" xPosition="74.0" yPosition="118.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="read" returnType="String" visibility="public">
+          <Argument type="String" name="source"/>
+        </Method>
+        <Method name="create" returnType="boolean" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="update" returnType="boolean" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="String" name="criterion"/>
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="delete" returnType="boolean" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="String" name="criterion"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FileManager" package="utils" visibility="public" xPosition="1081.0" yPosition="118.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="read" returnType="String" visibility="public">
+          <Argument type="String" name="source"/>
+        </Method>
+        <Method name="create" returnType="boolean" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="update" returnType="boolean" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="String" name="criterion"/>
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="delete" returnType="boolean" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="String" name="criterion"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="Persistence" package="utils" visibility="public" xPosition="563.0" yPosition="19.0">
+      <Methods>
+        <Method name="read" returnType="String" visibility="public">
+          <Argument type="String" name="source"/>
+        </Method>
+        <Method name="create" returnType="boolean" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="update" returnType="boolean" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="String" name="criterion"/>
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="delete" returnType="boolean" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="String" name="criterion"/>
+        </Method>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="customer" source="ec.edu.espe.cooplatina.view.FrmCustomer" target="ec.edu.espe.cooplatina.model.Customer" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="persistence" source="ec.edu.espe.cooplatina.view.FrmCustomer" target="utils.Persistence" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="utils.Database" target="utils.Persistence"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="utils.FileManager" target="utils.Persistence"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
