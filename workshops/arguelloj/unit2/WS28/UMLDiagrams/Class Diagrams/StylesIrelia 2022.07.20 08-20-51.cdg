@@ -1,0 +1,1094 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="StylesIrelia">
+  <ClassDiagramComponents>
+    <Class name="BasicController" package="ec.edu.espe.stylesirelia.controller" visibility="public" xPosition="360.0" yPosition="250.0">
+      <Fields>
+        <Field name="model" type="T" visibility="package"/>
+        <Field name="mongoDB" type="MongoDatabase" visibility="private"/>
+        <Field name="mongoCollection" type="MongoCollection&lt;Document&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="T" name="object"/>
+          <Argument type="String" name="collectionName"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getMongoCollection" returnType="MongoCollection" visibility="public"/>
+        <Method name="create" returnType="void" visibility="public"/>
+        <Method name="read" returnType="Document" visibility="public">
+          <Argument type="String" name="id"/>
+        </Method>
+        <Method name="delete" returnType="void" visibility="public">
+          <Argument type="String" name="id"/>
+          <Argument type="Object" name="idValue"/>
+        </Method>
+        <Method name="updateModel" returnType="void" visibility="public">
+          <Argument type="T" name="model"/>
+        </Method>
+        <Method name="update" returnType="void" visibility="public">
+          <Argument type="String" name="id"/>
+          <Argument type="String" name="idValue"/>
+          <Argument type="String" name="updateKey"/>
+          <Argument type="String" name="valueUpdate"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CommerceController" package="ec.edu.espe.stylesirelia.controller" visibility="public" xPosition="941.0" yPosition="91.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Commerce" name="object"/>
+          <Argument type="String" name="collectionName"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="CustomerController" package="ec.edu.espe.stylesirelia.controller" visibility="public" xPosition="396.0" yPosition="-35.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Customer" name="object"/>
+          <Argument type="String" name="collectionName"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="ProductController" package="ec.edu.espe.stylesirelia.controller" visibility="public" xPosition="1132.0" yPosition="307.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Product" name="object"/>
+          <Argument type="String" name="collectionName"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="ServiceController" package="ec.edu.espe.stylesirelia.controller" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Service" name="object"/>
+          <Argument type="String" name="collectionName"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="StylistController" package="ec.edu.espe.stylesirelia.controller" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Stylist" name="object"/>
+          <Argument type="String" name="collectionName"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="SupplierController" package="ec.edu.espe.stylesirelia.controller" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Supplier" name="object"/>
+          <Argument type="String" name="collectionName"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="TurnController" package="ec.edu.espe.stylesirelia.controller" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Turn" name="object"/>
+          <Argument type="String" name="collectionName"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="UserController" package="ec.edu.espe.stylesirelia.controller" visibility="public" xPosition="-35.0" yPosition="307.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="User" name="object"/>
+          <Argument type="String" name="collectionName"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="BasicModel" package="ec.edu.espe.stylesirelia.model" visibility="public" isAbstract="true" xPosition="734.0" yPosition="647.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="buildDocument" returnType="Document" visibility="public" isAbstract="true"/>
+      </Methods>
+    </Class>
+    <Class name="Commerce" package="ec.edu.espe.stylesirelia.model" visibility="public" xPosition="920.0" yPosition="554.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="direction" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="direction"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="buildDocument" returnType="Document" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getDirection" returnType="String" visibility="public"/>
+        <Method name="setDirection" returnType="void" visibility="public">
+          <Argument type="String" name="direction"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Connection" package="ec.edu.espe.stylesirelia.model" visibility="public" xPosition="891.0" yPosition="-18.0">
+      <Fields>
+        <Field name="mongodb" type="MongoDatabase" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="connectionDataBase" returnType="MongoDatabase" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Customer" package="ec.edu.espe.stylesirelia.model" visibility="public" xPosition="67.0" yPosition="531.0">
+      <Fields>
+        <Field name="identificationCard" type="String" visibility="private"/>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="number" type="int" visibility="private"/>
+        <Field name="pendingPayment" type="boolean" visibility="private"/>
+        <Field name="appointment" type="String" visibility="private"/>
+        <Field name="address" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="identificationCard"/>
+          <Argument type="String" name="name"/>
+          <Argument type="int" name="number"/>
+          <Argument type="boolean" name="pendingPayment"/>
+          <Argument type="String" name="appointment"/>
+          <Argument type="String" name="address"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="buildDocument" returnType="Document" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="toStringData" returnType="String" visibility="public"/>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getNumber" returnType="int" visibility="public"/>
+        <Method name="setNumber" returnType="void" visibility="public">
+          <Argument type="int" name="number"/>
+        </Method>
+        <Method name="isPendingPayment" returnType="boolean" visibility="public"/>
+        <Method name="setPendingPayment" returnType="void" visibility="public">
+          <Argument type="boolean" name="pendingPayment"/>
+        </Method>
+        <Method name="getAppointment" returnType="String" visibility="public"/>
+        <Method name="setAppointment" returnType="void" visibility="public">
+          <Argument type="String" name="appointment"/>
+        </Method>
+        <Method name="getAddress" returnType="String" visibility="public"/>
+        <Method name="setAddress" returnType="void" visibility="public">
+          <Argument type="String" name="address"/>
+        </Method>
+        <Method name="getIdentificationCard" returnType="String" visibility="public"/>
+        <Method name="setIdentificationCard" returnType="void" visibility="public">
+          <Argument type="String" name="identificationCard"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Product" package="ec.edu.espe.stylesirelia.model" visibility="public" xPosition="1546.0" yPosition="193.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="price" type="float" visibility="private"/>
+        <Field name="expiration" type="String" visibility="private"/>
+        <Field name="stock" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="float" name="price"/>
+          <Argument type="String" name="expiration"/>
+          <Argument type="int" name="stock"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="buildDocument" returnType="Document" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="toStringData" returnType="String" visibility="public"/>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getPrice" returnType="float" visibility="public"/>
+        <Method name="setPrice" returnType="void" visibility="public">
+          <Argument type="float" name="price"/>
+        </Method>
+        <Method name="getExpiration" returnType="String" visibility="public"/>
+        <Method name="setExpiration" returnType="void" visibility="public">
+          <Argument type="String" name="expiration"/>
+        </Method>
+        <Method name="getStock" returnType="int" visibility="public"/>
+        <Method name="setStock" returnType="void" visibility="public">
+          <Argument type="int" name="stock"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Service" package="ec.edu.espe.stylesirelia.model" visibility="public" xPosition="1920.0" yPosition="531.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="price" type="double" visibility="private"/>
+        <Field name="pendingPayment" type="boolean" visibility="private"/>
+        <Field name="available" type="boolean" visibility="private"/>
+        <Field name="availableStylist" type="ArrayList&lt;Stylist&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="double" name="price"/>
+          <Argument type="boolean" name="pendingPayment"/>
+          <Argument type="boolean" name="available"/>
+          <Argument type="ArrayList&lt;Stylist&gt;" name="availableStylist"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="buildDocument" returnType="Document" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="toStringData" returnType="String" visibility="public"/>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getPrice" returnType="double" visibility="public"/>
+        <Method name="setPrice" returnType="void" visibility="public">
+          <Argument type="double" name="price"/>
+        </Method>
+        <Method name="isPendingPayment" returnType="boolean" visibility="public"/>
+        <Method name="setPendingPayment" returnType="void" visibility="public">
+          <Argument type="boolean" name="pendingPayment"/>
+        </Method>
+        <Method name="isAvailable" returnType="boolean" visibility="public"/>
+        <Method name="setAvailable" returnType="void" visibility="public">
+          <Argument type="boolean" name="available"/>
+        </Method>
+        <Method name="getAvailableStylist" returnType="ArrayList&lt;Stylist&gt;" visibility="public"/>
+        <Method name="setAvailableStylist" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Stylist&gt;" name="availableStylist"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Stylist" package="ec.edu.espe.stylesirelia.model" visibility="public" xPosition="1750.0" yPosition="731.0">
+      <Fields>
+        <Field name="identificationCard" type="String" visibility="private"/>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="number" type="String" visibility="private"/>
+        <Field name="payment" type="double" visibility="private"/>
+        <Field name="appointment" type="String" visibility="private"/>
+        <Field name="address" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="identificationCard"/>
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="number"/>
+          <Argument type="double" name="payment"/>
+          <Argument type="String" name="appointment"/>
+          <Argument type="String" name="address"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getNumber" returnType="String" visibility="public"/>
+        <Method name="setNumber" returnType="void" visibility="public">
+          <Argument type="String" name="number"/>
+        </Method>
+        <Method name="getPayment" returnType="double" visibility="public"/>
+        <Method name="setPayment" returnType="void" visibility="public">
+          <Argument type="double" name="payment"/>
+        </Method>
+        <Method name="getAppointment" returnType="String" visibility="public"/>
+        <Method name="setAppointment" returnType="void" visibility="public">
+          <Argument type="String" name="appointment"/>
+        </Method>
+        <Method name="getAddress" returnType="String" visibility="public"/>
+        <Method name="setAddress" returnType="void" visibility="public">
+          <Argument type="String" name="address"/>
+        </Method>
+        <Method name="getIdentificationCard" returnType="String" visibility="public"/>
+        <Method name="setIdentificationCard" returnType="void" visibility="public">
+          <Argument type="String" name="identificationCard"/>
+        </Method>
+        <Method name="buildDocument" returnType="Document" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Supplier" package="ec.edu.espe.stylesirelia.model" visibility="public" xPosition="20.0" yPosition="820.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="number" type="int" visibility="private"/>
+        <Field name="pendingPayment" type="boolean" visibility="private"/>
+        <Field name="appointment" type="String" visibility="private"/>
+        <Field name="address" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="int" name="number"/>
+          <Argument type="boolean" name="pendingPayment"/>
+          <Argument type="String" name="appointment"/>
+          <Argument type="String" name="address"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="buildDocument" returnType="Document" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getNumber" returnType="int" visibility="public"/>
+        <Method name="setNumber" returnType="void" visibility="public">
+          <Argument type="int" name="number"/>
+        </Method>
+        <Method name="isPendingPayment" returnType="boolean" visibility="public"/>
+        <Method name="setPendingPayment" returnType="void" visibility="public">
+          <Argument type="boolean" name="pendingPayment"/>
+        </Method>
+        <Method name="getAppointment" returnType="String" visibility="public"/>
+        <Method name="setAppointment" returnType="void" visibility="public">
+          <Argument type="String" name="appointment"/>
+        </Method>
+        <Method name="getAddress" returnType="String" visibility="public"/>
+        <Method name="setAddress" returnType="void" visibility="public">
+          <Argument type="String" name="address"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Turn" package="ec.edu.espe.stylesirelia.model" visibility="public" xPosition="320.0" yPosition="820.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="date" type="String" visibility="private"/>
+        <Field name="customer" type="String" visibility="private"/>
+        <Field name="service" type="String" visibility="private"/>
+        <Field name="stylist" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="String" name="date"/>
+          <Argument type="String" name="customer"/>
+          <Argument type="String" name="service"/>
+          <Argument type="String" name="stylist"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="buildDocument" returnType="Document" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getDate" returnType="String" visibility="public"/>
+        <Method name="setDate" returnType="void" visibility="public">
+          <Argument type="String" name="date"/>
+        </Method>
+        <Method name="getCustomer" returnType="String" visibility="public"/>
+        <Method name="setCustomer" returnType="void" visibility="public">
+          <Argument type="String" name="customer"/>
+        </Method>
+        <Method name="getService" returnType="String" visibility="public"/>
+        <Method name="setService" returnType="void" visibility="public">
+          <Argument type="String" name="service"/>
+        </Method>
+        <Method name="getStylist" returnType="String" visibility="public"/>
+        <Method name="setStylist" returnType="void" visibility="public">
+          <Argument type="String" name="stylist"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="User" package="ec.edu.espe.stylesirelia.model" visibility="public" xPosition="620.0" yPosition="820.0">
+      <Fields>
+        <Field name="user" type="String" visibility="private"/>
+        <Field name="password" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="user"/>
+          <Argument type="String" name="password"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="buildDocument" returnType="Document" visibility="public"/>
+        <Method name="getUser" returnType="String" visibility="public"/>
+        <Method name="setUser" returnType="void" visibility="public">
+          <Argument type="String" name="user"/>
+        </Method>
+        <Method name="getPassword" returnType="String" visibility="public"/>
+        <Method name="setPassword" returnType="void" visibility="public">
+          <Argument type="String" name="password"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AdministrativeDisplay" package="ec.edu.espe.stylesirelia.view" visibility="public" xPosition="920.0" yPosition="820.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="printOptions" returnType="void" visibility="private" isStatic="true"/>
+        <Method name="unitTest" returnType="void" visibility="public" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Class name="FrmAbout" package="ec.edu.espe.stylesirelia.view" visibility="public" xPosition="1053.0" yPosition="1086.0">
+      <Fields>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel10" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel4" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="labelWelcome" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtOK" type="javax.swing.JButton" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="txtOKActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmAddStylist" package="ec.edu.espe.stylesirelia.view" visibility="public" xPosition="2299.0" yPosition="673.0">
+      <Fields>
+        <Field name="bntBack" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnAdd" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnDelete" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnRead" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnUpdate" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jSeparator1" type="javax.swing.JSeparator" visibility="private"/>
+        <Field name="jSeparator3" type="javax.swing.JSeparator" visibility="private"/>
+        <Field name="jSeparator4" type="javax.swing.JSeparator" visibility="private"/>
+        <Field name="jSeparator5" type="javax.swing.JSeparator" visibility="private"/>
+        <Field name="jSeparator6" type="javax.swing.JSeparator" visibility="private"/>
+        <Field name="jSeparator7" type="javax.swing.JSeparator" visibility="private"/>
+        <Field name="txtAddress" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtAppoinment" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtIdentification" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtName" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtNumber" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtPayment" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnAddActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="txtAddressActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnUpdateActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnDeleteActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnReadActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="bntBackActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="txtAppoinmentActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="txtIdentificationActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmCustomer" package="ec.edu.espe.stylesirelia.view" visibility="public" xPosition="1078.0" yPosition="994.0">
+      <Fields>
+        <Field name="formDate" type="SimpleDateFormat" visibility="package"/>
+        <Field name="btnAdd" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnBackToMenu" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnSearch" type="javax.swing.JButton" visibility="private"/>
+        <Field name="cmbPayment" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jSeparator1" type="javax.swing.JSeparator" visibility="private"/>
+        <Field name="jSeparator3" type="javax.swing.JSeparator" visibility="private"/>
+        <Field name="jSeparator4" type="javax.swing.JSeparator" visibility="private"/>
+        <Field name="jSeparator6" type="javax.swing.JSeparator" visibility="private"/>
+        <Field name="txtAddress" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtDateService" type="com.toedter.calendar.JDateChooser" visibility="private"/>
+        <Field name="txtId" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtName" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtNumber" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getDate" returnType="String" visibility="public">
+          <Argument type="JDateChooser" name="jdDate"/>
+        </Method>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnAddActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnSearchActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnBackToMenuActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="txtNameActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="txtIdActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmLogin" package="ec.edu.espe.stylesirelia.view" visibility="public" xPosition="1767.0" yPosition="1141.0">
+      <Fields>
+        <Field name="xMouse" type="int" visibility="package"/>
+        <Field name="btnEnterLogin" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnLeaveLogin" type="javax.swing.JButton" visibility="private"/>
+        <Field name="exitButton" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="iconTeam" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="labelWelcome" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lbBtnExit" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="passwordField" type="javax.swing.JPasswordField" visibility="private"/>
+        <Field name="sptPsd" type="javax.swing.JSeparator" visibility="private"/>
+        <Field name="sptUsn" type="javax.swing.JSeparator" visibility="private"/>
+        <Field name="textFieldUser" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtInfo" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtPsd" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtUsername" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getIconImage" returnType="Image" visibility="public"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnLeaveLoginActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnEnterLoginActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="textFieldUserActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="passwordFieldActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jPanel2MousePressed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="jPanel2MouseDragged" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="lbBtnExitMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="lbBtnExitMouseEntered" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="lbBtnExitMouseExited" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="textFieldUserMousePressed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="passwordFieldMousePressed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmProduct" package="ec.edu.espe.stylesirelia.view" visibility="public" xPosition="20.0" yPosition="1220.0">
+      <Fields>
+        <Field name="formDate" type="SimpleDateFormat" visibility="package"/>
+        <Field name="btnAddProduct" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnBackToMenu" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnRemove" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnSearch" type="javax.swing.JButton" visibility="private"/>
+        <Field name="dtcExpirationProduct" type="com.toedter.calendar.JDateChooser" visibility="private"/>
+        <Field name="jLabel13" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jSeparator1" type="javax.swing.JSeparator" visibility="private"/>
+        <Field name="jSeparator2" type="javax.swing.JSeparator" visibility="private"/>
+        <Field name="jSeparator3" type="javax.swing.JSeparator" visibility="private"/>
+        <Field name="txtAddress" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtName" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtPrice" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtStock" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtUpdate" type="javax.swing.JButton" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getDate" returnType="String" visibility="public">
+          <Argument type="JDateChooser" name="jdDate"/>
+        </Method>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnAddProductActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnRemoveActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnBackToMenuActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnSearchActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="txtStockActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="txtUpdateActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="txtPriceActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmService" package="ec.edu.espe.stylesirelia.view" visibility="public" xPosition="320.0" yPosition="1220.0">
+      <Fields>
+        <Field name="formDate" type="SimpleDateFormat" visibility="package"/>
+        <Field name="btnAdd" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnDelete" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnSearch" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnUpdate" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="txtAvailable" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtAvailableStylist" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtName" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtPendingPayment" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtPrice" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getDate" returnType="String" visibility="public">
+          <Argument type="JDateChooser" name="jdDate"/>
+        </Method>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnAddActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="split" returnType="ArrayList&lt;Stylist&gt;" visibility="private">
+          <Argument type="String" name="text"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmStylesIreliaMenu" package="ec.edu.espe.stylesirelia.view" visibility="public" xPosition="1053.0" yPosition="1695.0">
+      <Fields>
+        <Field name="itmCustomer" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="itmProduct" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="itmServices" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="itmStylist" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="itmSupplier" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="itmTableCustomer" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="itmTableProduct" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="itmTableService" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="itmTableStylist" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="itmTableSupllier" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="itmTableSupplier" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jMenu2" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jMenu4" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jMenu5" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jMenuBar1" type="javax.swing.JMenuBar" visibility="private"/>
+        <Field name="jMenuItem1" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuItem2" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="txtStyles" type="javax.swing.JMenu" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getIconImage" returnType="Image" visibility="public"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="txtStylesActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jMenuItem2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="itmCustomerActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="itmStylistActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="itmProductActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jMenuItem1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="itmTableStylistActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="itmTableProductActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="itmSupplierActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="itmTableCustomerActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="itmTableServiceActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="itmTableSupllierActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="itmServicesActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmStylistAdmin" package="ec.edu.espe.stylesirelia.view" visibility="public" xPosition="1433.0" yPosition="1431.0">
+      <Fields>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmSupplier" package="ec.edu.espe.stylesirelia.view" visibility="public" xPosition="2246.0" yPosition="1379.0">
+      <Fields>
+        <Field name="btnAddSupplier" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnBackToMenu" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnDelete" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnSearch" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="txtAddress" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtAppointment" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtName" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtNumber" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtPendingPayment" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="txtAppointmentActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnAddSupplierActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnBackToMenuActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnSearchActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnDeleteActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmTableCustomer" package="ec.edu.espe.stylesirelia.view" visibility="public" xPosition="1520.0" yPosition="1220.0">
+      <Fields>
+        <Field name="btnBack" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnLoad" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="tableCustomers" type="javax.swing.JTable" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="loadCustomersTable" returnType="void" visibility="public"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnLoadActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnBackActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmTableProduct" package="ec.edu.espe.stylesirelia.view" visibility="public" xPosition="1820.0" yPosition="1220.0">
+      <Fields>
+        <Field name="btnBack" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnLoad" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="tableProducts" type="javax.swing.JTable" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="loadProductsTable" returnType="void" visibility="public"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnLoadActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnBackActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmTableService" package="ec.edu.espe.stylesirelia.view" visibility="public" xPosition="2120.0" yPosition="1220.0">
+      <Fields>
+        <Field name="btnBack" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnLoad" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="tableServices" type="javax.swing.JTable" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="loadServicesTable" returnType="void" visibility="public"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnLoadActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnBackActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmTableStylist" package="ec.edu.espe.stylesirelia.view" visibility="public" xPosition="20.0" yPosition="1620.0">
+      <Fields>
+        <Field name="btnBack" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnLoad" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="tableStylists" type="javax.swing.JTable" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="loadStylistsTable" returnType="void" visibility="public"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnLoadActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnBackActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmTableSupplier" package="ec.edu.espe.stylesirelia.view" visibility="public" xPosition="320.0" yPosition="1620.0">
+      <Fields>
+        <Field name="btnBack" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnLoad" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="tableSuppliers" type="javax.swing.JTable" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="loadSuppliersTable" returnType="void" visibility="public"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnLoadActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnBackActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmTurn" package="ec.edu.espe.stylesirelia.view" visibility="public" xPosition="2697.0" yPosition="2006.0">
+      <Fields>
+        <Field name="formDate" type="SimpleDateFormat" visibility="package"/>
+        <Field name="btnBackToMenu" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnRegisterTurn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="cmbService" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="dtcServiceTurn" type="com.toedter.calendar.JDateChooser" visibility="private"/>
+        <Field name="jDesktopPane1" type="javax.swing.JDesktopPane" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jMenu1" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jMenu2" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jMenu4" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jMenu5" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jMenu6" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jMenu7" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jMenu8" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jMenuBar1" type="javax.swing.JMenuBar" visibility="private"/>
+        <Field name="jMenuBar2" type="javax.swing.JMenuBar" visibility="private"/>
+        <Field name="jMenuItem1" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="mnuStylesIrelia" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="txtGetATurn" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getDate" returnType="String" visibility="public">
+          <Argument type="JDateChooser" name="jdDate"/>
+        </Method>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jMenu1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="mnuStylesIreliaActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnBackToMenuActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnRegisterTurnActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="ec.edu.espe.stylesirelia.model.Supplier" target="ec.edu.espe.stylesirelia.model.BasicModel"/>
+    <IsRelation name="is" source="ec.edu.espe.stylesirelia.model.User" target="ec.edu.espe.stylesirelia.model.BasicModel"/>
+    <IsRelation name="is" source="ec.edu.espe.stylesirelia.controller.UserController" target="ec.edu.espe.stylesirelia.controller.BasicController"/>
+    <IsRelation name="is" source="ec.edu.espe.stylesirelia.controller.TurnController" target="ec.edu.espe.stylesirelia.controller.BasicController"/>
+    <IsRelation name="is" source="ec.edu.espe.stylesirelia.model.Turn" target="ec.edu.espe.stylesirelia.model.BasicModel"/>
+    <IsRelation name="is" source="ec.edu.espe.stylesirelia.model.Commerce" target="ec.edu.espe.stylesirelia.model.BasicModel"/>
+    <IsRelation name="is" source="ec.edu.espe.stylesirelia.model.Stylist" target="ec.edu.espe.stylesirelia.model.BasicModel"/>
+    <IsRelation name="is" source="ec.edu.espe.stylesirelia.controller.StylistController" target="ec.edu.espe.stylesirelia.controller.BasicController"/>
+    <IsRelation name="is" source="ec.edu.espe.stylesirelia.model.Service" target="ec.edu.espe.stylesirelia.model.BasicModel"/>
+    <IsRelation name="is" source="ec.edu.espe.stylesirelia.model.Product" target="ec.edu.espe.stylesirelia.model.BasicModel"/>
+    <HasRelation name="availableStylist" source="ec.edu.espe.stylesirelia.model.Service" target="ec.edu.espe.stylesirelia.model.Stylist" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Stylist&gt;"/>
+    <IsRelation name="is" source="ec.edu.espe.stylesirelia.controller.CustomerController" target="ec.edu.espe.stylesirelia.controller.BasicController"/>
+    <IsRelation name="is" source="ec.edu.espe.stylesirelia.model.Customer" target="ec.edu.espe.stylesirelia.model.BasicModel"/>
+    <IsRelation name="is" source="ec.edu.espe.stylesirelia.controller.ServiceController" target="ec.edu.espe.stylesirelia.controller.BasicController"/>
+    <UseRelation source="ec.edu.espe.stylesirelia.view.FrmService" target="ec.edu.espe.stylesirelia.model.Stylist" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ec.edu.espe.stylesirelia.model.Service" target="ec.edu.espe.stylesirelia.model.Stylist" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="ec.edu.espe.stylesirelia.controller.ProductController" target="ec.edu.espe.stylesirelia.controller.BasicController"/>
+    <IsRelation name="is" source="ec.edu.espe.stylesirelia.controller.SupplierController" target="ec.edu.espe.stylesirelia.controller.BasicController"/>
+    <IsRelation name="is" source="ec.edu.espe.stylesirelia.controller.CommerceController" target="ec.edu.espe.stylesirelia.controller.BasicController"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
