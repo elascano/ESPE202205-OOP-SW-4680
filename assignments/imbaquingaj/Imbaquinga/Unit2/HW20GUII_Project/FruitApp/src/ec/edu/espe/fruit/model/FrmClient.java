@@ -1,8 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package ec.edu.espe.fruit.model;
+
+import java.awt.Image;
+import java.awt.Toolkit;
+import javax.swing.JFrame;
 
 /**
  *
@@ -15,8 +15,16 @@ public class FrmClient extends javax.swing.JFrame {
      */
     public FrmClient() {
         initComponents();
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        setIconImage(getIconImage());
     }
 
+    
+        @Override
+        public Image getIconImage(){
+            Image retValue=Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("Imagen/Icon-Log.png"));
+            return retValue;
+        }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -35,8 +43,10 @@ public class FrmClient extends javax.swing.JFrame {
         cmbAge = new javax.swing.JComboBox<>();
         txtName = new javax.swing.JTextField();
         txtId = new javax.swing.JTextField();
+        btnMenu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setIconImage(getIconImage());
 
         lblClient.setText("Client");
 
@@ -51,6 +61,13 @@ public class FrmClient extends javax.swing.JFrame {
         jButton2.setText("Remove");
 
         cmbAge.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "18", "19", "20", "21", "22", "23", "24" }));
+
+        btnMenu.setText("Back to menu");
+        btnMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMenuActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -80,8 +97,10 @@ public class FrmClient extends javax.swing.JFrame {
                         .addGap(80, 80, 80)
                         .addComponent(jButton1)
                         .addGap(32, 32, 32)
-                        .addComponent(jButton2)))
-                .addContainerGap(143, Short.MAX_VALUE))
+                        .addComponent(jButton2)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnMenu)))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -103,12 +122,18 @@ public class FrmClient extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(jButton2)
+                    .addComponent(btnMenu))
                 .addGap(57, 57, 57))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
+        FrmMenu frmMenu = new FrmMenu();
+        frmMenu.setVisible(true);
+        this.setVisible(false);      }//GEN-LAST:event_btnMenuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -146,6 +171,7 @@ public class FrmClient extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnMenu;
     private javax.swing.JComboBox<String> cmbAge;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;

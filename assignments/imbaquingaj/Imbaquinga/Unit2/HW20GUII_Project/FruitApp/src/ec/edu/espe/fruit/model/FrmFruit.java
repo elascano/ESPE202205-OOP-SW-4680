@@ -1,8 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package ec.edu.espe.fruit.model;
+
+import javax.swing.JFrame;
 
 /**
  *
@@ -15,6 +13,7 @@ public class FrmFruit extends javax.swing.JFrame {
      */
     public FrmFruit() {
         initComponents();
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
     }
 
     /**
@@ -40,8 +39,10 @@ public class FrmFruit extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         txtCost = new javax.swing.JTextField();
+        btnMenu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setIconImage(getIconImage());
 
         lblFruit.setText("Fruit");
 
@@ -62,6 +63,13 @@ public class FrmFruit extends javax.swing.JFrame {
         jButton1.setText("Add");
 
         jButton2.setText("Remove");
+
+        btnMenu.setText("Back to menu");
+        btnMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMenuActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -93,9 +101,11 @@ public class FrmFruit extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(74, 74, 74)
                         .addComponent(jButton1)
-                        .addGap(98, 98, 98)
-                        .addComponent(jButton2)))
-                .addContainerGap(166, Short.MAX_VALUE))
+                        .addGap(45, 45, 45)
+                        .addComponent(jButton2)
+                        .addGap(70, 70, 70)
+                        .addComponent(btnMenu)))
+                .addContainerGap(74, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -125,7 +135,8 @@ public class FrmFruit extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(jButton2)
+                    .addComponent(btnMenu))
                 .addGap(35, 35, 35))
         );
 
@@ -146,6 +157,12 @@ public class FrmFruit extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
+        FrmMenu frmMenu = new FrmMenu();
+        frmMenu.setVisible(true);
+        this.setVisible(false);  
+    }//GEN-LAST:event_btnMenuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -184,6 +201,7 @@ public class FrmFruit extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> CmbColor;
+    private javax.swing.JButton btnMenu;
     private javax.swing.JComboBox<String> cmbAmount;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
