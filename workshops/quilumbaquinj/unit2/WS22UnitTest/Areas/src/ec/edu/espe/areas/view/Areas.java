@@ -27,9 +27,6 @@ public class Areas {
         //triangule=new Triangule(4.3f,3.4f,5.2f);
         //area=triangule.CalculateArea();
         
-        System.out.println(square.CalculateArea());
-        System.out.println(triangule.CalculateArea());
-        
         
         
     }
