@@ -1,0 +1,22 @@
+{{#if cars}}
+{{#each cars}}
+
+<div class="col-md-4">
+    <div class="card">
+        <div class="card-header">
+            <h3>{{brand}}</h3>
+        </div>
+        <div class="card-body">
+            <p>Model  : {{model}}</p>
+            <p>Year   : {{year}}</p>
+            <p>Price  : {{price}}</p>
+            <p>Color  : {{color}}</p>
+            <p>Passager Capacity : {{passagerCapacity}}</p>
+            <p>Fuel Type : {{fuelType}}</p>
+            <p>Fuel Capacity : {{fuelCapacity}}</p>
+
+        </div>
+    </div>
+</div>
+{{/each}}
+{{/if}}
