@@ -51,7 +51,7 @@ public class Parallelogram
     /**
      * @param height the height to set
      */
-    public void setSideB(double height) 
+    public void setheight(double height) 
     {
         this.height = height;
     }
