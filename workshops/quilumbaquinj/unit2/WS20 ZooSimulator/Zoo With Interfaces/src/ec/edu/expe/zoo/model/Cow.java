@@ -17,7 +17,7 @@ public class Cow implements IAnimal{
 
     @Override
     public void addToZoo(IZoo zoo) {
-        System.out.println("");
+        System.out.println("adding cow to zoo");
     }
     
 }
