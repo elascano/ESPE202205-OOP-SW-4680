@@ -22,6 +22,7 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 /workshops/toapantam/unit1/WS07FromUMLToCod/ChickenFarmer/nbproject/private/
@@ -350,6 +351,12 @@ hs_err_pid*
 /workshops/burbanol/unit2/New Folder/University/nbproject/private/
 =======
 >>>>>>> 4e54fe44633611af5d335b4d7141a5e1abbce783
+<<<<<<< HEAD
+/workshops/toapantam/unit2/New Folder/FileManager/nbproject/private/
+/workshops/toapantam/unit2/New Folder/FileManager/build/
+/workshops/toapantam/unit2/New Folder/FileManager/dist/
+/workshops/toapantam/unit2/WS16 Libraries/University/nbproject/private/
+=======
 >>>>>>> 6f966b86e552c922cfa420d5a25648587c597a68
 /workshops/silvar/unit2/WS14/Person/nbproject/private/
 /workshops/silvar/unit2/WS14/Person/build/
@@ -372,6 +379,13 @@ hs_err_pid*
 =======
 <<<<<<< HEAD
 >>>>>>> eedfc2bcdb85e402f1a91ba8e35ab81b28d343e5
+<<<<<<< HEAD
+/assignments/loorc/unit2/HW8/HW08ArrayAndFunctions/nbproject/private/
+/assignments/loorc/unit2/HW8/ArrayandFuntion/nbproject/private/
+/assignments/loorc/unit2/HW8/ArrayandFuntion/build/
+/workshops/loorc/unit2/WS16Libraries/FileManager/nbproject/private/
+/workshops/loorc/unit2/WS16Libraries/University/nbproject/private/
+=======
 >>>>>>> 01353c96a7ca781cd389c5e4f61338cc08ec98f7
 <<<<<<< HEAD
 /workshops/caizaw/unit 2/WS16Libreri/FileManager/nbproject/private/
@@ -407,6 +421,11 @@ hs_err_pid*
 /assignments/arguelloj/unit2/HW08ArrayAndFunctions/nbproject/private/
 /assignments/arguelloj/unit2/HW08ArrayAndFunctions/build/
 >>>>>>> 4827621c763548c0602aaeb482559eb124fb4006
+<<<<<<< HEAD
+/assignments/condorm/unit2/HW08ArrayAndFunctions/build/
+/workshops/condorm/unit2/WS15/FileManager/nbproject/private/
+/workshops/condorm/unit2/WS15/University/nbproject/private/
+=======
 >>>>>>> 50e39ba898aa025f7d41b470ab12f39928febe49
 >>>>>>> 838d0558820e493aea7dda649832d9708a7f040c
 <<<<<<< HEAD
@@ -463,6 +482,9 @@ hs_err_pid*
 =======
 /workshops/montufard/unit2/WS16Libraries/FileManager/nbproject/private/
 /workshops/montufard/unit2/WS16Libraries/University/nbproject/private/
+<<<<<<< HEAD
+/assignments/imbaquingaj/Unit1/HW05AntSimulator/AntSimulator/nbproject/private/
+=======
 /assignments/silvar/unit2/HW07WriteFiles/HW07WriteFiles/nbproject/private/
 /assignments/silvar/unit2/HW07WriteFiles/HW07WriteFiles/build/
 /workshops/arguelloj/unit2/WSO14Arrays/nbproject/private/
@@ -477,6 +499,7 @@ hs_err_pid*
 >>>>>>> 4c39e55b77248603311c5df6c4efe023b622f4ef
 >>>>>>> 8ad4e64ed9a6994fb9ce86eda76a2de495759bad
 >>>>>>> a970034b1c9d1e293dab225aa8a8f9cc12f85c31
+<<<<<<< HEAD
 /workshops/chavezg/unit2/WS0DataPersistance/DataPersistance/nbproject/private/
 /workshops/chavezg/unit2/WS20Interface/FileManager/nbproject/private/
 /workshops/chavezg/unit2/WS20Interface/ZooInterfaces/nbproject/private/
@@ -494,3 +517,330 @@ hs_err_pid*
 /workshops/chavezg/unit2/WS28GUIandInterfaces/Pompei/dist/
 /workshops/chavezg/unit2/WS28GUIandInterfaces/Examn2/nbproject/private/
 /workshops/chavezg/unit2/WS28GUIandInterfaces/KeyboardApp/nbproject/private/
+=======
+<<<<<<< HEAD
+/assignments/caizaw/unit2/HW09Libraries/University/build/
+=======
+<<<<<<< HEAD
+>>>>>>> a4f5213eba628544e577844545c48a3b67204299
+=======
+>>>>>>> 919e22088ce105b559bb70aca6dbfabc0697e31b
+<<<<<<< HEAD
+/workshops/burbanol/unit2/WS16FileManager/Exam/nbproject/private/
+=======
+>>>>>>> 93eb9f901f5b212588a103f155c0e3b025565126
+>>>>>>> 5bd73e4910519705287ad5034f88c89c3386b5f5
+>>>>>>> bebe7dcbce193e826e796edab809484cc92626a7
+>>>>>>> 032fd80fbc89c207436054b09fb5762658c3a0dd
+>>>>>>> dee9f9b7386cbcf030ce84726a089b3a71f60696
+<<<<<<< HEAD
+/workshops/loorc/unit2/WS18OOPFundamentals/DataPersistence/nbproject/private/
+/workshops/loorc/unit2/WS18OOPFundamentals/DataPersistence/build/
+/assignments/loorc/unit2/HW13MongoDB/JavaApplication14/nbproject/private/
+/assignments/loorc/unit2/HW13MongoDB/PruebaMongo/nbproject/private/
+/assignments/loorc/unit2/HW13MongoDB/PruebaMongo/build/
+/workshops/loorc/unit2/WS20/FileManager/nbproject/private/
+/workshops/loorc/unit2/WS20/FileManager/build/
+=======
+<<<<<<< HEAD
+/workshops/silvar/unit2/WS18OOFundamentals/DataPersistence/nbproject/private/
+/workshops/silvar/unit2/WS18OOFundamentals/DataPersistence/build/
+/workshops/silvar/unit2/WS18OOFundamentals/DataPersistence/dist/
+/workshops/silvar/unit2/WS18OOFundamentals/prueba/nbproject/private/
+/workshops/silvar/unit2/WS18OOFundamentals/prueba/build/
+=======
+<<<<<<< HEAD
+/workshops/molinag/unit2/WS18OOFundamentals/DataPersistence/nbproject/private/
+/workshops/molinag/unit2/WS18OOFundamentals/DataPersistence/build/
+/workshops/molinag/unit2/WS18OOFundamentals/DataPersistence/dist/
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+/workshops/riverac/unit2/New Folder/cHESS/nbproject/private/
+/workshops/riverac/unit2/New Folder/Chess 1/nbproject/private/
+/workshops/riverac/unit2/New Folder/DataPersistence/nbproject/private/
+=======
+=======
+>>>>>>> d01bf6351eccf63e78f33a291c8ef57ffc486380
+/workshops/quimbiulcoj/unit2/WS18OOFundamentals/DataPersistance/nbproject/private/
+<<<<<<< HEAD
+/workshops/tituañad/unit2/WS18OOFundamentals/DataPersistance/build/
+=======
+<<<<<<< HEAD
+/workshops/quilumbaquinj/unit2/WS18 DataPersistence/DataPersistance/nbproject/private/
+=======
+>>>>>>> a2f3eac16ba266fe7072605802f4a16073128513
+>>>>>>> 9ae5c0d9c8b1466cf0a28371ee26a52d9f701e19
+<<<<<<< HEAD
+>>>>>>> 9a678eae10e7917c95bfc4899c815457e022065f
+>>>>>>> 68579bdfd7910214e3f2f612f2d3408107b860f5
+=======
+/workshops/quilumbaquinj/unit2/WS16 ClassLibrary/FileManager/nbproject/private/
+/workshops/quilumbaquinj/unit2/WS16 ClassLibrary/FileManager/dist/
+/workshops/quilumbaquinj/unit2/WS16 ClassLibrary/FileManager/build/
+/workshops/quilumbaquinj/unit2/WS16 ClassLibrary/University/nbproject/private/
+/workshops/quilumbaquinj/unit2/WS16 ClassLibrary/University/build/
+/assignments/quilumbaquinJ/unit2/HW12/JSONREADER/nbproject/private/
+/assignments/quilumbaquinJ/unit2/HW12/JSONREADER/build/
+/assignments/quilumbaquinJ/unit2/HW12/JSONREADER/dist/
+/assignments/quilumbaquinJ/unit2/HW12/JSONTEST/nbproject/private/
+/assignments/quilumbaquinJ/unit2/HW12/JSONTEST/build/
+=======
+/workshops/arguelloj/unit2/WS18/DataPersistance/nbproject/private/
+>>>>>>> 4f40e7bbce180c5d655ed8ff3453962d6e3d7302
+<<<<<<< HEAD
+/workshops/quilumbaquinj/unit2/WS18 DataPersistence/DataPersistence/nbproject/private/
+=======
+>>>>>>> d01bf6351eccf63e78f33a291c8ef57ffc486380
+<<<<<<< HEAD
+/workshops/riverac/unit2/New Folder/FileManager/nbproject/private/
+/workshops/riverac/unit2/New Folder/ZooWithInterface/nbproject/private/
+/workshops/riverac/unit2/WS20Interface/ZooWithInterface/nbproject/private/
+/workshops/riverac/unit2/WS19FileManager/FileManager/nbproject/private/
+=======
+>>>>>>> e9c7273c107230a62672ec655ad8d0805dfd4682
+/assignments/arguelloj/unit2/WS/nbproject/private/
+<<<<<<< HEAD
+/assignments/montufard/unit2/HW13MongoBD/HW13/nbproject/private/
+/assignments/montufard/unit2/HW13MongoBD/HW13/build/
+=======
+>>>>>>> 718105a6992b15f93dcb80a7386128b5c4a8615b
+>>>>>>> f1f3b99acdc46c2f84762fe3e6481bbf1b451faa
+<<<<<<< HEAD
+/assignments/quimbiulcoj/unit2/MogoCRUD/nbproject/private/
+/workshops/quimbiulcoj/unit2/WS20Interfaces/FileManager/nbproject/private/
+/workshops/quimbiulcoj/unit2/WS20Interfaces/FileManager/build/
+/workshops/quimbiulcoj/unit2/WS20Interfaces/ZooWithInterfaces/nbproject/private/
+/assignments/quimbiulcoj/unit2/HW12CRUDPersistence/DataPersistence/DataPersistence/dist/
+=======
+<<<<<<< HEAD
+/workshops/imbaquingaj/Imbaquinga/Unit2/WSO20Interface/FileManager/target/
+=======
+/workshops/quilumbaquinj/unit2/WS20 ZooSimulator/ZooSimulator/nbproject/private/
+/workshops/quilumbaquinj/unit2/WS20 ZooSimulator/Zoo With Interfaces/nbproject/private/
+=======
+<<<<<<< HEAD
+>>>>>>> 80fd4efbd160cd651c2cf5aec500622a9ed0aed9
+>>>>>>> 56c5929aebe24466e78776c20b761ac44f80e678
+>>>>>>> fe89ebf7800919465e051391cce03f3d42e1f7c4
+>>>>>>> b054af857060ce2c48b05b0bc4edafeafa567bec
+<<<<<<< HEAD
+/assignments/montufard/unit2/HW13MongoBD/HW13/nbproject/private/
+/assignments/montufard/unit2/HW13MongoBD/HW13/build/
+=======
+/workshops/quilumbaquinj/unit2/WS18 DataPersistence/DataPersistence/build/
+>>>>>>> ddb2d46673b8f3bbac6b63e59360ee646a27c167
+>>>>>>> 0275404c99832b40295e1e19275ad751a75e885d
+>>>>>>> f1f866aef1ed47b29c0c76fe155c690d83da4d30
+<<<<<<< HEAD
+/workshops/villavicenciob/unit2/WS20 Interfaces/WS20 Interfaces/nbproject/private/
+/assignments/villavicenciob/unit2/HW09 Libraries/HW09Libraries/University/nbproject/private/
+/assignments/villavicenciob/unit2/HW09 Libraries/HW09Libraries/University/build/
+=======
+/workshops/ibarrar/unit2/WS20Interfaces/FileManager/build/
+/workshops/ibarrar/unit2/WS20Interfaces/FileManager/nbproject/private/
+=======
+>>>>>>> 22d62f3ce9b3a45e90c0f658720e4ea9283d8f50
+>>>>>>> b63f191000332cd2dccda5e5c8a37cecd4dfc018
+<<<<<<< HEAD
+/workshops/riverac/unit2/WS20Interface/Zoo2/ZooWithInterfaces/nbproject/private/
+/workshops/riverac/unit2/WS20Interface/Zoo2/ZooWithInterfaces/build/
+=======
+>>>>>>> 176f34dd9ed110be35f39c7e6e9f1839336aef92
+>>>>>>> 3bd7f4b876d19d89679ec0e64abd12e20b5f73cb
+>>>>>>> 797b8d082cc4c45a50781340ee5d0e6c4b1ef931
+>>>>>>> 8fdad54bb61c6b1df97ad1bed3c15f21dd19ad45
+>>>>>>> 66144c912a8ce0eb64b85a4c810e696e971845ad
+>>>>>>> 4ccc1dab1a10b8999f2fa9a64103176a932ae06f
+>>>>>>> 8927f1a96dd0e56d5f80f963df94b9022aa5322a
+/workshops/villavicenciob/unit2/WS20 Interfaces/WS20 AnimalInterfaces/build/
+/workshops/villavicenciob/unit2/WS20 Interfaces/WS20 AnimalInterfaces/nbproject/private/
+/workshops/villavicenciob/unit2/WS20 Interfaces/WS20 ZooInterface/ZooInterface/ZooInterface/build/
+/workshops/villavicenciob/unit2/WS20 Interfaces/WS20 ZooInterface/ZooInterface/ZooInterface/nbproject/private/
+/workshops/villavicenciob/unit2/WS20 Interfaces/WS20/build/
+/workshops/villavicenciob/unit2/WS20 Interfaces/WS20/nbproject/private/
+>>>>>>> 97d45bb8d42be1d4b0ec7326fa768249e1892d3b
+<<<<<<< HEAD
+/workshops/bedonr/unit2/WS20Interface/ZooWithInterfaces/nbproject/private/
+=======
+/workshops/quimbiulcoj/unit2/WS20Interfaces/WS20 AnimalInterfaces/build/
+/workshops/quimbiulcoj/unit2/WS20Interfaces/WS20 AnimalInterfaces/nbproject/private/
+/workshops/quimbiulcoj/unit2/WS20Interfaces/WS20 ZooInterface/ZooInterface/ZooInterface/build/
+/workshops/quimbiulcoj/unit2/WS20Interfaces/WS20 ZooInterface/ZooInterface/ZooInterface/nbproject/private/
+/workshops/quimbiulcoj/unit2/WS20Interfaces/FileManagerOG/nbproject/private/
+>>>>>>> b9d0e3d2bc4067eb73c17ab7b0d38e189e565cf5
+/assignments/quilumbaquinJ/unit2/HW15/HW15Pitfalls/nbproject/private/
+/assignments/quilumbaquinJ/unit2/HW15/HW15Pitfalls/build/
+/assignments/villavicenciob/unit2/HW15 Pitfalls/HW15Pitfalls/nbproject/private/
+/assignments/villavicenciob/unit2/HW15 Pitfalls/HW15Pitfalls/build/
+<<<<<<< HEAD
+>>>>>>> 7b48b4fd1356df68820aad8d303b66e33b78a5a1
+/workshops/loorc/unit2/WS22UnitTest/CalculeArea/nbproject/private/
+/workshops/loorc/unit2/WS22UnitTest/CalculeArea/build/
+/workshops/loorc/unit2/WS22UnitTest/Area/nbproject/private/
+/workshops/loorc/unit2/WS22UnitTest/Area/build/
+/workshops/loorc/unit2/W23/Equations/nbproject/private/
+/workshops/loorc/unit2/W23/Equations/build/
+/assignments/loorc/unit2/HW19TestPackage/TestPackage/nbproject/private/
+/workshops/loorc/unit2/WS24GUI/CoopLatina/nbproject/private/
+/workshops/loorc/unit2/WS24/CoopLatinaMarco/nbproject/private/
+/workshops/loorc/unit2/WS24/CoopLatinaMarco/build/
+/workshops/loorc/unit2/WS24/CoopLatinaMarco/dist/
+/workshops/loorc/unit2/WS28GUIAnInterfaces/CoopLatina/nbproject/private/
+/workshops/loorc/unit2/WS28GUIAnInterfaces/CoopLatina/build/
+/workshops/loorc/unit2/WS28GUIAnInterfaces/CoopLatina/dist/
+=======
+/workshops/arguelloj/unit2/WS22/areas/nbproject/private/
+/workshops/arguelloj/unit2/WS22/areas/build/
+<<<<<<< HEAD
+>>>>>>> a2d97794290951311948c01fbaf8763bf17708b4
+>>>>>>> c8e54a8779a3c05da363a71bb56629eb692cb8e6
+<<<<<<< HEAD
+/workshops/riverac/unit2/WS22/Rectangle/Rectangle/nbproject/private/
+/workshops/riverac/unit2/WS22/Rectangle/Rectangle/build/
+/workshops/riverac/unit2/WS23/WS23 UnitTestProfile_Function/New Folder/W22/nbproject/private/
+/workshops/riverac/unit2/WS23/WS23 UnitTestProfile_Function/New Folder/W22/build/
+/workshops/riverac/unit2/WS22/W22/nbproject/private/
+/workshops/riverac/unit2/WS24/Bookfy-WS24/nbproject/private/
+/workshops/riverac/unit2/WS24/Bookfy-WS24/build/
+/workshops/riverac/unit2/WS24/Bookfy-WS24/dist/
+/workshops/riverac/unit2/WS24/Bookfy_/nbproject/private/
+/workshops/riverac/unit2/WS24/Bookfy_/build/
+/workshops/riverac/unit2/WS24/Bookfy_/dist/
+/workshops/riverac/unit2/WS24/Movie/nbproject/private/
+/workshops/riverac/unit2/WS24/Movie/build/
+/workshops/riverac/unit2/WS24/Movie/dist/
+/workshops/riverac/unit2/WS24/Library/nbproject/private/
+/workshops/riverac/unit2/WS24/Library/build/
+/workshops/riverac/unit2/WS24/Library/dist/
+/workshops/riverac/unit2/WS24/Library_WS28/nbproject/private/
+/workshops/riverac/unit2/WS28/Bookify/nbproject/private/
+/workshops/riverac/unit2/WS28/Bookify_P/nbproject/private/
+/workshops/riverac/unit2/WS28/Bookify_P/build/
+/workshops/riverac/unit2/WS28/Bookify_P/dist/
+/assignments/riverac/unit2/HW09FileManager/FileManager/nbproject/private/
+/assignments/riverac/unit2/HW13MongoDB_DataPersistenceDataPersistence/PruebaMongoDb/nbproject/private/
+/assignments/riverac/unit2/HW15FixCode/HW15FixCode/nbproject/private/
+/workshops/riverac/unit2/WS16 FileManager/FileManager/nbproject/private/
+/workshops/riverac/unit2/WS22 UnitTest_Areas/Areas/build/
+/workshops/riverac/unit2/WS22 UnitTest_Areas/Areas/nbproject/private/
+/workshops/riverac/unit2/WS22 UnitTest_Areas/Rectangle/Rectangle/build/
+/workshops/riverac/unit2/WS22 UnitTest_Areas/Rectangle/Rectangle/nbproject/private/
+/workshops/riverac/unit2/WS24 GUI/Bookfy_/build/
+/workshops/riverac/unit2/WS24 GUI/Bookfy_/dist/
+/workshops/riverac/unit2/WS24 GUI/Bookfy_/nbproject/private/
+/workshops/riverac/unit2/WS24 GUI/Library/nbproject/private/
+=======
+>>>>>>> 4e20b5f1253862ecad5a2468f380d8d47ddd1b51
+>>>>>>> 581eb6ff4c726bef487d30dec6760dced8695c8c
+>>>>>>> 2a2e2f72b108942524e272ec5996cf579e5ef284
+<<<<<<< HEAD
+/workshops/molinag/unit2/WS24GUI/Coop-Latina/nbproject/private/
+/workshops/molinag/unit2/WS24GUI/JavaApplication15/nbproject/private/
+/workshops/molinag/unit2/WS24GUI/JavaApplication15/build/
+/workshops/molinag/unit2/WS24GUI/JavaApplication15/dist/
+/workshops/molinag/unit2/WS28GUIAndInterfaces/CoopLatina/nbproject/private/
+/workshops/molinag/unit2/WS28GUIAndInterfaces/CoopLatina/build/
+=======
+>>>>>>> ed34016334faca6dadb6d3780143dbbc63b40718
+<<<<<<< HEAD
+/workshops/bedonr/unit2/WS18OOFundamentals/DataPersistence/nbproject/private/
+/assignments/bedonr/unit2/WH15FixCode/LongMethods/nbproject/private/
+/workshops/bedonr/unit2/Calculodepruebas/Equations/nbproject/private/
+/workshops/bedonr/unit2/Calculodepruebas/Equations/build/
+/workshops/bedonr/unit2/WS23TestProfileFunction/Equations/build/
+/workshops/bedonr/unit2/WS23TestProfileFunction/Equations/nbproject/private/
+/workshops/bedonr/unit2/WS24GUI/StylistIrelia/nbproject/private/
+/workshops/bedonr/unit2/WS24GUI/ProductApp/nbproject/private/
+=======
+>>>>>>> cdc6efb3710869a3f10ab4867de25e6db454d826
+<<<<<<< HEAD
+/workshops/quimbiulcoj/unit2/WS24GUI/BooKiFi/nbproject/private/
+=======
+/workshops/quilumbaquinj/unit2/WS22UnitTest/Equations/nbproject/private/
+/workshops/quilumbaquinj/unit2/WS23GraphicInterfaces/BookifyProject/nbproject/private/
+=======
+/workshops/arguelloj/unit2/New Folder/StylesIrelia/nbproject/private/
+/workshops/arguelloj/unit2/New Folder/StyliesIrealia/nbproject/private/
+>>>>>>> bdb1b5b1b71cdd7008816d0772f4b206f5f31728
+<<<<<<< HEAD
+/workshops/silvar/unit2/WS24GUI/BookyFy/nbproject/private/
+/workshops/silvar/unit2/WS24GUI/BookiFy/nbproject/private/
+/workshops/silvar/unit2/WS24GUI/BookiFy/build/
+/workshops/silvar/unit2/WS28GUIAndInterfaces/Booki/nbproject/private/
+/workshops/silvar/unit2/WS28GUIAndInterfaces/JavaApplication12/nbproject/private/
+/workshops/silvar/unit2/WS28GUIAndInterfaces/Booki/build/
+/workshops/silvar/unit2/WS28GUIAndInterfaces/Booki/dist/
+=======
+>>>>>>> 5ed8420fa59312a0c1817cc2d534fa5c8d33efc1
+>>>>>>> aec7b08c8bbccbb1d729af0f9a837ebd3aceb7a0
+<<<<<<< HEAD
+/workshops/quilumbaquinj/unit2/WS22UnitTest/Equations/build/
+/exams/quilumbaquinj/unit2/POO_EXAM_2P/nbproject/private/
+/exams/quilumbaquinj/unit2/Q1/nbproject/private/
+/exams/quilumbaquinj/unit2/Q61-70/nbproject/private/
+/exams/quilumbaquinj/unit2/Q61-70/build/
+=======
+<<<<<<< HEAD
+/workshops/quimbiulcoj/unit2/WS24GUI/BooKiFi/build/
+/workshops/quimbiulcoj/unit2/WS24GUI/BooKiFi/dist/
+/workshops/quimbiulcoj/unit2/W28GUIandInterfaces/BooKifiTables/nbproject/private/
+/workshops/quimbiulcoj/unit2/W28GUIandInterfaces/BooKifiTables/build/
+/exams/bedonr/unit2/Question38-51/JavaApplication38/nbproject/private/
+/exams/bedonr/unit2/Question38-51/Questions38-51/nbproject/private/
+/exams/bedonr/unit2/P-71-100/ComputerStore/nbproject/private/
+/exams/bedonr/unit2/P-71-100/ComputerStore/build/
+=======
+<<<<<<< HEAD
+/workshops/villavicenciob/unit2/WS29 DesignTableProject/WS29/nbproject/private/
+/workshops/villavicenciob/unit2/WS29 DesignTableProject/WS29/build/
+=======
+/workshops/arguelloj/unit2/WS28/StyliesIrelia/nbproject/private/
+/workshops/arguelloj/unit2/WS28/StyliesIrelia/build/
+/workshops/arguelloj/unit2/WS28/StyliesIrelia/dist/
+>>>>>>> ffc604de9009f00044763698287d3a70b301356b
+>>>>>>> 4fd2a534089f09220a8b2ba9dff7f5db7f198453
+/workshops/imbaquingaj/Imbaquinga/Unit2/WS25MVC/FruitApp/build/
+/workshops/imbaquingaj/Imbaquinga/Unit2/WS25MVC/FruitApp/dist/
+/workshops/imbaquingaj/Imbaquinga/Unit2/WS25MVC/FruitApp/nbproject/private/
+>>>>>>> 0288ff3364d03a8fe1f5617d79d1e160c160faaf
+<<<<<<< HEAD
+/exams/caizaw/unit 2/QuestionForniture/nbproject/private/
+=======
+/assignments/quimbiulcoj/unit2/HW13 MongoDBPersistance/DataPersistance/build/
+/assignments/quimbiulcoj/unit2/HW13 MongoDBPersistance/DataPersistance/nbproject/private/
+/assignments/quimbiulcoj/unit2/HW17UnitTest/Areas/build/
+/assignments/quimbiulcoj/unit2/HW17UnitTest/Areas/nbproject/private/
+/assignments/quimbiulcoj/unit2/HW20GUIProject/BooKiFi/build/
+/assignments/quimbiulcoj/unit2/HW20GUIProject/BooKiFi/nbproject/private/
+/assignments/quimbiulcoj/unit2/HW21GUIAndInterfacesProject/BooKifiGUI/build/
+/assignments/quimbiulcoj/unit2/HW21GUIAndInterfacesProject/BooKifiGUI/nbproject/private/
+/workshops/quimbiulcoj/unit2/WS16FileManager/FileManager/build/
+/workshops/quimbiulcoj/unit2/WS16FileManager/FileManager/nbproject/private/
+/workshops/quimbiulcoj/unit2/WS19FileManager/FileManager/build/
+/workshops/quimbiulcoj/unit2/WS19FileManager/FileManager/nbproject/private/
+/workshops/quimbiulcoj/unit2/WS19ObjectForMongoDB/FileManager/build/
+/workshops/quimbiulcoj/unit2/WS19ObjectForMongoDB/FileManager/nbproject/private/
+>>>>>>> c23d63decc1fbfb36ef25ac87de2fc6ae4b4e290
+/assignments/burbanol/unit2/HW16OPPInAnotherLenguage/nbproject/private/
+/assignments/montufard/unit2/HW20GUI_Project/JavaApplication15/nbproject/private/
+/assignments/montufard/unit2/HW20GUI_Project/CoopLatina/nbproject/private/
+<<<<<<< HEAD
+/exams/montufard/unit2/Question38-51/nbproject/private/
+/exams/montufard/unit2/Students/nbproject/private/
+/exams/montufard/unit2/Q71-100-ExecutableCode/nbproject/private/
+=======
+>>>>>>> 69921242ce7c73b54640590ed6984b98631d091f
+<<<<<<< HEAD
+/exams/silvar/unit2/New Folder/ExamQ71-100/nbproject/private/
+/exams/silvar/unit2/Q71-100/ExamQ71-100/build/
+/exams/silvar/unit2/Q71-100/ExamQ71-100/dist/
+/exams/silvar/unit2/Q71-100/ExamQ71-100/nbproject/private/
+=======
+>>>>>>> 0bc5b0e81475982ccf8205dc8d6cae918612e9fb
+>>>>>>> fd8d78f7ee3fc5990e0e280a6714bc8f390fd4a5
+>>>>>>> 3ef8ca8be91c0e985a276287727fcf31f4638b49
+>>>>>>> 4b758b43e4367736f1ee54525b9977bcefa11f54
+/workshops/chiribogad/unit2/WS23 TestProfileFunction/Equations/build/
+>>>>>>> fbf0b007fafd11f35ab8f3ca24829ff68e57f432
+>>>>>>> 0da20260b527185c684c386b26203a13511b3288

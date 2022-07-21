@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="CoopLatinaMarco">
+  <ClassDiagramComponents>
+    <Class name="BusController" package="espe.edu.ec.CoopLatinaMarco.controller" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Interface name="Customer" package="espe.edu.ec.CoopLatinaMarco.controller" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Methods/>
+    </Interface>
+    <Class name="PassengerController" package="espe.edu.ec.CoopLatinaMarco.controller" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="RoutesController" package="espe.edu.ec.CoopLatinaMarco.controller" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Bus" package="espe.edu.ec.CoopLatinaMarco.model" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="matricule" type="String" visibility="private"/>
+        <Field name="nameOfDriver" type="String" visibility="private"/>
+        <Field name="route" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="String" name="matricule"/>
+          <Argument type="String" name="nameOfDriver"/>
+          <Argument type="int" name="route"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getMatricule" returnType="String" visibility="public"/>
+        <Method name="setMatricule" returnType="void" visibility="public">
+          <Argument type="String" name="matricule"/>
+        </Method>
+        <Method name="getNameOfDriver" returnType="String" visibility="public"/>
+        <Method name="setNameOfDriver" returnType="void" visibility="public">
+          <Argument type="String" name="nameOfDriver"/>
+        </Method>
+        <Method name="getRoute" returnType="int" visibility="public"/>
+        <Method name="setRoute" returnType="void" visibility="public">
+          <Argument type="int" name="route"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Connection" package="espe.edu.ec.CoopLatinaMarco.model" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Customer" package="espe.edu.ec.CoopLatinaMarco.model" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Passenger" package="espe.edu.ec.CoopLatinaMarco.model" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="email" type="String" visibility="private"/>
+        <Field name="Password" type="String" visibility="private"/>
+        <Field name="ConfirmPassword" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="int" name="id"/>
+          <Argument type="String" name="email"/>
+          <Argument type="String" name="Password"/>
+          <Argument type="String" name="ConfirmPassword"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getEmail" returnType="String" visibility="public"/>
+        <Method name="setEmail" returnType="void" visibility="public">
+          <Argument type="String" name="email"/>
+        </Method>
+        <Method name="getPassword" returnType="String" visibility="public"/>
+        <Method name="setPassword" returnType="void" visibility="public">
+          <Argument type="String" name="Password"/>
+        </Method>
+        <Method name="getConfirmPassword" returnType="String" visibility="public"/>
+        <Method name="setConfirmPassword" returnType="void" visibility="public">
+          <Argument type="String" name="ConfirmPassword"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Routes" package="espe.edu.ec.CoopLatinaMarco.model" visibility="public" xPosition="20.0" yPosition="420.0">
+      <Fields>
+        <Field name="nameRoute" type="String" visibility="private"/>
+        <Field name="idRoute" type="int" visibility="private"/>
+        <Field name="distanceKm" type="int" visibility="private"/>
+        <Field name="priceOfRoute" type="float" visibility="private"/>
+        <Field name="avalibleRoute" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nameRoute"/>
+          <Argument type="int" name="idRoute"/>
+          <Argument type="int" name="distanceKm"/>
+          <Argument type="float" name="priceOfRoute"/>
+          <Argument type="boolean" name="avalibleRoute"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getNameRoute" returnType="String" visibility="public"/>
+        <Method name="setNameRoute" returnType="void" visibility="public">
+          <Argument type="String" name="nameRoute"/>
+        </Method>
+        <Method name="getIdRoute" returnType="int" visibility="public"/>
+        <Method name="setIdRoute" returnType="void" visibility="public">
+          <Argument type="int" name="idRoute"/>
+        </Method>
+        <Method name="getDistanceKm" returnType="int" visibility="public"/>
+        <Method name="setDistanceKm" returnType="void" visibility="public">
+          <Argument type="int" name="distanceKm"/>
+        </Method>
+        <Method name="getPriceOfRoute" returnType="float" visibility="public"/>
+        <Method name="setPriceOfRoute" returnType="void" visibility="public">
+          <Argument type="float" name="priceOfRoute"/>
+        </Method>
+        <Method name="isAvalibleRoute" returnType="boolean" visibility="public"/>
+        <Method name="setAvalibleRoute" returnType="void" visibility="public">
+          <Argument type="boolean" name="avalibleRoute"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ticket" package="espe.edu.ec.CoopLatinaMarco.model" visibility="public" xPosition="320.0" yPosition="420.0">
+      <Fields>
+        <Field name="route" type="String" visibility="private"/>
+        <Field name="bus" type="String" visibility="private"/>
+        <Field name="address" type="String" visibility="private"/>
+        <Field name="price" type="float" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="route"/>
+          <Argument type="String" name="bus"/>
+          <Argument type="String" name="address"/>
+          <Argument type="float" name="price"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getRoute" returnType="String" visibility="public"/>
+        <Method name="setRoute" returnType="void" visibility="public">
+          <Argument type="String" name="route"/>
+        </Method>
+        <Method name="getBus" returnType="String" visibility="public"/>
+        <Method name="setBus" returnType="void" visibility="public">
+          <Argument type="String" name="bus"/>
+        </Method>
+        <Method name="getAddress" returnType="String" visibility="public"/>
+        <Method name="setAddress" returnType="void" visibility="public">
+          <Argument type="String" name="address"/>
+        </Method>
+        <Method name="getPrice" returnType="float" visibility="public"/>
+        <Method name="setPrice" returnType="void" visibility="public">
+          <Argument type="float" name="price"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Frmabout" package="espe.edu.ec.CoopLatinaMarco.view" visibility="public" xPosition="620.0" yPosition="420.0">
+      <Fields>
+        <Field name="btncback" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jDesktopPane1" type="javax.swing.JDesktopPane" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getIconImage" returnType="Image" visibility="public"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="btncbackActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmCoopLatina" package="espe.edu.ec.CoopLatinaMarco.view" visibility="public" xPosition="920.0" yPosition="420.0">
+      <Fields>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jMenu1" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jMenu2" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jMenu3" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jMenu4" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jMenuBar1" type="javax.swing.JMenuBar" visibility="private"/>
+        <Field name="jMenuItem1" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuItem2" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuItem3" type="javax.swing.JMenuItem" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getIconImage" returnType="Image" visibility="public"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmLogin" package="espe.edu.ec.CoopLatinaMarco.view" visibility="public" xPosition="1220.0" yPosition="420.0">
+      <Fields>
+        <Field name="btnLeave" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnLogin" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="lblUserError" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtPass" type="javax.swing.JPasswordField" visibility="private"/>
+        <Field name="txtUser" type="java.awt.TextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getIconImage" returnType="Image" visibility="public"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="btnLoginActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnLeaveActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="txtUserKeyPressed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="txtPassKeyPressed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmPassenger" package="espe.edu.ec.CoopLatinaMarco.view" visibility="public" xPosition="1520.0" yPosition="420.0">
+      <Fields>
+        <Field name="btnBack" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jTextField1" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField2" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField3" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getIconImage" returnType="Image" visibility="public"/>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="btnBackActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jTextField1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DataBaseManager" package="util" visibility="public" xPosition="1820.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="read" returnType="String" visibility="public">
+          <Argument type="String" name="dataSource"/>
+        </Method>
+        <Method name="create" returnType="boolean" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="update" returnType="boolean" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="String" name="criterion"/>
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="delete" returnType="boolean" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="String" name="criterion"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FileManager" package="util" visibility="public" xPosition="2120.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="read" returnType="String" visibility="public">
+          <Argument type="String" name="dataSource"/>
+        </Method>
+        <Method name="create" returnType="boolean" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="update" returnType="boolean" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="String" name="criterion"/>
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="delete" returnType="boolean" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="String" name="criterion"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="Persistence" package="util" visibility="public" xPosition="20.0" yPosition="820.0">
+      <Methods>
+        <Method name="read" returnType="String" visibility="public">
+          <Argument type="String" name="dataSource"/>
+        </Method>
+        <Method name="create" returnType="boolean" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="update" returnType="boolean" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="String" name="criterion"/>
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="delete" returnType="boolean" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="String" name="criterion"/>
+        </Method>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="util.FileManager" target="util.Persistence"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="util.DataBaseManager" target="util.Persistence"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

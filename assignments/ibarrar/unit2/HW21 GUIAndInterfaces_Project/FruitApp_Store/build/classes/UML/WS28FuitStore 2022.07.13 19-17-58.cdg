@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="WS28FuitStore">
+  <ClassDiagramComponents>
+    <Class name="FruitController" package="ec.edu.espe.FruitStore.Controller" visibility="public" xPosition="1210.0" yPosition="275.0">
+      <Fields>
+        <Field name="persistence" type="Persistence" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="register" returnType="boolean" visibility="public">
+          <Argument type="Fruit" name="fruit"/>
+        </Method>
+        <Method name="update" returnType="boolean" visibility="public">
+          <Argument type="String" name="criterion"/>
+          <Argument type="Fruit" name="fruit"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Fruit" package="ec.edu.espe.FruitStore.model" visibility="public" xPosition="583.0" yPosition="322.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="texture" type="String" visibility="private"/>
+        <Field name="quantity" type="double" visibility="private"/>
+        <Field name="weight" type="double" visibility="private"/>
+        <Field name="cost" type="float" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="texture"/>
+          <Argument type="double" name="quantity"/>
+          <Argument type="double" name="weight"/>
+          <Argument type="float" name="cost"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="see" returnType="void" visibility="public"/>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getTexture" returnType="String" visibility="public"/>
+        <Method name="setTexture" returnType="void" visibility="public">
+          <Argument type="String" name="texture"/>
+        </Method>
+        <Method name="getQuantity" returnType="double" visibility="public"/>
+        <Method name="setQuantity" returnType="void" visibility="public">
+          <Argument type="double" name="quantity"/>
+        </Method>
+        <Method name="getWeight" returnType="double" visibility="public"/>
+        <Method name="setWeight" returnType="void" visibility="public">
+          <Argument type="double" name="weight"/>
+        </Method>
+        <Method name="getCost" returnType="float" visibility="public"/>
+        <Method name="setCost" returnType="void" visibility="public">
+          <Argument type="float" name="cost"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmFruit" package="ec.edu.espe.FruitStore.view" visibility="public" xPosition="30.0" yPosition="20.0">
+      <Fields>
+        <Field name="fruit" type="Fruit" visibility="private"/>
+        <Field name="fruitController" type="FruitController" visibility="package"/>
+        <Field name="btnADD" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnREMOVE" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnTexture" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="btnUPDATE" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton3" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jComboBox1" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jEditorPane1" type="javax.swing.JEditorPane" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jTextField1" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField2" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="spnQuantity" type="javax.swing.JSpinner" visibility="private"/>
+        <Field name="txtCost" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtFruit" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtQuantity" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtTexture" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtWeight" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jButton3ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnADDActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnUPDATEActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="readFrominput" returnType="void" visibility="public"/>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DatabaseManager" package="utils" visibility="public" xPosition="479.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="read" returnType="String" visibility="public">
+          <Argument type="String" name="source"/>
+        </Method>
+        <Method name="create" returnType="boolean" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="update" returnType="boolean" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="String" name="criterion"/>
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="delete" returnType="boolean" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="String" name="criterion"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FileManager" package="utils" visibility="public" xPosition="1669.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="read" returnType="String" visibility="public">
+          <Argument type="String" name="source"/>
+        </Method>
+        <Method name="create" returnType="boolean" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="update" returnType="boolean" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="String" name="criterion"/>
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="delete" returnType="boolean" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="String" name="criterion"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="Persistence" package="utils" visibility="public" xPosition="1165.0" yPosition="31.0">
+      <Methods>
+        <Method name="read" returnType="String" visibility="public">
+          <Argument type="String" name="source"/>
+        </Method>
+        <Method name="create" returnType="boolean" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="update" returnType="boolean" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="String" name="criterion"/>
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="delete" returnType="boolean" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="String" name="criterion"/>
+        </Method>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="fruitController" source="ec.edu.espe.FruitStore.view.FrmFruit" target="ec.edu.espe.FruitStore.Controller.FruitController" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="fruit" source="ec.edu.espe.FruitStore.view.FrmFruit" target="ec.edu.espe.FruitStore.model.Fruit" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="persistence" source="ec.edu.espe.FruitStore.Controller.FruitController" target="utils.Persistence" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="utils.DatabaseManager" target="utils.Persistence"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="utils.FileManager" target="utils.Persistence"/>
+    <UseRelation source="ec.edu.espe.FruitStore.Controller.FruitController" target="ec.edu.espe.FruitStore.model.Fruit" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
