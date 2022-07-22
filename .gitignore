@@ -815,6 +815,18 @@ hs_err_pid*
 >>>>>>> fd8d78f7ee3fc5990e0e280a6714bc8f390fd4a5
 >>>>>>> 3ef8ca8be91c0e985a276287727fcf31f4638b49
 >>>>>>> 4b758b43e4367736f1ee54525b9977bcefa11f54
+<<<<<<< HEAD
+/workshops/chiribogad/unit2/WS23 TestProfileFunction/Equations/build/
+>>>>>>> fbf0b007fafd11f35ab8f3ca24829ff68e57f432
+>>>>>>> 0da20260b527185c684c386b26203a13511b3288
+/workshops/chavezg/unit2/FileManager/nbproject/private/
+/workshops/chavezg/unit2/WS27Menu/Bakery/build/
+/workshops/chavezg/unit2/WS27Menu/Bakery/dist/
+/workshops/chavezg/unit2/WS27Menu/Bakery/nbproject/private/
+/workshops/chavezg/unit2/WS29Tables/Bakery/build/
+/workshops/chavezg/unit2/WS29Tables/Bakery/dist/
+/workshops/chavezg/unit2/WS29Tables/Bakery/nbproject/private/
+=======
 /assignments/arguelloj/unit2/HW03/nbproject/private/
 /assignments/arguelloj/unit2/HW03/build/
 /assignments/arguelloj/unit2/HW07 FileData/FileData/dist/
@@ -823,3 +835,4 @@ hs_err_pid*
 /assignments/arguelloj/unit2/HW15 TemporaryFields/HW15 TemporaryFields/HW15 TemporaryFields/dist/
 /assignments/arguelloj/unit2/HW18 UnitTest_CalculateArea_Rectangle/AreasTriangle/dist/
 /assignments/arguelloj/unit2/WS19/nbproject/private/
+>>>>>>> 0c5b1e24a5315b57c7fef101f110dc98074bf3ae
