@@ -3,7 +3,7 @@ package ec.edu.espe.question3851.view;
 
 /**
  *
- * @author Luis Burbano, DCCO- ESPE, BettaCoders
+ * @author Carlos Rivera, DCCO-ESPE, CODEX++
  */
 public class Question3851 {
 
