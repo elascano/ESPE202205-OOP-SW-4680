@@ -1,5 +1,5 @@
 
-package ec.edu.espe.models;
+package ec.edu.espe.area.models;
 
 /**
  *
@@ -18,7 +18,7 @@ public class Triangle {
     }
     
     
-    public double calculatedArea(){
+    public double area(){
         double semiperimeter;
         double area;
         

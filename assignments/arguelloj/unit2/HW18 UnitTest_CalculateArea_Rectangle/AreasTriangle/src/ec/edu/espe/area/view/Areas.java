@@ -20,9 +20,9 @@ public class Areas {
         Scanner scanner;
         scanner = new Scanner(System.in);
         System.out.println("Side A");
-        sideA = scanner.nextDouble();
+        sideA = 23;
         System.out.println("Side B");
-        sideB = scanner.nextDouble();
+        sideB = 235;
         System.out.println("Side C");
         sideC = scanner.nextDouble();
         triangle = new Triangle(sideA, sideB, sideC);
