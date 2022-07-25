@@ -14,12 +14,13 @@ import java.util.Iterator;
 import java.util.Scanner;
 import org.bson.Document;
 import org.bson.conversions.Bson;
+import utils.NoSqlManager;
 
 /**
  *
  * @author QUILUMBAQUIN JAIRO, DCC0-ESPE: CODEX++
  */
-public class MongoDBManager extends NoSqlManager {
+public class MongoDBManager extends NoSqlManager{
 
     String collection;
 
