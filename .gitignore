@@ -773,19 +773,6 @@ hs_err_pid*
 /workshops/arguelloj/unit2/WS28/StyliesIrelia/build/
 /workshops/arguelloj/unit2/WS28/StyliesIrelia/dist/
 >>>>>>> ffc604de9009f00044763698287d3a70b301356b
-<<<<<<< HEAD
-/exams/riverac/unit2/Q31-38/Exam1/nbproject/private/
-/exams/riverac/unit2/Q31-38/Exam2/nbproject/private/
-/exams/riverac/unit2/Q31-38/EXAM2P/nbproject/private/
-/exams/riverac/unit2/Q31-38/Exam2/build/
-/exams/riverac/unit2/Q31-38/Question3851/nbproject/private/
-/exams/riverac/unit2/Food/nbproject/private/
-/exams/riverac/unit2/Food/build/
-/exams/riverac/unit2/Food/dist/
-/exams/riverac/unit2/Question28/nbproject/private/
-/exams/riverac/unit2/Question61/nbproject/private/
-/exams/riverac/unit2/Question61/build/
-=======
 >>>>>>> 4fd2a534089f09220a8b2ba9dff7f5db7f198453
 /workshops/imbaquingaj/Imbaquinga/Unit2/WS25MVC/FruitApp/build/
 /workshops/imbaquingaj/Imbaquinga/Unit2/WS25MVC/FruitApp/dist/
@@ -828,18 +815,6 @@ hs_err_pid*
 >>>>>>> fd8d78f7ee3fc5990e0e280a6714bc8f390fd4a5
 >>>>>>> 3ef8ca8be91c0e985a276287727fcf31f4638b49
 >>>>>>> 4b758b43e4367736f1ee54525b9977bcefa11f54
-<<<<<<< HEAD
-/workshops/chiribogad/unit2/WS23 TestProfileFunction/Equations/build/
->>>>>>> fbf0b007fafd11f35ab8f3ca24829ff68e57f432
->>>>>>> 0da20260b527185c684c386b26203a13511b3288
-/workshops/chavezg/unit2/FileManager/nbproject/private/
-/workshops/chavezg/unit2/WS27Menu/Bakery/build/
-/workshops/chavezg/unit2/WS27Menu/Bakery/dist/
-/workshops/chavezg/unit2/WS27Menu/Bakery/nbproject/private/
-/workshops/chavezg/unit2/WS29Tables/Bakery/build/
-/workshops/chavezg/unit2/WS29Tables/Bakery/dist/
-/workshops/chavezg/unit2/WS29Tables/Bakery/nbproject/private/
-=======
 /assignments/arguelloj/unit2/HW03/nbproject/private/
 /assignments/arguelloj/unit2/HW03/build/
 /assignments/arguelloj/unit2/HW07 FileData/FileData/dist/
@@ -848,6 +823,7 @@ hs_err_pid*
 /assignments/arguelloj/unit2/HW15 TemporaryFields/HW15 TemporaryFields/HW15 TemporaryFields/dist/
 /assignments/arguelloj/unit2/HW18 UnitTest_CalculateArea_Rectangle/AreasTriangle/dist/
 /assignments/arguelloj/unit2/WS19/nbproject/private/
+<<<<<<< HEAD
 >>>>>>> 0c5b1e24a5315b57c7fef101f110dc98074bf3ae
 /assignments/bedonr/unit2/HW17UnitTest/AreaHeptagon/build/
 /assignments/bedonr/unit2/HW17UnitTest/AreaHeptagon/nbproject/private/
@@ -855,3 +831,6 @@ hs_err_pid*
 /exams/riverac/unit2/Q31-38/Question3851_/nbproject/private/
 /exams/riverac/unit2/Question3851/nbproject/private/
 /exams/riverac/unit2/Q71-100Food/dist/
+=======
+/assignments/arguelloj/unit2/WS19/dist/
+>>>>>>> e70e627d29872fc22dd560dfb4603acfe10268a7

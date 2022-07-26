@@ -20,7 +20,7 @@ public class DBTester {
     public static void main(String[] args) {
         MongoDBManager mdb;
         mdb= new MongoDBManager();
-        mdb.Delete();
+        mdb.Read();
     }
     
 }
