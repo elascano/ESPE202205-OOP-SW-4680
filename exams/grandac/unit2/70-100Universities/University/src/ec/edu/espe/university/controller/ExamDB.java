@@ -9,7 +9,7 @@ import org.bson.Document;
 
 /**
  *
- * @author Juan Quimbiulco, DCCO-ESPE, CODEX++
+ * @author Carlos Granda, DCCO-ESPE, Syntax Error
  */
 public class ExamDB {
     

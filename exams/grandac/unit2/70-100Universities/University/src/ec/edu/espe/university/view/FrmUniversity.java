@@ -6,7 +6,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Juan Quimbiulco, DCCO-ESPE, CODEX++
+ * @author Carlos Granda, DCCO-ESPE, Syntax Error
  */
 public class FrmUniversity extends javax.swing.JFrame {
 

@@ -5,7 +5,7 @@ import javax.swing.JTextField;
 
 /**
  *
- * @author Juan Quimbiulco, DCCO-ESPE, CODEX++
+ * @author Carlos Granda, DCCO-ESPE, Syntax Error
  */
 class InputNumbersValidation {
 
