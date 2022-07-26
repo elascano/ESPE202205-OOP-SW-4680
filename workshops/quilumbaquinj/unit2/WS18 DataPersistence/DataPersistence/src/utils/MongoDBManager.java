@@ -14,7 +14,6 @@ import java.util.Iterator;
 import java.util.Scanner;
 import org.bson.Document;
 import org.bson.conversions.Bson;
-import utils.NoSqlManager;
 
 /**
  *
