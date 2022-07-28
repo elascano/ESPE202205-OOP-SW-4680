@@ -19,7 +19,7 @@ import org.bson.conversions.Bson;
  *
  * @author QUILUMBAQUIN JAIRO, DCC0-ESPE: CODEX++
  */
-public class MongoDBManager extends NoSqlManager {
+public class MongoDBManager extends NoSqlManager{
 
     String collection;
 

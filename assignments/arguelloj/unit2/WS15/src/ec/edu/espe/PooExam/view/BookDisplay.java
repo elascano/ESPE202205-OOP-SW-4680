@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package ec.edu.espe.PooExam.view;
 
 import ec.edu.espe.PooExam.model.Book;
@@ -9,7 +5,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Juan Quimbiulco, DCCO-ESPE, CODEX++
+ * @author Joel Arguello, DCCO-ESPE, BETTACODDERS
  */
 public class BookDisplay {
     public static void main(String[] args) {
