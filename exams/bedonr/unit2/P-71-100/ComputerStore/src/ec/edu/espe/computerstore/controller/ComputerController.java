@@ -3,8 +3,10 @@ package ec.edu.espe.computerstore.controller;
 
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
-import com.sun.jdi.connect.spi.Connection;
-import javax.swing.text.Document;
+import static com.mongodb.client.model.Filters.eq;
+import ec.edu.espe.computerstore.model.computers;
+import org.bson.Document;
+
 
 /**
  *
@@ -12,10 +14,19 @@ import javax.swing.text.Document;
  */
 public class ComputerController {
      
-    
-    private  MongoDatabase mongoDB = Connection.mongodb;
+    computers computer;
+    private  MongoDatabase mongoDB=Connection.mongodb;
 
     private MongoCollection<Document> mongoCollection;
+
+     public ComputerController(computers computer, String collectionName) {
+        this.computer = computer;
+        this.mongoCollection = mongoDB.getCollection(collectionName);
+    }
+     public ComputerController() {
+        this.computer = new computers();
+        this.mongoCollection = mongoDB.getCollection("computers");
+    }
 
    
 
@@ -25,11 +36,8 @@ public class ComputerController {
       
     }
     
-    public void create()  {
-
-        org.bson.Document document = model.buildDocument();
-
-        mongoCollection.insertOne(document);
-
+    public Document read(String id,String fieldName) {
+        
+        return mongoCollection.find(eq(fieldName,id)).first();
     }
 }
