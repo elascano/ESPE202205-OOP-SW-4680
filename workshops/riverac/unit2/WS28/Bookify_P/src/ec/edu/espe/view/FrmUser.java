@@ -2,6 +2,7 @@ package ec.edu.espe.view;
 
 
 import ec.edu.espe.model.User;
+import javax.swing.JOptionPane;
 import utils.DataBaseManager;
 import utils.Persistence;
 
@@ -49,6 +50,12 @@ public class FrmUser extends javax.swing.JFrame {
 
         jLabel3.setText("TotalSales:");
 
+        txtId.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtIdActionPerformed(evt);
+            }
+        });
+
         btnAdd.setText("Add");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,6 +65,7 @@ public class FrmUser extends javax.swing.JFrame {
 
         btnSearch.setText("Search");
 
+        btnDelete.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         btnDelete.setText("Delete");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,7 +93,7 @@ public class FrmUser extends javax.swing.JFrame {
                 .addComponent(btnUpDate)
                 .addGap(18, 18, 18)
                 .addComponent(btnDelete)
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -139,7 +147,7 @@ public class FrmUser extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(txtTotalSales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14))
         );
@@ -148,7 +156,7 @@ public class FrmUser extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
-       
+        
     }//GEN-LAST:event_btnDeleteActionPerformed
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
@@ -160,6 +168,19 @@ public class FrmUser extends javax.swing.JFrame {
         persistence.update("Users", txtId.getText(), user);
         readFromInput();
     }//GEN-LAST:event_btnUpDateActionPerformed
+
+    private void txtIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdActionPerformed
+            if (validarNumeros(txtId.getText().trim())){
+             JOptionPane.showMessageDialog(rootPane, "Los datos no son correctos");
+            } else{
+             JOptionPane.showMessageDialog(rootPane, "Los datos son correctos");   
+            } 
+    }//GEN-LAST:event_txtIdActionPerformed
+    
+    public static boolean validarNumero(String datos){
+        return datos.matches("[0-9]");
+    }
+    
     public void  readFromInput(){
         int id;
         String name;
@@ -170,6 +191,7 @@ public class FrmUser extends javax.swing.JFrame {
         
         user = new User(id, name, totalSales);
     }
+    
     /**
      * @param args the command line arguments
      */
@@ -219,4 +241,8 @@ public class FrmUser extends javax.swing.JFrame {
     private javax.swing.JTextField txtName;
     private javax.swing.JTextField txtTotalSales;
     // End of variables declaration//GEN-END:variables
+
+    private boolean validarNumeros(String trim) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
