@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Bookify">
+  <ClassDiagramComponents>
+    <Class name="FormsHandler" package="ec.edu.espe.Bookify.controller" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="goToMainScreen" returnType="void" visibility="public" isStatic="true">
+          <Argument type="JFrame" name="jFrameToClose"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="InputNumbersValidation" package="ec.edu.espe.Bookify.controller" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="ValidationNumbers" returnType="boolean" visibility="public">
+          <Argument type="String" name="inputJT"/>
+        </Method>
+        <Method name="NumberValidation" returnType="void" visibility="public">
+          <Argument type="JTextField" name="txtField"/>
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+          <Argument type="JLabel" name="lblfield"/>
+        </Method>
+        <Method name="NumberandLengthValidation" returnType="void" visibility="public">
+          <Argument type="JTextField" name="txtField"/>
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+          <Argument type="JLabel" name="lblfield"/>
+          <Argument type="int" name="length"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MongoDBManager" package="ec.edu.espe.Bookify.controller" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="collection" type="String" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="EstablishConnection" returnType="MongoDatabase" visibility="public"/>
+        <Method name="CreateUser" returnType="void" visibility="public">
+          <Argument type="User" name="user"/>
+        </Method>
+        <Method name="CreateMovie" returnType="void" visibility="public">
+          <Argument type="Movie" name="movie"/>
+        </Method>
+        <Method name="CreateBook" returnType="void" visibility="public">
+          <Argument type="Book" name="book"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Book" package="ec.edu.espe.Bookify.model" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="title" type="String" visibility="private"/>
+        <Field name="author" type="String" visibility="private"/>
+        <Field name="publisher" type="String" visibility="private"/>
+        <Field name="yearOfPúblication" type="String" visibility="private"/>
+        <Field name="ISBN" type="String" visibility="private"/>
+        <Field name="available" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="title"/>
+          <Argument type="String" name="author"/>
+          <Argument type="String" name="publisher"/>
+          <Argument type="String" name="yearOfPúblication"/>
+          <Argument type="String" name="ISBN"/>
+          <Argument type="boolean" name="available"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getTitle" returnType="String" visibility="public"/>
+        <Method name="setTitle" returnType="void" visibility="public">
+          <Argument type="String" name="title"/>
+        </Method>
+        <Method name="getAuthor" returnType="String" visibility="public"/>
+        <Method name="setAuthor" returnType="void" visibility="public">
+          <Argument type="String" name="author"/>
+        </Method>
+        <Method name="getPublisher" returnType="String" visibility="public"/>
+        <Method name="setPublisher" returnType="void" visibility="public">
+          <Argument type="String" name="publisher"/>
+        </Method>
+        <Method name="getYearOfPúblication" returnType="String" visibility="public"/>
+        <Method name="setYearOfPúblication" returnType="void" visibility="public">
+          <Argument type="String" name="yearOfPúblication"/>
+        </Method>
+        <Method name="getISBN" returnType="String" visibility="public"/>
+        <Method name="setISBN" returnType="void" visibility="public">
+          <Argument type="String" name="ISBN"/>
+        </Method>
+        <Method name="isAvailable" returnType="boolean" visibility="public"/>
+        <Method name="setAvailable" returnType="void" visibility="public">
+          <Argument type="boolean" name="available"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Movie" package="ec.edu.espe.Bookify.model" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="title" type="String" visibility="private"/>
+        <Field name="genre" type="String" visibility="private"/>
+        <Field name="idiom" type="String" visibility="private"/>
+        <Field name="available" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="title"/>
+          <Argument type="String" name="genre"/>
+          <Argument type="String" name="idiom"/>
+          <Argument type="boolean" name="available"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getTitle" returnType="String" visibility="public"/>
+        <Method name="setTitle" returnType="void" visibility="public">
+          <Argument type="String" name="title"/>
+        </Method>
+        <Method name="getGenre" returnType="String" visibility="public"/>
+        <Method name="setGenre" returnType="void" visibility="public">
+          <Argument type="String" name="genre"/>
+        </Method>
+        <Method name="getIdiom" returnType="String" visibility="public"/>
+        <Method name="setIdiom" returnType="void" visibility="public">
+          <Argument type="String" name="idiom"/>
+        </Method>
+        <Method name="isAvailable" returnType="boolean" visibility="public"/>
+        <Method name="setAvailable" returnType="void" visibility="public">
+          <Argument type="boolean" name="available"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Product" package="ec.edu.espe.Bookify.model" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Staff" package="ec.edu.espe.Bookify.model" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields>
+        <Field name="StaffName" type="String" visibility="private"/>
+        <Field name="StaffId" type="int" visibility="private"/>
+        <Field name="StaffAge" type="int" visibility="private"/>
+        <Field name="StaffPhone" type="int" visibility="private"/>
+        <Field name="StaffAddress" type="String" visibility="private"/>
+        <Field name="StaffPasword" type="int" visibility="private"/>
+        <Field name="StaffBlackList" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="StaffName"/>
+          <Argument type="int" name="StaffId"/>
+          <Argument type="int" name="StaffAge"/>
+          <Argument type="int" name="StaffPhone"/>
+          <Argument type="String" name="StaffAddress"/>
+          <Argument type="int" name="StaffPasword"/>
+          <Argument type="boolean" name="StaffBlackList"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="addUser" returnType="User" visibility="public"/>
+        <Method name="StaffData" returnType="String" visibility="public"/>
+        <Method name="RecordUser" returnType="void" visibility="public"/>
+        <Method name="VerifyDataBase" returnType="void" visibility="public"/>
+        <Method name="ShowUsers" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getStaffName" returnType="String" visibility="public"/>
+        <Method name="setStaffName" returnType="void" visibility="public">
+          <Argument type="String" name="StaffName"/>
+        </Method>
+        <Method name="getStaffId" returnType="int" visibility="public"/>
+        <Method name="setStaffId" returnType="void" visibility="public">
+          <Argument type="int" name="StaffId"/>
+        </Method>
+        <Method name="getStaffAge" returnType="int" visibility="public"/>
+        <Method name="setStaffAge" returnType="void" visibility="public">
+          <Argument type="int" name="StaffAge"/>
+        </Method>
+        <Method name="getStaffPhone" returnType="int" visibility="public"/>
+        <Method name="setStaffPhone" returnType="void" visibility="public">
+          <Argument type="int" name="StaffPhone"/>
+        </Method>
+        <Method name="getStaffAddress" returnType="String" visibility="public"/>
+        <Method name="setStaffAddress" returnType="void" visibility="public">
+          <Argument type="String" name="StaffAddress"/>
+        </Method>
+        <Method name="getStaffPasword" returnType="int" visibility="public"/>
+        <Method name="setStaffPasword" returnType="void" visibility="public">
+          <Argument type="int" name="StaffPasword"/>
+        </Method>
+        <Method name="isStaffBlackList" returnType="boolean" visibility="public"/>
+        <Method name="setStaffBlackList" returnType="void" visibility="public">
+          <Argument type="boolean" name="StaffBlackList"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="User" package="ec.edu.espe.Bookify.model" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields>
+        <Field name="UserName" type="String" visibility="private"/>
+        <Field name="UserId" type="int" visibility="private"/>
+        <Field name="UserEmail" type="String" visibility="private"/>
+        <Field name="UserPhone" type="int" visibility="private"/>
+        <Field name="UserAddress" type="String" visibility="private"/>
+        <Field name="UserAge" type="int" visibility="private"/>
+        <Field name="UserPassword" type="int" visibility="private"/>
+        <Field name="Pasuwu" type="int" visibility="package"/>
+        <Field name="Password" type="int" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="int" name="id"/>
+          <Argument type="String" name="userEmail"/>
+          <Argument type="int" name="userPhone"/>
+          <Argument type="String" name="userAddress"/>
+          <Argument type="int" name="age"/>
+          <Argument type="int" name="password"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getUserName" returnType="String" visibility="public"/>
+        <Method name="setUserName" returnType="void" visibility="public">
+          <Argument type="String" name="UserName"/>
+        </Method>
+        <Method name="getUserId" returnType="int" visibility="public"/>
+        <Method name="setUserId" returnType="void" visibility="public">
+          <Argument type="int" name="UserId"/>
+        </Method>
+        <Method name="getUserEmail" returnType="String" visibility="public"/>
+        <Method name="setUserEmail" returnType="void" visibility="public">
+          <Argument type="String" name="UserEmail"/>
+        </Method>
+        <Method name="getUserPhone" returnType="int" visibility="public"/>
+        <Method name="setUserPhone" returnType="void" visibility="public">
+          <Argument type="int" name="UserPhone"/>
+        </Method>
+        <Method name="getUserAge" returnType="int" visibility="public"/>
+        <Method name="setUserAge" returnType="void" visibility="public">
+          <Argument type="int" name="UserAge"/>
+        </Method>
+        <Method name="getUserPassword" returnType="int" visibility="public"/>
+        <Method name="setUserPassword" returnType="void" visibility="public">
+          <Argument type="int" name="UserPassword"/>
+        </Method>
+        <Method name="UserData" returnType="String" visibility="public"/>
+        <Method name="RecordUserData" returnType="String" visibility="public"/>
+        <Method name="setUserAddress" returnType="void" visibility="public">
+          <Argument type="String" name="UserAddress"/>
+        </Method>
+        <Method name="readData" returnType="void" visibility="public"/>
+        <Method name="getUserAddress" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Bookify" package="ec.edu.espe.Bookify.view" visibility="public" xPosition="20.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="printMenu" returnType="void" visibility="private" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Class name="FrmAbout" package="ec.edu.espe.Bookify.view" visibility="public" xPosition="320.0" yPosition="420.0">
+      <Fields>
+        <Field name="btnReturn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="btnReturnActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmAddBook" package="ec.edu.espe.Bookify.view" visibility="public" xPosition="620.0" yPosition="420.0">
+      <Fields>
+        <Field name="cmboBool" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton2" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtAuthor" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtIsbn" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtPublisher" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtTitle" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="txtPublisherActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="AvailableBook" returnType="boolean" visibility="public">
+          <Argument type="String" name="option"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmAddMovie" package="ec.edu.espe.Bookify.view" visibility="public" xPosition="920.0" yPosition="420.0">
+      <Fields>
+        <Field name="cmbAvailable" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton2" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtMovieGender" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtMovieIdiom" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtMovieTitle" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="jButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="txtMovieIdiomActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="AvailableMovie" returnType="boolean" visibility="public">
+          <Argument type="String" name="option"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmBookify" package="ec.edu.espe.Bookify.view" visibility="public" xPosition="1220.0" yPosition="420.0">
+      <Fields>
+        <Field name="jMenu1" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jMenu2" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jMenuBar1" type="javax.swing.JMenuBar" visibility="private"/>
+        <Field name="jMenuItem1" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuItem2" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuItem3" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuItem4" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuItem5" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jMenuItem6" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="jMenuItem1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jMenuItem2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jMenuItem3ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jMenuItem4ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jMenuItem5ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jMenuItem6ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmHelp" package="ec.edu.espe.Bookify.view" visibility="public" xPosition="1520.0" yPosition="420.0">
+      <Fields>
+        <Field name="btnReturn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="btnReturnActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmUser1" package="ec.edu.espe.Bookify.view" visibility="public" xPosition="1820.0" yPosition="420.0">
+      <Fields>
+        <Field name="TFaddres" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="TFage" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="TFemail" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="TFpassword" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="TFphone" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="TFuserId" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="TFuserName" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jToggleButton1" type="javax.swing.JToggleButton" visibility="private"/>
+        <Field name="lblErrorAge" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lblErrorId" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lblErrorPhone" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="jButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jToggleButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="TFuserNameKeyPressed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="TFuserIdKeyPressed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="TFphoneKeyPressed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="TFageKeyPressed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="AgeValidation" returnType="int" visibility="public">
+          <Argument type="String" name="Age"/>
+        </Method>
+        <Method name="JTValidation" returnType="int" visibility="public">
+          <Argument type="String" name="Age"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="ec.edu.espe.Bookify.model.Staff" target="ec.edu.espe.Bookify.model.User" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ec.edu.espe.Bookify.controller.MongoDBManager" target="ec.edu.espe.Bookify.model.Movie" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ec.edu.espe.Bookify.controller.MongoDBManager" target="ec.edu.espe.Bookify.model.User" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ec.edu.espe.Bookify.controller.MongoDBManager" target="ec.edu.espe.Bookify.model.Book" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

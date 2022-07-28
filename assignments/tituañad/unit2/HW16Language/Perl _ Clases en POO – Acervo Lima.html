@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)https://es.acervolima.com/perl-clases-en-poo/ -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="La mayor colección de tutoriales y referencias">
+    <meta name="keywords" content="Python, JavaScript, PHP, Java, Kotlin, C#, C++, C, Golang, Acervo Lima">
+    <link rel="shortcut icon" href="https://es.acervolima.com/resources/img/favicon.ico" type="image/x-icon">
+    <title>Perl | Clases en POO – Acervo Lima</title>
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto:wght@100;300;400&display=swap');
+
+/* CONFIGURAÇÕES GLOBAIS */
+
+:root {
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+    word-wrap: break-word;
+}
+
+.conteiner {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.text-decoration-none {
+    text-decoration: none;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+} 
+
+table {
+    display: block;
+    border-spacing: 0;
+    margin: 0 0 2.3rem;
+    width: 100%;
+    overflow-x: auto;
+}
+
+th {
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+}
+
+td {
+    padding: 0.6rem 1rem 0.6rem 0;
+}
+
+th, td {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+    font-weight: normal;
+    text-align: left;
+}
+
+ul {
+    list-style: square;
+}
+
+pre {
+    font-size: 1.2rem;
+    padding: 1rem;
+    border-left: 3px solid greenyellow;
+    background-color: #272822;
+    font-family: monospace;
+    color: #fff;
+    overflow-x: auto;
+}
+
+p {
+    margin: 0px;
+    margin-bottom: 1rem;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+.post-content div {
+    max-width: 100%;
+    overflow: auto;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+/* FIM DAS CONFIGURAÇÕES GLOBAIS */
+
+/* HEADER PRINCIPAL */
+
+.header-principal {
+    background-color: #000;
+}
+
+.titulo-subtitulo-outter {
+    text-align: center;
+    padding: 2.6rem 0px 1.4rem;
+    margin: 0px 1rem;
+}
+
+.titulo-acervolima {
+    margin: 0px;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    font-weight: lighter;
+    font-size: calc(2rem + 4.5vw);
+    line-height: 1.1;
+    letter-spacing: 2px;
+}
+
+.principal-link-acervolima {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.subtitulo-acervolima {
+    color: #666;
+    margin: 0px;
+    font-size: 1rem;
+    line-height: 1;
+    letter-spacing: 2px;
+}
+
+.navbar-outter {
+    background-color: #404040;
+}
+
+#btn-navbar-toggler {
+    display: none;
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 0.6rem;
+    color: #CCC;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.nav-link-ativo {
+    color: #FFF;
+}
+
+.nav-link:hover {
+    background-color: #303030;
+    color: #FFF;
+}
+
+/* FIM HEADER PRINCIPAL */
+
+
+/* MAIN PRINCIPAL */
+
+.row {
+    display: flex;
+}
+
+.primarywrap {
+    flex: 0 0 auto;
+    width: 66.6%;
+    padding-right: calc(1.5rem * .5);
+    padding-left: calc(1.5rem * .5);
+    padding-bottom: 1.5rem
+}
+
+.secundarywrap {
+    flex: 0 0 auto;
+    width: 33.3%;
+    padding-right: calc(1.5rem * .5);
+    padding-left: calc(1.5rem * .5);
+}
+
+.main-principal {
+    padding-top: 2.6rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.main-principal a {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    color: #b00;
+}
+
+.titulo-post {
+    margin: 0px 0px 1rem;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.9rem;
+    color: #000;
+}
+
+.titulo-post a {
+    color: currentColor;
+    border: none;
+}
+
+.bloco-resumo-artigo {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.resumo-post {
+    line-height: 1.9rem;
+}
+
+.link-lermais-outter {
+    margin: .5rem .25rem 1.5rem;
+    text-align: right;
+}
+
+.footer-resumo-post {
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.45);
+    letter-spacing: 2px;
+}
+
+.footer-resumo-post a {
+    color: inherit;
+}
+
+.footer-resumo-post a:hover {
+    color: #b00;
+}
+
+.nav-prev-next {
+    display: flex;
+    margin-top: 2rem;
+    justify-content: space-between;
+
+}
+
+a.prev-next {
+    padding: 0.25rem 1.5rem;
+    background-color: #000;
+    color: #FFF;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.widget:last-child {
+    margin-top: 1.5rem;
+}
+
+.widget-titulo {
+    color: #000;
+    font-size: 1.5rem;
+}
+
+.widgets-wrap a {
+    border: none;
+    color: inherit;
+    text-decoration: none;
+}
+
+.widgets-wrap a:hover {
+    color: #b00;
+}
+
+.list-group {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.list-group-flush > .list-group-item {
+    border-width: 0 0 1px;
+}
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: .5rem 1rem;
+    color: #212529;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+}
+
+/* FIM MAIN PRINCIPAL */
+
+/* FOOTER PRINCIPAL */
+
+.footer-principal {
+    margin-top: 1.5rem;
+    background-color: #f8f9fa;
+}
+
+.footer-principal a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+.linha-footer {
+    max-width: 1116px;
+    display: flex;
+    margin: 0px auto;
+    color: #6c757d;
+}
+
+.coluna-footer {
+    min-width: 24.99%;
+    padding: 1.5rem;
+}
+
+.titulo-coluna {
+    display: inline-block;
+    margin: 0px;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.footer-copyright {
+    padding: 1.5rem;
+    background-color: #000;
+    color: #666;
+    text-align: center;
+}
+
+.colecao-posts {
+    margin-bottom: 2rem;
+}
+
+.titulo-colecao {
+    padding: 4rem 2.3rem 1.8rem;
+    background-color: #EEE;
+    color: #606060;
+}
+
+/* FIM FOOTER PRINCIPAL */
+
+/* POST */
+
+.creditos {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    padding: 1rem 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.45);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.creditos a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+.creditos a:hover {
+    color: #b00;
+}
+
+a.link-categoria {
+    display: inline-block;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+    padding: 0.25rem 1rem;
+    background-color: #444;
+    color: rgba(255,255,255,.75);
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.post-content > * {
+    margin: 0px 0px 1.2rem;
+}
+
+/* FIM POST */
+
+@media (max-width: 800px) {
+
+    /* NAVEGAÇÃO MOBILE */
+
+    .btn-navbar-toggler-wrap {
+        padding: .2rem .5rem;
+    }
+
+    #btn-navbar-toggler {
+        display: block;
+        border: 2px solid #EEE;
+        border-radius: 6px;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        background: none;
+        cursor: pointer;
+    }
+
+    #menu {
+        max-height: 0px;
+        overflow-y: hidden;
+        transition: 0.6s;
+    }
+
+    .nav-link {
+        display: block;
+    }
+
+    #nav.menu-mobile-active #menu{
+        display: block;
+        max-height: 300px;
+    }
+
+    #navbar-toggler-icon {
+        display: block;
+        width: 20px;
+        border-top: 2px solid;
+    }
+
+    #navbar-toggler-icon::after, #navbar-toggler-icon::before {
+        display: block;
+        margin-top: 5px;
+        content: '';
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        transition: .3s;
+        position: relative;
+    }
+
+    #nav.menu-mobile-active #navbar-toggler-icon {
+        border-top-color: transparent;
+    }
+
+    #nav.menu-mobile-active #navbar-toggler-icon::after {
+        transform: rotate(135deg);
+        top: -7px;
+    }
+
+    #nav.menu-mobile-active #navbar-toggler-icon::before {
+        transform: rotate(-135deg);
+    }
+
+    /* FIM NAVEGAÇÃO MOBILE */
+
+    /* MAIN PRINCIPAL */
+
+    .row {
+        flex-direction: column;
+    }
+
+    .primarywrap, .secundarywrap {
+        width: auto;
+    }
+
+    .widget {
+        margin-top: 2rem;
+    }
+
+    /* FIM MAIN PRINCIPAL */
+
+    /* FOOTER PRINCIPAL */
+
+    .linha-footer {
+        display: block;
+        text-align: center;
+    }
+
+    .coluna-footer {
+        max-width: 100%;
+    }
+
+    /* FIM FOOTER PRINCIPAL */
+}
+    </style>
+
+<style type="text/css">
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: 'Circular-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Book-cd7d2bcec649b1243839a15d5eb8f0a3.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 500;
+  font-style:  normal;
+  font-family: 'Circular-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Medium-d74eac43c78bd5852478998ce63dceb3.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: 'Circular-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Bold-83b8ceaf77f49c7cffa44107561909e4.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 900;
+  font-style:  normal;
+  font-family: 'Circular-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Black-bf067ecb8aa777ceb6df7d72226febca.woff2') format('woff2');
+}</style></head>
+<body>
+
+    <header class="header-principal">
+        <div class="titulo-subtitulo-outter">
+            <div class="titulo-outter">
+                <h1 class="titulo-acervolima"><a class="principal-link-acervolima" href="https://es.acervolima.com/">Acervo Lima</a></h1>
+            </div>
+            <div class="subtitulo-outter">
+                <h2 class="subtitulo-acervolima">La mayor colección de tutoriales y referencias</h2>
+            </div>
+        </div>
+        <div class="navbar-outter">
+            <nav id="nav" class="navbar-principal conteiner">
+                <div class="btn-navbar-toggler-wrap">
+                    <button id="btn-navbar-toggler" type="button" aria-label="Abrir Menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+                        <span id="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div id="menu" class="navbar-nav" role="menu">
+                    <a class="nav-link nav-link-ativo" href="https://es.acervolima.com/">Home</a>
+                    <a class="nav-link" href="https://es.acervolima.com/category/python/">Python</a>
+                    <a class="nav-link" href="https://es.acervolima.com/category/javascript/">JavaScript</a>
+                    <a class="nav-link" href="https://es.acervolima.com/category/php/">PHP</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-principal conteiner">
+        <div class="outter">
+            <div class="row">
+                <div class="col-md-8 primarywrap pb-4">
+                    <div class="wrap-main-content">
+                        <article class="post">
+                            <header class="header-post">
+                                <h1 class="titulo-post">Perl | Clases en POO</h1>
+                            </header>
+                            <div class="post-content">
+                                <p>En este mundo moderno, donde el uso de la programación se ha movido al máximo y tiene su aplicación en todos y cada uno de los trabajos de nuestra vida, necesitamos adaptarnos a esos paradigmas de programación que están directamente vinculados a los ejemplos del mundo real. Ha habido un cambio drástico en la competitividad y la complejidad de los problemas del mundo real, por lo que la industria ahora requiere algunos enfoques versátiles hacia estas complejidades. El concepto de lenguaje de programación orientado a objetos se adapta cómodamente a estas complejidades y es una manera perfecta de dar forma a cualquier lenguaje de programación de manera que los ejemplos del mundo real se vuelvan muy fáciles de resolver. La programación orientada a objetos (POO) utiliza la metodología de enfatizar más en los objetos que en el procedimiento. El concepto de POO se trata de trabajar en términos de objetos y la interacción entre objetos.&nbsp;</p>
+<p><strong>Nota:</strong> La programación orientada a objetos tiene como objetivo implementar entidades del mundo real como <i><strong>herencia</strong></i> , <i><strong>encapsulación</strong></i> , <i><strong>polimorfismo</strong></i> , etc. en programación. El objetivo principal de OOP es unir los datos y las funciones que operan en ellos para que ninguna otra parte del código pueda acceder a estos datos excepto esa función.</p>
+<h2>Objeto -</h2>
+<p>Un objeto es una instancia de una clase de la estructura de datos con algunas características y comportamiento. Por ejemplo, decimos que una "Apple" es un objeto. Sus características son: <i>es una fruta</i> , <i>su color es el rojo</i> , <i>etc</i> . Su comportamiento es: " <i>sabe bien</i> ". En el concepto de POO, las características de un objeto están representadas por sus datos y el comportamiento está representado por sus funciones asociadas. Así, un objeto es una entidad que almacena datos y tiene su interfaz a través de funciones.</p>
+<h2>Clase -</h2>
+<p>Una clase es un concepto ampliado de estructuras de datos. Define un modelo prototipo de objetos que comprenden datos. Y un objeto es una instancia de una clase. Una clase se compone de miembros de datos y funciones de datos y es un tipo de datos predefinido creado según los requisitos del usuario al que se puede acceder y utilizar creando una instancia de esa clase.</p>
+<p><strong>Ejemplo:</strong>&nbsp;<br> Considere una clase de <i>Escuela</i> . Puede haber escuelas con diferentes nombres y estructura, pero todas comparten algunas características comunes como estudiantes, maestros, personal, etc. Así que aquí la escuela es la clase con maestros, estudiantes y padres como miembros de datos, y las funciones de los miembros pueden ser Calculate_students_marks(), calculate_teachers_salary() y Parents_Database().&nbsp;</p>
+<div id="d6f45c53-ff16-4cc5-8b91-eb6ee7037116"></div>
+<p><strong>Miembro de datos: los</strong> miembros de datos son las variables de datos y las funciones de miembro son las funciones que se utilizan para manipular estas variables y, juntos, estos miembros de datos y las funciones de miembro definen las propiedades y el comportamiento de los objetos en una clase.&nbsp;</p>
+<p><img alt="" src="./Perl _ Clases en POO – Acervo Lima_files/Class-21.jpg"></p>
+<h3>Definición de una clase -</h3>
+<p>Es muy fácil definir una clase en Perl. En Perl, una clase corresponde a un paquete. Para definir una clase, primero cargamos y construimos un <a href="https://es.acervolima.com/paquetes-en-perl/">paquete</a> . Un paquete es una unidad precontenida de variables y subrutinas definidas por el usuario, que se puede utilizar en todo el programa.</p>
+<p><strong>Sintaxis:</strong>&nbsp;&nbsp;</p>
+<pre>package Class_name</pre>
+<h3>Crear clases y usar objetos</h3>
+<p>Se puede crear una clase en Perl usando el paquete de palabras clave, pero para crear un objeto, se llama a un <a href="https://es.acervolima.com/perl-constructores-y-destructores/">constructor</a> . Un constructor se define en una clase como método.&nbsp;</p>
+<p><strong>La creación de una instancia de un</strong>&nbsp;<br> nombre de clase de <strong>clase</strong> A y un nombre de constructor puede ser según los requisitos del usuario. La mayoría de los programadores prefieren usar 'nuevo' como nombre de constructor para sus programas, ya que es fácil de recordar y más factible de usar que cualquier otro nombre de constructor complejo.&nbsp;&nbsp;</p>
+<pre class="bloco-codigo"><code>package student     // This is the class student
+sub Student_data    // Constructor to class
+{
+    my $class = shift;
+    my $self = {
+                _StudentFirstName =&gt; shift;
+                _StudentLastName =&gt; shift;
+               };
+                
+    print "Student's First Name is $self -&gt;{_StudentFirstName}\n";
+    print "Student's Last Name is $self -&gt;{_StudentLastName}\n";
+    bless $self, $class;
+    return $self;
+}</code></pre>
+<p>En el código de ejemplo anterior, se usa una función llamada <strong>bendición</strong> . Esta función se utiliza para adjuntar un objeto a una clase que se le pasa como argumento.&nbsp;</p>
+<p><strong>Sintaxis:</strong>&nbsp;</p>
+<pre>bless Object_name, Class Name</pre>
+<p><strong>Creación de un objeto</strong>&nbsp;<br> Se <strong>crea una</strong> instancia de un objeto en Perl utilizando el constructor definido en la clase. Un nombre de objeto puede ser cualquier variable según los requisitos del usuario, pero es convencional nombrarlo con respecto a la relevancia con la clase.&nbsp;&nbsp;</p>
+<pre class="bloco-codigo"><code>$Data = Student_data student( "Shikhar", "Mathur");</code></pre>
+<p><strong>Ejemplo:</strong>&nbsp;</p>
+<pre class="bloco-codigo"><code>use strict;
+use warnings;
+ 
+package student;
+ 
+# constructor
+sub student_data
+{
+ 
+    # shift will take package name 'student'
+    # and assign it to variable 'class'
+    my $class_name = shift;
+    my $self = {
+                'StudentFirstName' =&gt; shift,
+                'StudentLastName' =&gt; shift
+               };
+    # Using bless function
+    bless $self, $class_name;
+     
+    # returning object from constructor
+    return $self;
+}
+ 
+# Object creating and constructor calling
+my $Data = student_data student("Geeks","forGeeks");
+ 
+# Printing the data
+print "$Data-&gt;{'StudentFirstName'}\n";
+print "$Data-&gt;{'StudentLastName'}\n";</code></pre>
+<div><strong>Producción:</strong>&nbsp;<pre>Frikis
+forGeeks</pre><p>&nbsp;</p></div>
+<p>El concepto de usar clases en Programación Orientada a Objetos es muy importante ya que describe completamente las aplicaciones del mundo real y puede ser adoptado en problemas del mundo real.<br>&nbsp;</p>
+<div id="82d2079a-8120-480f-9fc7-5cda825d56e7"></div>
+                            </div>
+                            <div class="clearfix nav-prev-next">
+                                <a class="float-start prev-next" href="https://es.acervolima.com/perl-gestion-de-bases-de-datos-mediante-dbi/">Anterior</a>
+                                <a class="float-end prev-next" href="https://es.acervolima.com/perl-siguiente-operador/">Próximo</a>
+                            </div>
+                            <footer class="footer-post">
+                                <div class="creditos">
+                                    by <a href="https://auth.geeksforgeeks.org/user/ShikharMathur1/articles" target="_blank">ShikharMathur1</a> and translated by Acervo Lima From <a href="https://www.geeksforgeeks.org/perl-classes-in-oop/" target="_blank">Perl | Classes in OOP</a>. License: <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CCBY-SA</a>
+                                </div>
+                                <div class="post-categorias">
+                                    <a href="https://es.acervolima.com/category/perl-oop/" class="link-categoria">Perl-OOP</a><a href="https://es.acervolima.com/category/picked/" class="link-categoria">Picked</a><a href="https://es.acervolima.com/category/perl/" class="link-categoria">Perl</a>
+                                </div>
+                            </footer>
+
+                        </article>
+                    </div>
+                    
+                </div>
+                <div class="col-md-4 secundarywrap">
+                    <div class="widgets-wrap">
+                        <div class="widget widget-lastest-posts">
+                            <h2 class="text-black text-uppercase widget-titulo">Latest posts</h2>
+                            <div class="widget-content">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><a href="https://es.acervolima.com/experiencia-de-entrevista-de-epicor/">Experiencia de entrevista de Epicor</a></li><li class="list-group-item"><a href="https://es.acervolima.com/experiencia-de-entrevista-de-ebix/">Experiencia de entrevista de Ebix</a></li><li class="list-group-item"><a href="https://es.acervolima.com/experiencia-de-entrevista-pickyourtrail-set-1/">Experiencia de entrevista Pickyourtrail (SET 1)</a></li><li class="list-group-item"><a href="https://es.acervolima.com/c-dot-experiencia-de-entrevista-a-tiempo-completo/">C-DOT (Experiencia de entrevista a tiempo completo)</a></li><li class="list-group-item"><a href="https://es.acervolima.com/diferencia-maxima-de-peso/">Diferencia máxima de peso</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="widget widget-most-popular-posts">
+                            <h2 class="text-black text-uppercase widget-titulo">Most popular posts</h2>
+                            <div class="widget-content">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><a href="https://es.acervolima.com/como-redondear-numeros-en-python/">¿Cómo redondear números en Python?</a></li><li class="list-group-item"><a href="https://es.acervolima.com/10-mejores-ide-para-desarrolladores-de-c-o-c-en-2021/">10 mejores IDE para desarrolladores de C o C++ en 2021</a></li><li class="list-group-item"><a href="https://es.acervolima.com/cual-es-la-probabilidad-de-obtener-un-10-o-una-jota-de-una-baraja-de-52-cartas/">¿Cuál es la probabilidad de obtener un 10 o una jota de una baraja de 52 cartas?</a></li><li class="list-group-item"><a href="https://es.acervolima.com/formas-de-importar-archivos-csv-en-google-colab/">Formas de importar archivos CSV en Google Colab</a></li><li class="list-group-item"><a href="https://es.acervolima.com/como-sumar-y-restar-dias-usando-datetime-en-python/">¿Cómo sumar y restar días usando DateTime en Python?</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-principal">
+        <div class="linha-footer">
+            <div class="coluna-footer">
+                <span class="titulo-coluna">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-diamond-fill" viewBox="0 0 16 16">
+                        <path d="M9.05.435c-.58-.58-1.52-.58-2.1 0L4.047 3.339 8 7.293l3.954-3.954L9.049.435zm3.61 3.611L8.708 8l3.954 3.954 2.904-2.905c.58-.58.58-1.519 0-2.098l-2.904-2.905zm-.706 8.614L8 8.708l-3.954 3.954 2.905 2.904c.58.58 1.519.58 2.098 0l2.905-2.904zm-8.614-.706L7.292 8 3.339 4.046.435 6.951c-.58.58-.58 1.519 0 2.098l2.904 2.905z"></path>
+                    </svg>
+                    Acervo Lima
+                </span>
+                <p>Acervo Lima provides translations of articles published on GeekForGeeks for several languages. </p>
+            </div>
+            <div class="coluna-footer">
+                <span class="titulo-coluna">Main categories</span>
+                <p><a class="footer-coluna-link" href="https://es.acervolima.com/category/python/">Python</a></p>
+                <p><a class="footer-coluna-link" href="https://es.acervolima.com/category/javascript/">JavaScript</a></p>
+                <p><a class="footer-coluna-link" href="https://es.acervolima.com/category/php/">PHP</a></p>
+                <p><a class="footer-coluna-link" href="https://es.acervolima.com/category/java/">Java</a></p>
+            </div>
+            <div class="coluna-footer">
+                <span class="titulo-coluna">More categories</span>
+                <p><a class="footer-coluna-link" href="https://es.acervolima.com/category/gblog/">GBlog</a></p>
+                <p><a class="footer-coluna-link" href="https://es.acervolima.com/category/golang/">Golang</a></p>
+                <p><a class="footer-coluna-link" href="https://es.acervolima.com/category/kotlin/">Kotlin</a></p>
+                <p><a class="footer-coluna-link" href="https://es.acervolima.com/category/ruby/">Ruby</a></p>
+            </div>
+            <div class="coluna-footer">
+                <span class="titulo-coluna">Contact</span>
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"></path>
+                        <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"></path>
+                    </svg>
+                    Icapuí-CE, Brasil
+                </p>
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                        <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"></path>
+                    </svg>
+                    contact@acervolima.com
+                </p>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            © 2022 Acervo Lima, Some rights reserved
+        </div>
+    </footer>
+
+    <script>
+
+        const btnMobile = document.getElementById('btn-navbar-toggler');
+
+        function toggleMenu(event) {
+
+            if (event.type === 'touchstart') event.preventDefault();
+
+            const nav = document.getElementById('nav');
+            nav.classList.toggle('menu-mobile-active');
+            const menuMobileAtivo = nav.classList.contains('menu-mobile-active');
+            event.currentTarget.setAttribute('aria-expanded', menuMobileAtivo);
+
+            if (menuMobileAtivo) {
+
+                event.currentTarget.setAttribute('aria-label', 'Fechar Menu');
+
+            } else {
+
+                event.currentTarget.setAttribute('aria-label', 'Abrir Menu');
+
+            }
+        }
+
+        btnMobile.addEventListener('click', toggleMenu);
+        btnMobile.addEventListener('touchstart', toggleMenu);
+        
+    </script>
+
+    <script>
+
+        function iniciarScriptTerceiros() {
+
+            // Google Adsense
+            let scriptAds = document.createElement('script');
+            scriptAds.setAttribute("data-ad-client", "ca-pub-7274418547299766");
+            scriptAds.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
+            document.body.append(scriptAds);
+
+            // Google Analytics
+            let scriptGA = document.createElement('script');
+            scriptGA.src = "https://www.googletagmanager.com/gtag/js?id=G-9BY86T1KXF";
+            document.body.append(scriptGA);
+
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-9BY86T1KXF');
+
+        }
+
+        window.onload = iniciarScriptTerceiros;
+
+    </script>
+    
+
+<script data-ad-client="ca-pub-7274418547299766" src="./Perl _ Clases en POO – Acervo Lima_files/f.txt"></script><script src="./Perl _ Clases en POO – Acervo Lima_files/js"></script></body><loom-container id="lo-engage-ext-container"><loom-shadow classname="resolved"></loom-shadow></loom-container><loom-container id="lo-companion-container"><loom-shadow classname="resolved"></loom-shadow></loom-container></html>

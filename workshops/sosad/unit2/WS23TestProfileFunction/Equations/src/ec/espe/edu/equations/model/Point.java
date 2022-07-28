@@ -1,0 +1,46 @@
+package ec.espe.edu.equations.model;
+
+/**
+ *
+ * @author Diana Sosa, DCCO-ESPE MyWayCode
+ */
+public class Point {
+
+    public Point(int coordinateX, int coordinateY) {
+        this.coordinateX = coordinateX;
+        this.coordinateY = coordinateY;
+    }
+
+    /**
+     * @return the coordinateX
+     */
+    public int getCoordinateX() {
+        return coordinateX;
+    }
+
+    /**
+     * @param coordinateX the coordinateX to set
+     */
+    public void setCoordinateX(int coordinateX) {
+        this.coordinateX = coordinateX;
+    }
+
+    /**
+     * @return the coordinateY
+     */
+    public int getCoordinateY() {
+        return coordinateY;
+    }
+
+    /**
+     * @param coordinateY the coordinateY to set
+     */
+    public void setCoordinateY(int coordinateY) {
+        this.coordinateY = coordinateY;
+    }
+    private int coordinateX;
+    private int coordinateY;
+
+ 
+    
+}

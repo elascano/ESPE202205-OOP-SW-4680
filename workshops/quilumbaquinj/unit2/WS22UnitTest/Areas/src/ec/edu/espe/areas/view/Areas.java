@@ -1,5 +1,6 @@
 package ec.edu.espe.areas.view;
 
+import ec.edu.espe.areas.control.Square;
 import ec.edu.espe.areas.control.Triangule;
 
 /**
@@ -13,6 +14,8 @@ public class Areas {
      */
     public static void main(String[] args) {
         Triangule triangule;
+        Square square;
+        square= new Square();
         triangule=new Triangule();
         float area;
         //triangule=new Triangule(4,4,3);
@@ -23,7 +26,6 @@ public class Areas {
         
         //triangule=new Triangule(4.3f,3.4f,5.2f);
         //area=triangule.CalculateArea();
-        System.out.println(triangule.CalculateArea());
         
         
         
