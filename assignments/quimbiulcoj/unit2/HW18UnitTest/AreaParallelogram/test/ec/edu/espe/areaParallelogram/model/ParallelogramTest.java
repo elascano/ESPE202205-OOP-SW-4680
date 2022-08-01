@@ -13,9 +13,9 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Juan Quimbiulco, DCCO-ESPE, CODEX++
+ * @author Diego Ponce
  */
-public class ParallelogramTest {
+public class CircleTest {
     
     public ParallelogramTest() {
     }

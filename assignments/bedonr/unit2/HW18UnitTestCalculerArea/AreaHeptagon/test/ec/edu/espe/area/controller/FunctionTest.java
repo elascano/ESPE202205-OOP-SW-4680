@@ -27,7 +27,7 @@ public class FunctionTest {
         Function instance = new Function();
         double expResult = 14;
         double result = instance.getOfCalculator(apothem, side);
-        assertEquals(expResult, result, 0.0);
+        assertEquals(expResult, result, 2);
         
     }
     
