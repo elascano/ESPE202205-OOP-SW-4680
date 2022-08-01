@@ -20,7 +20,7 @@ public class AreaRectangle {
         Rectangle rectangle;
 
         System.out.println("Insert base");
-        base = sc.nextDouble();
+       base = 23;
         System.out.println("Insert height");
         height = sc.nextDouble();
 

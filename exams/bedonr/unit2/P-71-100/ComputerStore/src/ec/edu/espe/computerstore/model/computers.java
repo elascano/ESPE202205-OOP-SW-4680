@@ -16,6 +16,10 @@ public class computers {
         this.ram = ram;
     }
 
+    public computers() {
+    }
+    
+
     public String getId() {
         return id;
     }

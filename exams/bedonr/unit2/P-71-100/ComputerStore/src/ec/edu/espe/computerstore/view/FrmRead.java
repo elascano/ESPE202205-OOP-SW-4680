@@ -4,6 +4,10 @@
  */
 package ec.edu.espe.computerstore.view;
 
+import ec.edu.espe.computerstore.controller.ComputerController;
+import ec.edu.espe.computerstore.controller.Connection;
+import org.bson.Document;
+
 /**
  *
  * @author Roberto Bedon, DCCO-ESPE, BettaCoders
@@ -15,6 +19,7 @@ public class FrmRead extends javax.swing.JFrame {
      */
     public FrmRead() {
         initComponents();
+        Connection.connectionDataBase();
     }
 
     /**
@@ -132,7 +137,9 @@ public class FrmRead extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-      
+        ComputerController cc= new ComputerController();
+        Document doc = cc.read(txtId.getText(),"Name");
+        System.out.println(doc.toJson());
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
