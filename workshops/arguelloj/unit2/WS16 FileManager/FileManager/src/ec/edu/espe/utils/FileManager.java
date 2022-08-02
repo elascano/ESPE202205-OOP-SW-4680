@@ -9,7 +9,7 @@ public class FileManager {
     public static String readFile(String fileName){
         // code to read from file
         
-        String data ="From"+fileName+"-->{\"name\":\"Steven\"}";
+        String data ="From"+fileName+"-->{\"name\":\"Joel\"}";
         return data;
     }
     public static int add(int addend1, int addend2){

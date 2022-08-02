@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="POO_EXAM_2P">
+  <ClassDiagramComponents>
+    <Class name="A" package="ec.edu.espe.Exam.modell" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="objecta" type="A" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="B" package="ec.edu.espe.Exam.modell" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="C" package="ec.edu.espe.Exam.modell" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="objectE" type="E" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="D" package="ec.edu.espe.Exam.modell" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="objectE" type="E" visibility="package"/>
+        <Field name="objectF" type="ArrayList&lt;F&gt;" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="E" package="ec.edu.espe.Exam.modell" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="F" package="ec.edu.espe.Exam.modell" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="G" package="ec.edu.espe.Exam.modell" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields>
+        <Field name="objectj" type="J" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Interface name="H" package="ec.edu.espe.Exam.modell" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Methods/>
+    </Interface>
+    <Class name="J" package="ec.edu.espe.Exam.modell" visibility="public" xPosition="20.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="POO_EXAM_2P" package="ec.edu.espe.Exam.view" visibility="public" xPosition="320.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="objectE" source="ec.edu.espe.Exam.modell.C" target="ec.edu.espe.Exam.modell.E" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="ec.edu.espe.Exam.modell.B" target="ec.edu.espe.Exam.modell.A"/>
+    <IsRelation name="is" source="ec.edu.espe.Exam.modell.C" target="ec.edu.espe.Exam.modell.A"/>
+    <HasRelation name="objectE" source="ec.edu.espe.Exam.modell.D" target="ec.edu.espe.Exam.modell.E" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="objecta" source="ec.edu.espe.Exam.modell.A" target="ec.edu.espe.Exam.modell.A" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="ec.edu.espe.Exam.modell.G" target="ec.edu.espe.Exam.modell.H"/>
+    <HasRelation name="objectj" source="ec.edu.espe.Exam.modell.G" target="ec.edu.espe.Exam.modell.J" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="ec.edu.espe.Exam.modell.D" target="ec.edu.espe.Exam.modell.A"/>
+    <HasRelation name="objectF" source="ec.edu.espe.Exam.modell.D" target="ec.edu.espe.Exam.modell.F" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;F&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
