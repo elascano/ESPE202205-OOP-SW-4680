@@ -6,7 +6,7 @@ package ec.edu.espe.equations.model;
 
 /**
  *
- * @author H301
+ * @author Diego Ponce
  */
 public class Point {
     private int coordinateX;

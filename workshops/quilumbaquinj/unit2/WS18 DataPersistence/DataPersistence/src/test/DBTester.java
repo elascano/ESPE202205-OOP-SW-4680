@@ -6,6 +6,8 @@ package test;
 
 import utils.MongoDBManager;
 
+
+
 /**
  *
  * @author QUILUMBAQUIN JAIRO, DCC0-ESPE: CODEX++
@@ -18,7 +20,7 @@ public class DBTester {
     public static void main(String[] args) {
         MongoDBManager mdb;
         mdb= new MongoDBManager();
-        mdb.Delete();
+        mdb.Read();
     }
     
 }
