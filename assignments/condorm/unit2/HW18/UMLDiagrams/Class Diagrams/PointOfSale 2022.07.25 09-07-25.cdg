@@ -1,0 +1,829 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="PointOfSale">
+  <ClassDiagramComponents>
+    <Class name="DatabaseController" package="ec.edu.espe.pointofsale.controller" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="database" type="MongoDatabase" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="conectionDb" returnType="MongoDatabase" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ExpenseController" package="ec.edu.espe.pointofsale.controller" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="register" returnType="boolean" visibility="public">
+          <Argument type="JFrame" name="frame"/>
+          <Argument type="Expense" name="expense"/>
+        </Method>
+        <Method name="populateExpenseTable" returnType="void" visibility="public">
+          <Argument type="JTable" name="tbl"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ProductController" package="ec.edu.espe.pointofsale.controller" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="register" returnType="boolean" visibility="public">
+          <Argument type="JFrame" name="frame"/>
+          <Argument type="Product" name="product"/>
+        </Method>
+        <Method name="update" returnType="boolean" visibility="public">
+          <Argument type="JFrame" name="frame"/>
+          <Argument type="String" name="dataName"/>
+          <Argument type="String" name="data"/>
+          <Argument type="Product" name="updateProduct"/>
+        </Method>
+        <Method name="delete" returnType="boolean" visibility="public">
+          <Argument type="JFrame" name="frame"/>
+          <Argument type="String" name="dataName"/>
+          <Argument type="String" name="data"/>
+        </Method>
+        <Method name="populateProductTable" returnType="void" visibility="public">
+          <Argument type="JTable" name="tbl"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="SaleController" package="ec.edu.espe.pointofsale.controller" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="register" returnType="boolean" visibility="public">
+          <Argument type="JFrame" name="frame"/>
+          <Argument type="Customer" name="customer"/>
+          <Argument type="Product" name="product"/>
+        </Method>
+        <Method name="populateSaleTable" returnType="void" visibility="public">
+          <Argument type="JTable" name="tbl"/>
+        </Method>
+        <Method name="getProducts" returnType="void" visibility="public">
+          <Argument type="JComboBox" name="cmb"/>
+          <Argument type="JTextField" name="txt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="UserController" package="ec.edu.espe.pointofsale.controller" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="registerNewUser" returnType="boolean" visibility="public">
+          <Argument type="JFrame" name="frame"/>
+          <Argument type="User" name="users"/>
+        </Method>
+        <Method name="verifyLogin" returnType="void" visibility="public">
+          <Argument type="JFrame" name="frame"/>
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="password"/>
+        </Method>
+        <Method name="verifyUsername" returnType="String" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ValidateMethod" package="ec.edu.espe.pointofsale.controller" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="validateIntegers" returnType="void" visibility="public">
+          <Argument type="KeyEvent" name="evt"/>
+          <Argument type="JTextField" name="txt"/>
+          <Argument type="JLabel" name="lblError"/>
+        </Method>
+        <Method name="validateCharacters" returnType="void" visibility="public">
+          <Argument type="KeyEvent" name="evt"/>
+          <Argument type="JTextField" name="txt"/>
+          <Argument type="JLabel" name="lblError"/>
+        </Method>
+        <Method name="validateFloat" returnType="void" visibility="public">
+          <Argument type="KeyEvent" name="evt"/>
+          <Argument type="JTextField" name="txt"/>
+          <Argument type="JLabel" name="lblError"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Customer" package="ec.edu.espe.pointofsale.model" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields>
+        <Field name="customerName" type="String" visibility="private"/>
+        <Field name="idCustomer" type="String" visibility="private"/>
+        <Field name="phone" type="int" visibility="private"/>
+        <Field name="address" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="id"/>
+          <Argument type="int" name="phone"/>
+          <Argument type="String" name="address"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="see" returnType="void" visibility="public"/>
+        <Method name="getCustomerName" returnType="String" visibility="public"/>
+        <Method name="setCustomerName" returnType="void" visibility="public">
+          <Argument type="String" name="customerName"/>
+        </Method>
+        <Method name="getIdCustomer" returnType="String" visibility="public"/>
+        <Method name="setIdCustomer" returnType="void" visibility="public">
+          <Argument type="String" name="idCustomer"/>
+        </Method>
+        <Method name="getPhone" returnType="int" visibility="public"/>
+        <Method name="setPhone" returnType="void" visibility="public">
+          <Argument type="int" name="phone"/>
+        </Method>
+        <Method name="getAddress" returnType="String" visibility="public"/>
+        <Method name="setAddress" returnType="void" visibility="public">
+          <Argument type="String" name="address"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Expense" package="ec.edu.espe.pointofsale.model" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields>
+        <Field name="date" type="String" visibility="private"/>
+        <Field name="electricity" type="float" visibility="private"/>
+        <Field name="water" type="float" visibility="private"/>
+        <Field name="rent" type="float" visibility="private"/>
+        <Field name="gas" type="float" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="date"/>
+          <Argument type="float" name="electricity"/>
+          <Argument type="float" name="water"/>
+          <Argument type="float" name="rent"/>
+          <Argument type="float" name="gas"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDate" returnType="String" visibility="public"/>
+        <Method name="setDate" returnType="void" visibility="public">
+          <Argument type="String" name="date"/>
+        </Method>
+        <Method name="getElectricity" returnType="float" visibility="public"/>
+        <Method name="setElectricity" returnType="void" visibility="public">
+          <Argument type="float" name="electricity"/>
+        </Method>
+        <Method name="getWater" returnType="float" visibility="public"/>
+        <Method name="setWater" returnType="void" visibility="public">
+          <Argument type="float" name="water"/>
+        </Method>
+        <Method name="getRent" returnType="float" visibility="public"/>
+        <Method name="setRent" returnType="void" visibility="public">
+          <Argument type="float" name="rent"/>
+        </Method>
+        <Method name="getGas" returnType="float" visibility="public"/>
+        <Method name="setGas" returnType="void" visibility="public">
+          <Argument type="float" name="gas"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Product" package="ec.edu.espe.pointofsale.model" visibility="public" xPosition="20.0" yPosition="420.0">
+      <Fields>
+        <Field name="productName" type="String" visibility="private"/>
+        <Field name="idProduct" type="String" visibility="private"/>
+        <Field name="price" type="float" visibility="private"/>
+        <Field name="supplier" type="String" visibility="private"/>
+        <Field name="quantity" type="int" visibility="private"/>
+        <Field name="totalprice" type="float" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="float" name="price"/>
+          <Argument type="int" name="quantity"/>
+          <Argument type="float" name="totalprice"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="id"/>
+          <Argument type="String" name="name"/>
+          <Argument type="float" name="price"/>
+          <Argument type="String" name="supplier"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getProductName" returnType="String" visibility="public"/>
+        <Method name="setProductName" returnType="void" visibility="public">
+          <Argument type="String" name="productName"/>
+        </Method>
+        <Method name="getIdProduct" returnType="String" visibility="public"/>
+        <Method name="setIdProduct" returnType="void" visibility="public">
+          <Argument type="String" name="idProduct"/>
+        </Method>
+        <Method name="getPrice" returnType="float" visibility="public"/>
+        <Method name="setPrice" returnType="void" visibility="public">
+          <Argument type="float" name="price"/>
+        </Method>
+        <Method name="getSupplier" returnType="String" visibility="public"/>
+        <Method name="setSupplier" returnType="void" visibility="public">
+          <Argument type="String" name="supplier"/>
+        </Method>
+        <Method name="getQuantity" returnType="int" visibility="public"/>
+        <Method name="setQuantity" returnType="void" visibility="public">
+          <Argument type="int" name="quantity"/>
+        </Method>
+        <Method name="getTotalprice" returnType="float" visibility="public"/>
+        <Method name="setTotalprice" returnType="void" visibility="public">
+          <Argument type="float" name="totalprice"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="User" package="ec.edu.espe.pointofsale.model" visibility="public" xPosition="320.0" yPosition="420.0">
+      <Fields>
+        <Field name="username" type="String" visibility="private"/>
+        <Field name="password" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="password"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getUsername" returnType="String" visibility="public"/>
+        <Method name="setUsername" returnType="void" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="getPassword" returnType="String" visibility="public"/>
+        <Method name="setPassword" returnType="void" visibility="public">
+          <Argument type="String" name="password"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmAbout" package="ec.edu.espe.pointofsale.view" visibility="public" xPosition="620.0" yPosition="420.0">
+      <Fields>
+        <Field name="btnReturn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jTextArea1" type="javax.swing.JTextArea" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="btnReturnActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmDeleteProduct" package="ec.edu.espe.pointofsale.view" visibility="public" xPosition="920.0" yPosition="420.0">
+      <Fields>
+        <Field name="btnBack" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnDelete" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnReload" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="tblDeleteProduct" type="javax.swing.JTable" visibility="private"/>
+        <Field name="txtDeleteName" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="btnBackActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnDeleteActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnReloadActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmExpense" package="ec.edu.espe.pointofsale.view" visibility="public" xPosition="1220.0" yPosition="420.0">
+      <Fields>
+        <Field name="DateFormat" type="Object" visibility="private"/>
+        <Field name="btnBack" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnRegister" type="javax.swing.JButton" visibility="private"/>
+        <Field name="dateChooser" type="com.toedter.calendar.JDateChooser" visibility="private"/>
+        <Field name="jCalendar1" type="com.toedter.calendar.JCalendar" visibility="private"/>
+        <Field name="jLabel10" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel11" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel4" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="lblElectricityError" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lblGasError" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lblRentError" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lblWaterError" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtElectricity" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtGas" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtRent" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtWater" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="btnBackActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnRegisterActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="txtElectricityKeyPressed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="txtWaterKeyPressed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="txtRentKeyPressed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="txtGasKeyPressed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmLogin" package="ec.edu.espe.pointofsale.view" visibility="public" xPosition="1520.0" yPosition="420.0">
+      <Fields>
+        <Field name="btnLogin" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="txtPassword" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtUser" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="btnLoginActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmMenu" package="ec.edu.espe.pointofsale.view" visibility="public" xPosition="1820.0" yPosition="420.0">
+      <Fields>
+        <Field name="itemAbout" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="itemExit" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="itemLogout" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jMenuBar1" type="javax.swing.JMenuBar" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jSlider1" type="javax.swing.JSlider" visibility="private"/>
+        <Field name="mnuBakerySystem" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="mnuExpense" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="mnuProduct" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="mnuRegisterExpenses" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="mnuRegisterNewProduct" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="mnuRegisterNewSale" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="mnuRegisterNewUser" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="mnuSale" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="mnuSeeAllExpense" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="mnuSeeProducts" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="mnuSeeSales" type="javax.swing.JMenuItem" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="itemExitActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="itemLogoutActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="itemAboutActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="mnuRegisterNewProductActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="mnuRegisterNewSaleActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="mnuRegisterExpensesActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="mnuSeeProductsActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="mnuRegisterNewUserActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="mnuSeeSalesActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="mnuSeeAllExpenseActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmProduct" package="ec.edu.espe.pointofsale.view" visibility="public" xPosition="2120.0" yPosition="420.0">
+      <Fields>
+        <Field name="btnBack" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnRegister" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="lblIdError" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lblNameError" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lblPriceError" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lblSupplierError" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtId" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtName" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtPrice" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtSupplier" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="btnRegisterActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnBackActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="txtNameKeyPressed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="txtIdActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="txtIdKeyPressed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="txtPriceKeyPressed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="txtSupplierKeyPressed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmRegister" package="ec.edu.espe.pointofsale.view" visibility="public" xPosition="20.0" yPosition="820.0">
+      <Fields>
+        <Field name="btnBack" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnRegisterAdmin" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="lblErrorPassword" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lblErrorUser" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtPassword" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtUsername" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="btnBackActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnRegisterAdminActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="txtUsernameKeyPressed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="txtPasswordKeyPressed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmSale" package="ec.edu.espe.pointofsale.view" visibility="public" xPosition="320.0" yPosition="820.0">
+      <Fields>
+        <Field name="btnBack" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnRegisterSale" type="javax.swing.JButton" visibility="private"/>
+        <Field name="cmbProduct" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="lblCustomerError" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lblQtyError" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="spnQuantity" type="javax.swing.JSpinner" visibility="private"/>
+        <Field name="txtCustomer" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtPrice" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtTotalPrice" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="btnBackActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnRegisterSaleActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="spnQuantityStateChanged" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.ChangeEvent" name="evt"/>
+        </Method>
+        <Method name="txtCustomerKeyPressed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="txtPriceKeyPressed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="cmbProductActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="cmbProductItemStateChanged" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ItemEvent" name="evt"/>
+        </Method>
+        <Method name="calculateTotalPrice" returnType="float" visibility="private">
+          <Argument type="float" name="price"/>
+          <Argument type="int" name="quantity"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmTableExpense" package="ec.edu.espe.pointofsale.view" visibility="public" xPosition="620.0" yPosition="820.0">
+      <Fields>
+        <Field name="btnAck" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnReload" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="tblExpense" type="javax.swing.JTable" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="btnAckActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnReloadActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmTableProduct" package="ec.edu.espe.pointofsale.view" visibility="public" xPosition="920.0" yPosition="820.0">
+      <Fields>
+        <Field name="btnDelete" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnReload" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnReturn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnUpdate" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel4" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="tblProduct" type="javax.swing.JTable" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="btnReturnActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnReloadActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnUpdateActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnDeleteActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmTableSale" package="ec.edu.espe.pointofsale.view" visibility="public" xPosition="1220.0" yPosition="820.0">
+      <Fields>
+        <Field name="btnBack" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnReload" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="tblSale" type="javax.swing.JTable" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="btnBackActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnReloadActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrmUpdateProduct" package="ec.edu.espe.pointofsale.view" visibility="public" xPosition="1520.0" yPosition="820.0">
+      <Fields>
+        <Field name="btnBack" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnReload" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btnUpdate" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="lblErrorId" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lblErrorName" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lblErrorNameImput" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lblErrorPrice" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lblErrorSupplier" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="tblProducts" type="javax.swing.JTable" visibility="private"/>
+        <Field name="txtName" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtUId" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtUName" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtUPrice" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtUSupplier" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="btnUpdateActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnBackActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnReloadActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jPanel1KeyPressed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="txtNameKeyPressed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="txtUIdKeyPressed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="txtUNameKeyPressed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="txtUPriceKeyPressed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="txtUSupplierKeyPressed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+        <Method name="product" returnType="Product" visibility="private">
+          <Argument type="JTextField" name="txt1"/>
+          <Argument type="JTextField" name="txt2"/>
+          <Argument type="JTextField" name="txt3"/>
+          <Argument type="JTextField" name="txt4"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DataBaseManager" package="utils" visibility="public" xPosition="1820.0" yPosition="820.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="create" returnType="boolean" visibility="public">
+          <Argument type="Document" name="doc"/>
+          <Argument type="String" name="coll"/>
+        </Method>
+        <Method name="update" returnType="boolean" visibility="public">
+          <Argument type="String" name="coll"/>
+          <Argument type="String" name="dataName"/>
+          <Argument type="String" name="data"/>
+          <Argument type="Document" name="doc"/>
+        </Method>
+        <Method name="delete" returnType="boolean" visibility="public">
+          <Argument type="String" name="coll"/>
+          <Argument type="String" name="dataName"/>
+          <Argument type="String" name="data"/>
+        </Method>
+        <Method name="search" returnType="Document" visibility="public">
+          <Argument type="String" name="coll"/>
+          <Argument type="String" name="field"/>
+          <Argument type="String" name="value"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="DataCustomer" package="utils" visibility="public" xPosition="2120.0" yPosition="820.0">
+      <Methods>
+        <Method name="create" returnType="boolean" visibility="public">
+          <Argument type="Document" name="doc"/>
+          <Argument type="String" name="coll"/>
+        </Method>
+        <Method name="update" returnType="boolean" visibility="public">
+          <Argument type="String" name="coll"/>
+          <Argument type="String" name="dataName"/>
+          <Argument type="String" name="data"/>
+          <Argument type="Document" name="doc"/>
+        </Method>
+        <Method name="delete" returnType="boolean" visibility="public">
+          <Argument type="String" name="coll"/>
+          <Argument type="String" name="dataName"/>
+          <Argument type="String" name="value"/>
+        </Method>
+        <Method name="search" returnType="Document" visibility="public">
+          <Argument type="String" name="coll"/>
+          <Argument type="String" name="field"/>
+          <Argument type="String" name="value"/>
+        </Method>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="ec.edu.espe.pointofsale.controller.SaleController" target="ec.edu.espe.pointofsale.model.Product" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ec.edu.espe.pointofsale.view.FrmUpdateProduct" target="ec.edu.espe.pointofsale.model.Product" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ec.edu.espe.pointofsale.controller.ExpenseController" target="ec.edu.espe.pointofsale.model.Expense" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="utils.DataBaseManager" target="utils.DataCustomer"/>
+    <UseRelation source="ec.edu.espe.pointofsale.controller.UserController" target="ec.edu.espe.pointofsale.model.User" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ec.edu.espe.pointofsale.controller.ProductController" target="ec.edu.espe.pointofsale.model.Product" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

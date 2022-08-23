@@ -3,7 +3,7 @@ package ec.edu.espe.utils;
 
 /**
  *
- * @author Steven Pozo, DCCO-ESPE, DEES Developers
+ * @author Diego Ponce, DCCO-ESPE, DEES Developers
  */
 public class FileManager {
     public static String readFile(String fileName){
