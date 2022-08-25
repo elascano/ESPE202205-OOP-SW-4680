@@ -15,7 +15,7 @@ public class ConnectionDatabase {
     public MongoDatabase connectDatabase(){
         
         if (database == null) {
-            String uri = "mongodb+srv://admin:adminStylesIrealia@stylesirelia.by7pr.mongodb.net/?retryWrites=true&w=majority";
+            String uri = "mongodb+srv://danilo:danilo123@cluster0.smxif.mongodb.net/test";
             String db = "exam";
 
             MongoClient mongoClient = MongoClients.create(uri);
