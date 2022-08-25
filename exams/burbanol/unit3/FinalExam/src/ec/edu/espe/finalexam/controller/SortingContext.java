@@ -20,7 +20,7 @@ public class SortingContext {
 
     }
 
-    public SortingStrategy setSortStrategy(int listOfNumbers[], ListNumbers listNumbers) {
+    public SortingStrategy setSortStrategy(int listOfNumbers[]) {
 
         if (listOfNumbers.length < 4 && listOfNumbers.length >= 0) {
 

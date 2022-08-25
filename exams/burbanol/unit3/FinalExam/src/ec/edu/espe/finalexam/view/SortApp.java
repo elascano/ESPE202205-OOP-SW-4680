@@ -127,13 +127,14 @@ public class SortApp extends javax.swing.JFrame {
 
         String[] numberToSort = numberInDesorder.split(",");
         int[] numbersOfList = new int[numberToSort.length];
-        listNumbers.setListOfNumbersDisordered(numbersOfList);
+        
 
         for (int i = 0; i < numberToSort.length; i++) {
             numbersOfList[i] = Integer.parseInt(numberToSort[i]);
         }
+        listNumbers.setListOfNumbersDisordered(numbersOfList);
         SortingStrategy sortingStrategy;
-        sortingStrategy = sortingContext.setSortStrategy(numbersOfList, listNumbers);
+        sortingStrategy = sortingContext.setSortStrategy(numbersOfList);
 
         sortingStrategy.sort(listNumbers);
         document = listNumbersController.createDocument(listNumbers);
