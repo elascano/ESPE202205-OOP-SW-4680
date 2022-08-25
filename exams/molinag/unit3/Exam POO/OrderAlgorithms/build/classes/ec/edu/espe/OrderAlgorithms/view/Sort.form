@@ -61,16 +61,14 @@
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="txtNumbers" pref="253" max="32767" attributes="0"/>
-                      <Component id="txtSorted" max="32767" attributes="0"/>
+                      <Component id="txtUnarrangedNumbers" pref="253" max="32767" attributes="0"/>
+                      <Component id="txtNumberInOrder" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                           <Component id="btnSortNumbers" min="-2" pref="120" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="jButton1" min="-2" pref="74" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -82,18 +80,15 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtNumbers" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtUnarrangedNumbers" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtSorted" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtNumberInOrder" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="btnSortNumbers" min="-2" pref="33" max="-2" attributes="0"/>
-                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="btnSortNumbers" min="-2" pref="33" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -122,10 +117,10 @@
             <Property name="text" type="java.lang.String" value="Insert the numbers"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtNumbers">
+        <Component class="javax.swing.JTextField" name="txtUnarrangedNumbers">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNumbersActionPerformed"/>
-            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtNumbersKeyTyped"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtUnarrangedNumbersActionPerformed"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtUnarrangedNumbersKeyTyped"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnSortNumbers">
@@ -134,14 +129,6 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSortNumbersActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Add"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
@@ -155,7 +142,10 @@
             <Property name="text" type="java.lang.String" value="Sorted"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtSorted">
+        <Component class="javax.swing.JTextField" name="txtNumberInOrder">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNumberInOrderActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

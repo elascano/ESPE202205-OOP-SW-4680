@@ -8,80 +8,47 @@ import java.lang.reflect.Array;
  */
 public class SortApp {
 
-    private String algorithm;
-    private String unsorted;
-    private String sort;
-    private String size;
-
-    public SortApp() {
-    }
+    int unarrangedNumbers[];
+    int size;
+    String sort;
+    int orderlyNumbers[];
 
     @Override
     public String toString() {
-        return "SortApp{" + "algorithm=" + algorithm + ", unsorted=" + unsorted + ", sort=" + sort + ", size=" + size + '}';
+        return "SortApp{" + "unarrangedNumbers=" + unarrangedNumbers + ", size=" + size + ", sort=" + sort + ", orderlyNumbers=" + orderlyNumbers + '}';
     }
 
-    public SortApp(String algorithm, String unsorted, String sort, String size) {
-        this.algorithm = algorithm;
-        this.unsorted = unsorted;
-        this.sort = sort;
+    public int[] getUnarrangedNumbers() {
+        return unarrangedNumbers;
+    }
+
+    public void setUnarrangedNumbers(int[] unarrangedNumbers) {
+        this.unarrangedNumbers = unarrangedNumbers;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
         this.size = size;
     }
 
-    /**
-     * @return the algorithm
-     */
-    public String getAlgorithm() {
-        return algorithm;
-    }
-
-    /**
-     * @param algorithm the algorithm to set
-     */
-    public void setAlgorithm(String algorithm) {
-        this.algorithm = algorithm;
-    }
-
-    /**
-     * @return the unsorted
-     */
-    public String getUnsorted() {
-        return unsorted;
-    }
-
-    /**
-     * @param unsorted the unsorted to set
-     */
-    public void setUnsorted(String unsorted) {
-        this.unsorted = unsorted;
-    }
-
-    /**
-     * @return the sort
-     */
     public String getSort() {
         return sort;
     }
 
-    /**
-     * @param sort the sort to set
-     */
     public void setSort(String sort) {
         this.sort = sort;
     }
 
-    /**
-     * @return the size
-     */
-    public String getSize() {
-        return size;
+    public int[] getOrderlyNumbers() {
+        return orderlyNumbers;
     }
 
-    /**
-     * @param size the size to set
-     */
-    public void setSize(String size) {
-        this.size = size;
+    public void setOrderlyNumbers(int[] orderlyNumbers) {
+        this.orderlyNumbers = orderlyNumbers;
     }
 
+    
 }
