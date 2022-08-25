@@ -40,9 +40,9 @@ public class FrmCustomer extends javax.swing.JFrame {
         txtId = new javax.swing.JTextField();
         txtEmail = new javax.swing.JTextField();
         txtPhone = new javax.swing.JTextField();
-        cmbAge = new javax.swing.JComboBox<>();
         cmbEmail = new javax.swing.JComboBox<>();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        txtPassword = new javax.swing.JPasswordField();
+        txtAge = new javax.swing.JTextField();
         btnAdd = new javax.swing.JButton();
         btnCancel = new javax.swing.JButton();
         btnReturn = new javax.swing.JButton();
@@ -82,8 +82,6 @@ public class FrmCustomer extends javax.swing.JFrame {
             }
         });
 
-        cmbAge.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "15-20", "21-30", "31-40", "41-50", "50 ....." }));
-
         cmbEmail.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "@gmail.com", "@hotmail.com", "@espe.edu.ec", " " }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -98,7 +96,6 @@ public class FrmCustomer extends javax.swing.JFrame {
                 .addGap(15, 15, 15)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -109,22 +106,25 @@ public class FrmCustomer extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addComponent(lblName)
                                 .addGap(30, 30, 30)))
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(cmbAge, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(cmbEmail, 0, 115, Short.MAX_VALUE))
                             .addComponent(txtId)
-                            .addComponent(txtName)))
+                            .addComponent(txtName)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(txtAge, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtPhone, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE))
+                                .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addComponent(lblId)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addComponent(lblPassword)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPasswordField1)))
+                        .addComponent(txtPassword)))
                 .addGap(24, 24, 24))
         );
         jPanel1Layout.setVerticalGroup(
@@ -152,11 +152,11 @@ public class FrmCustomer extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblAge)
-                    .addComponent(cmbAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblPassword)
-                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(24, Short.MAX_VALUE))
         );
 
@@ -260,7 +260,18 @@ public class FrmCustomer extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCancelActionPerformed
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
-        JOptionPane.showMessageDialog(null, "The Customer was added successfully"); 
+
+          if(!txtName.getText().isBlank()&&!txtId.getText().isBlank()&&!txtEmail.getText().isBlank()&&!txtPhone.getText().isBlank()&&!txtAge.getText().isBlank()&&!txtPassword.getText().isBlank()){
+            
+            AddUserData();
+            JOptionPane.showMessageDialog(this, "successfully added");
+            CleanTxtFields();
+            
+        }else{
+            
+            JOptionPane.showMessageDialog(this, "Some TextField is empty, please enter valid data and try again");
+        }
+        
     }//GEN-LAST:event_btnAddActionPerformed
 
     /**
@@ -302,10 +313,8 @@ public class FrmCustomer extends javax.swing.JFrame {
     private javax.swing.JButton btnAdd;
     private javax.swing.JButton btnCancel;
     private javax.swing.JButton btnReturn;
-    private javax.swing.JComboBox<String> cmbAge;
     private javax.swing.JComboBox<String> cmbEmail;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JLabel lblAddCustomer;
     private javax.swing.JLabel lblAge;
     private javax.swing.JLabel lblEmail;
@@ -313,9 +322,19 @@ public class FrmCustomer extends javax.swing.JFrame {
     private javax.swing.JLabel lblName;
     private javax.swing.JLabel lblPassword;
     private javax.swing.JLabel lblPhone;
+    private javax.swing.JTextField txtAge;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtId;
     private javax.swing.JTextField txtName;
+    private javax.swing.JPasswordField txtPassword;
     private javax.swing.JTextField txtPhone;
     // End of variables declaration//GEN-END:variables
+
+    private void CleanTxtFields() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    private void AddUserData() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
