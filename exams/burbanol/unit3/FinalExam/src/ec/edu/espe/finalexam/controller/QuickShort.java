@@ -13,59 +13,52 @@ import java.util.Arrays;
  */
 public class QuickShort extends SortingStrategy {
 
-    // method to find the partition position
-    public static int partition(int array[], int low, int high) {
+    @Override
+    public void sort(ListNumbers listOfNumbers) {
+        int high;
+        int numbers[] = Arrays.copyOf(listOfNumbers.getListOfNumbersDisordered(), listOfNumbers.getListOfNumbersDisordered().length);
+        high = listOfNumbers.getListOfNumbersDisordered().length;
 
-        // choose the rightmost element as pivot
-        int pivot = array[high];
+        sort(numbers, 0, high - 1, listOfNumbers);
 
-        // pointer for greater element
-        int i = (low - 1);
-
-        // traverse through all elements
-        // compare each element with pivot
-        for (int j = low; j < high; j++) {
-            if (array[j] <= pivot) {
-
-                // if element smaller than pivot is found
-                // swap it with the greater element pointed by i
-                i++;
-
-                // swapping element at i with element at j
-                int temp = array[i];
-                array[i] = array[j];
-                array[j] = temp;
-            }
-
-        }
-
-        // swapt the pivot element with the greater element specified by i
-        int temp = array[i + 1];
-        array[i + 1] = array[high];
-        array[high] = temp;
-
-        // return the position from where partition is done
-        return (i + 1);
     }
 
-    public static void sort(int array[], int low, int high, ListNumbers listOfNumbers) {
-        if (low < high) {
-
-            // find pivot element such that
-            // elements smaller than pivot are on the left
-            // elements greater than pivot are on the right
-            int pi = partition(array, low, high);
-
-            // recursive call on the left of pivot
-            sort(array, low, pi - 1, listOfNumbers);
-
-            // recursive call on the right of pivot
-            sort(array, pi + 1, high, listOfNumbers);
-        }
+    private static void insertData(int array[], ListNumbers listOfNumbers) {
         listOfNumbers.setListOfNumberOrdered(array);
         listOfNumbers.setSortAlgorithm("Quick Short");
         listOfNumbers.setSizeOfListOfNumbers(listOfNumbers.getListOfNumbersDisordered().length);
+        listOfNumbers.setListOfNumbersDisordered(Arrays.copyOf(array, array.length));
+    }
 
+    public static void sort(int number[], int start, int fin, ListNumbers listNumbers) {
+        if (start >= fin) {
+            return;
+        }
+        int pivot = number[start];
+        int left = start + 1;
+        int right = fin;
+
+        while (left <= right) {
+            while (left <= fin && number[left] < pivot) {
+                left++;
+            }
+            while (right > start && number[right] >= pivot) {
+                right--;
+            }
+            if (left < right) {
+                int temporary = number[left];
+                number[left] = number[right];
+                number[right] = temporary;
+            }
+        }
+        if (right > start) {
+            int temporary = number[start];
+            number[start] = number[right];
+            number[right] = temporary;
+        }
+        sort(number, start, right - 1, listNumbers);
+        sort(number, right + 1, fin, listNumbers);
+        insertData(number, listNumbers);
     }
 
 }

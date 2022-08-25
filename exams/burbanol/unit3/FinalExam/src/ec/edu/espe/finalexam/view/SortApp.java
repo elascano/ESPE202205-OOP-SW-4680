@@ -2,10 +2,12 @@ package ec.edu.espe.finalexam.view;
 
 import ec.edu.espe.finalexam.controller.ListNumbersController;
 import ec.edu.espe.finalexam.controller.SortingContext;
+import ec.edu.espe.finalexam.controller.SortingStrategy;
 import ec.edu.espe.finalexam.model.ListNumbers;
 import java.text.DecimalFormat;
 import java.util.Arrays;
 import javax.swing.JOptionPane;
+import org.bson.Document;
 
 /**
  *
@@ -115,17 +117,31 @@ public class SortApp extends javax.swing.JFrame {
     private void btnSortActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSortActionPerformed
         String numberInDesorder;
         SortingContext sortingContext;
+        ListNumbers listNumbers;
+        ListNumbersController listNumbersController;
+        Document document;
+        listNumbersController = new ListNumbersController();
+        listNumbers = new ListNumbers();
         sortingContext = new SortingContext();
+        document = new Document();
+
         numberInDesorder = txtNumberInDesorder.getText();
-        ListNumbers listNumbers = new ListNumbers();
+
         String[] numberToSort = numberInDesorder.split(",");
-        int[] numbersOfList= new int[numberToSort.length];
+        int[] numbersOfList = new int[numberToSort.length];
         listNumbers.setListOfNumbersDisordered(numbersOfList);
+
         for (int i = 0; i < numberToSort.length; i++) {
             numbersOfList[i] = Integer.parseInt(numberToSort[i]);
         }
-        
-        sortingContext.setSortStrategy(numbersOfList,listNumbers);
+        SortingStrategy sortingStrategy;
+        sortingStrategy = sortingContext.setSortStrategy(numbersOfList, listNumbers);
+
+        sortingStrategy.sort(listNumbers);
+        document = listNumbersController.createDocument(listNumbers);
+
+        listNumbersController.updateToDatabase(document);
+
         txtNumberInOrder.setText(Arrays.toString(listNumbers.getListOfNumberOrdered()));
         txtAlgorithm.setText(listNumbers.getSortAlgorithm());
     }//GEN-LAST:event_btnSortActionPerformed
