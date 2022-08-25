@@ -4,7 +4,7 @@ import ec.edu.espe.equations.model.Point;
 
 /**
  *
- * @author H301
+ * @author Diego Ponce
  */
 public class Function {
     
