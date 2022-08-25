@@ -27,7 +27,7 @@ public class QuickShort extends SortingStrategy {
         listOfNumbers.setListOfNumberOrdered(array);
         listOfNumbers.setSortAlgorithm("Quick Short");
         listOfNumbers.setSizeOfListOfNumbers(listOfNumbers.getListOfNumbersDisordered().length);
-        listOfNumbers.setListOfNumbersDisordered(Arrays.copyOf(array, array.length));
+        listOfNumbers.setListOfNumbersDisordered(Arrays.copyOf(listOfNumbers.getListOfNumbersDisordered(), array.length));
     }
 
     public static void sort(int number[], int start, int fin, ListNumbers listNumbers) {

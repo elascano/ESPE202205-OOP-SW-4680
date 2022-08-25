@@ -41,7 +41,7 @@ public class BubbleSort extends SortingStrategy {
         listOfNumbers.setListOfNumberOrdered(listOfNumbersAux);
         listOfNumbers.setSortAlgorithm("BubbleSort");
         listOfNumbers.setSizeOfListOfNumbers(listOfNumbers.getListOfNumbersDisordered().length);
-        listOfNumbers.setListOfNumbersDisordered(Arrays.copyOf(listOfNumbersAux, listOfNumbersAux.length));
+        listOfNumbers.setListOfNumbersDisordered(Arrays.copyOf(listOfNumbers.getListOfNumbersDisordered(), listOfNumbersAux.length));
     }
 
 }

@@ -1734,6 +1734,9 @@ hs_err_pid*
 >>>>>>> 8d7546e62d7bcc58dc9da24de2840cf5be6bf4a2
 >>>>>>> a4264992dd08567c03e21e234999a17a34f470f7
 /exams/burbanol/unit3/FinalExam/build/
+<<<<<<< HEAD
+/exams/burbanol/unit3/FinalExam/nbproject/private/
+=======
 >>>>>>> 9b4551fa2dad57e48f8697077e37152a2a062008
 /assignments/condorm/unit3/HW24/Singleton/nbproject/private/
 /assignments/condorm/unit3/HW24/Code/build/
@@ -1743,3 +1746,4 @@ hs_err_pid*
 /assignments/condorm/unit3/HW25/Singleton/nbproject/private/
 /assignments/condorm/unit3/HW27/Singleton/build/
 /assignments/condorm/unit3/HW27/Singleton/nbproject/private/
+>>>>>>> ab144cf237ae6745b604e4b7d69977b99326caf8
