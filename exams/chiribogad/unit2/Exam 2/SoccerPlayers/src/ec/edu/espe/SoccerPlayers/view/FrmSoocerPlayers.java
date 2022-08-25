@@ -118,7 +118,7 @@ public class FrmSoocerPlayers extends javax.swing.JFrame {
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {                                       
         readFromInput();
-        DataSoccerPlayers.update("SoccerPlayers", txtname.getText(), "Document");
+        
     }                                      
 
     public void readFromInput(){
