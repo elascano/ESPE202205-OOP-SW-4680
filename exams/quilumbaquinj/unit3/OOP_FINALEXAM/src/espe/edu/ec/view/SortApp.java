@@ -178,7 +178,7 @@ public class SortApp extends javax.swing.JFrame {
                 bubblemehtod();
                 savetoDB(elements, bubblemehtod(), textFieldToArray(), "BubbleMethod");
             }
-            case 4,5,7 -> {
+            case 4,5,6,7 -> {
                 InsertionMethod();
                 savetoDB(elements, InsertionMethod(), textFieldToArray(), "InsertionSort");
             }
