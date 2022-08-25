@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Juan Quimbiulco, DCCO-ESPE, CODEX++
+ * @author Diego Ponce, DCCO-ESPE, Dev's Developers
  */
 
 class USTax {
