@@ -1,8 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package ec.edu.espe.exam.model;
+
+package ec.edu.espe.exam.controller;
 
 /**
  *
@@ -10,15 +7,9 @@ package ec.edu.espe.exam.model;
  */
 public class BubbleSort implements SortingStrategy {
 
-    public BubbleSort(int i) {
-        
-    }
+    @Override
+    public int[] sort(int[] arr) {
 
-    public BubbleSort(int[] iSplit) {
-        
-    }
-
-    void bubbleSort(int arr[]) {
         int n = arr.length;
         for (int i = 0; i < n - 1; i++) {
             for (int j = 0; j < n - i - 1; j++) {
@@ -30,10 +21,13 @@ public class BubbleSort implements SortingStrategy {
                 }
             }
         }
+        /* This code is contributed by Rajat Mishra. */
+        return arr;
     }
-    
+
     @Override
-    public void applyMethod(String method) {
-        System.out.println("Sort with"+ method + "method");
+    public int[] sort(int[] data, int low, int high) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+
 }

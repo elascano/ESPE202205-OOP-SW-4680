@@ -6,11 +6,13 @@ package ec.edu.espe.exam.view;
 
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
-import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
-import ec.edu.espe.exam.model.BubbleSort;
-import ec.edu.espe.exam.model.SortingStrategy;
-import java.util.ArrayList;
+import ec.edu.espe.exam.controller.InsertionSort;
+import ec.edu.espe.exam.controller.NumbersController;
+import ec.edu.espe.exam.controller.QuickSort;
+import ec.edu.espe.exam.controller.SortingContext;
+import ec.edu.espe.exam.controller.SortingStrategy;
+import ec.edu.espe.exam.model.Numbers;
 
 /**
  *
@@ -23,9 +25,7 @@ public class FrmMain extends javax.swing.JFrame {
      */
     public FrmMain() {
         initComponents();
-        MongoClient mongoClient = MongoClients.create("mongodb+srv://admin00:adminp00@bakerydb.q3bylhk.mongodb.net/?retryWrites=true&w=majority");
-        MongoDatabase database = mongoClient.getDatabase("exam3p");
-        MongoCollection collection = database.getCollection("numbers");
+
     }
 
     /**
@@ -118,27 +118,42 @@ public class FrmMain extends javax.swing.JFrame {
 
     private void btmSortActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmSortActionPerformed
         int numbers;
+        int sortedList[];
+        Numbers setNumbers;
         String sNumbers;
+        String selectedSortMethod;
+        SortingContext selectedSort = new SortingContext();
+        SortingStrategy sortingStrategy;
+        NumbersController numberC = new NumbersController();
+
         sNumbers = txtNumbers.getText();
         String[] split = sNumbers.split(",");
-
         int lenght = split.length;
         int iSplit[] = new int[lenght];
+        int iSplitaux[] = new int[lenght];
         int i;
         for (i = 0; i < lenght; i++) {
-
             iSplit[i] = Integer.parseInt(split[i]);
+            iSplitaux[i] = Integer.parseInt(split[i]);
             System.out.println(iSplit[i]);
-
         }
-
-        if (lenght < 4) {
-            SortingStrategy sort = new BubbleSort(iSplit);
-
+        System.out.println("\n");
+        sortingStrategy = selectedSort.setSortStrategy(lenght);
+        selectedSortMethod = selectedSort.selectedSortMethod(lenght);
+        
+        if ("QuickSort".equals(selectedSortMethod)) {
+            sortedList = sortingStrategy.sort(iSplit, 0, lenght - 1);
+        }else{
+            sortedList = sortingStrategy.sort(iSplit);  
         }
+        
+
         for (i = 0; i < lenght; i++) {
-            System.out.println(iSplit[i]);
+            System.out.println(sortedList[i]);
         }
+
+        setNumbers = new Numbers(iSplitaux, lenght, selectedSortMethod, sortedList);
+        numberC.register(setNumbers);
 
     }//GEN-LAST:event_btmSortActionPerformed
 
