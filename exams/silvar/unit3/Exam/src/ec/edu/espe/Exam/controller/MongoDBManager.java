@@ -39,10 +39,11 @@ public class MongoDBManager {
     public void CreateNumber(SortNumbers sortNumbers) {
 
         FinalExamDB = EstablishConnection();
-        examCollection = FinalExamDB.getCollection("numbers");
+        examCollection = FinalExamDB.getCollection("Numbers");
 
         document = new Document();
 
+        document.append("Numbers", sortNumbers.getNumbers());
         document.append("Algorithm", sortNumbers.getAlgorithm());
         document.append("Size", sortNumbers.getSize());
         document.append("Unsorted", sortNumbers.getUnsorted());
@@ -50,5 +51,6 @@ public class MongoDBManager {
       
         examCollection.insertOne(document);
     }
+
 
 }

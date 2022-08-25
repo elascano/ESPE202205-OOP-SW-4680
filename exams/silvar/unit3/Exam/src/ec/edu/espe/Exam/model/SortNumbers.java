@@ -9,19 +9,24 @@ import java.lang.reflect.Array;
 public class SortNumbers {
     private Array algorithm;
 
-    public SortNumbers() {
-    }
 
-    public SortNumbers(Array algorithm, Array unsorted, int size, Array ordenated) {
+
+    public SortNumbers(Array algorithm, Array unsorted, int size, Array ordenated, String numbers) {
         this.algorithm = algorithm;
         this.unsorted = unsorted;
         this.size = size;
         this.ordenated = ordenated;
+        this.numbers = numbers;
     }
+
+    public SortNumbers() {
+    }
+
+
     private Array unsorted;
     private int size;
     private Array ordenated;
-
+    private String numbers;
     /**
      * @return the algorithm
      */
@@ -76,5 +81,19 @@ public class SortNumbers {
      */
     public void setOrdenated(Array ordenated) {
         this.ordenated = ordenated;
+    }
+
+    /**
+     * @return the numbers
+     */
+    public String getNumbers() {
+        return numbers;
+    }
+
+    /**
+     * @param numbers the numbers to set
+     */
+    public void setNumbers(String numbers) {
+        this.numbers = numbers;
     }
 }

@@ -4,6 +4,8 @@
  */
 package ec.edu.espe.Exam.view;
 
+import ec.edu.espe.Exam.model.SortNumbers;
+import ec.edu.espe.exam.controller.MongoDBManager;
 import javax.swing.JOptionPane;
 
 /**
@@ -33,7 +35,7 @@ public class FrmContador extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         txtNumberLimit = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        txtEnterTheNumbers = new javax.swing.JTextField();
+        txtNumbers = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         lblFondo = new javax.swing.JLabel();
@@ -60,17 +62,17 @@ public class FrmContador extends javax.swing.JFrame {
         jLabel3.setText("Numbers:");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, -1, -1));
 
-        txtEnterTheNumbers.addActionListener(new java.awt.event.ActionListener() {
+        txtNumbers.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtEnterTheNumbersActionPerformed(evt);
+                txtNumbersActionPerformed(evt);
             }
         });
-        txtEnterTheNumbers.addKeyListener(new java.awt.event.KeyAdapter() {
+        txtNumbers.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtEnterTheNumbersKeyTyped(evt);
+                txtNumbersKeyTyped(evt);
             }
         });
-        getContentPane().add(txtEnterTheNumbers, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 140, 160, -1));
+        getContentPane().add(txtNumbers, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 140, 160, -1));
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton1.setText("Organize");
@@ -106,7 +108,7 @@ public class FrmContador extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_txtNumberLimitKeyTyped
 
-    private void txtEnterTheNumbersKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtEnterTheNumbersKeyTyped
+    private void txtNumbersKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNumbersKeyTyped
        char validar = evt.getKeyChar();
         if(Character.isLetter(validar)){
             getToolkit().beep();
@@ -114,10 +116,20 @@ public class FrmContador extends javax.swing.JFrame {
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Enter only numbers, for example 1 - 2 - 3, etc ");
         }
-    }//GEN-LAST:event_txtEnterTheNumbersKeyTyped
+    }//GEN-LAST:event_txtNumbersKeyTyped
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        SortNumbers sortNumbers;
+        MongoDBManager saveNumbers;
+        
+        sortNumbers = new SortNumbers();
+        saveNumbers = new MongoDBManager();
+        
+        sortNumbers.setNumbers(txtNumbers.getText());
+        
+        
+        saveNumbers.CreateNumber(sortNumbers);
+        JOptionPane.showMessageDialog(null, "Numbers added succesfull");        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -126,10 +138,10 @@ public class FrmContador extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void txtEnterTheNumbersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEnterTheNumbersActionPerformed
+    private void txtNumbersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNumbersActionPerformed
 
 
-    }//GEN-LAST:event_txtEnterTheNumbersActionPerformed
+    }//GEN-LAST:event_txtNumbersActionPerformed
 
     /**
      * @param args the command line arguments
@@ -174,7 +186,7 @@ public class FrmContador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel lblFondo;
-    private javax.swing.JTextField txtEnterTheNumbers;
     private javax.swing.JTextField txtNumberLimit;
+    private javax.swing.JTextField txtNumbers;
     // End of variables declaration//GEN-END:variables
 }
