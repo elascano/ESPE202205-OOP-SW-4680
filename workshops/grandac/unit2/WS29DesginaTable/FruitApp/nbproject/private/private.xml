@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Dell/OneDrive/Documentos/workshops%20xd/WS29DesginaTable/FruitApp/src/ec/edu/espe/FruitApp/model/Worker.java</file>
+            <file>file:/C:/Users/Dell/OneDrive/Documentos/workshops%20xd/WS29DesginaTable/FruitApp/src/ec/edu/espe/FruitApp/model/ConexionDB.java</file>
+            <file>file:/C:/Users/Dell/OneDrive/Documentos/workshops%20xd/WS29DesginaTable/FruitApp/src/ec/edu/espe/FruitApp/controller/ConexionMongoDBCustomer.java</file>
+            <file>file:/C:/Users/Dell/OneDrive/Documentos/workshops%20xd/WS29DesginaTable/FruitApp/src/ec/edu/espe/FruitApp/view/FrmAppMenu.java</file>
+            <file>file:/C:/Users/Dell/OneDrive/Documentos/workshops%20xd/WS29DesginaTable/FruitApp/src/ec/edu/espe/FruitApp/controller/FruitController.java</file>
+            <file>file:/C:/Users/Dell/OneDrive/Documentos/workshops%20xd/WS29DesginaTable/FruitApp/src/ec/edu/espe/FruitApp/controller/ConexionMongoDBWorker.java</file>
+            <file>file:/C:/Users/Dell/OneDrive/Documentos/workshops%20xd/WS29DesginaTable/FruitApp/src/ec/edu/espe/FruitApp/controller/ConexionMongoDBFruit.java</file>
+            <file>file:/C:/Users/Dell/OneDrive/Documentos/workshops%20xd/WS29DesginaTable/FruitApp/src/ec/edu/espe/FruitApp/model/Client.java</file>
+            <file>file:/C:/Users/Dell/OneDrive/Documentos/workshops%20xd/WS29DesginaTable/FruitApp/src/ec/edu/espe/FruitApp/controller/VegetableController.java</file>
+            <file>file:/C:/Users/Dell/OneDrive/Documentos/workshops%20xd/WS29DesginaTable/FruitApp/src/ec/edu/espe/FruitApp/model/Customer.java</file>
+            <file>file:/C:/Users/Dell/OneDrive/Documentos/workshops%20xd/WS29DesginaTable/FruitApp/src/ec/edu/espe/FruitApp/controller/RegisterController.java</file>
+            <file>file:/C:/Users/Dell/OneDrive/Documentos/workshops%20xd/WS29DesginaTable/FruitApp/src/ec/edu/espe/FruitApp/view/FrmAbout.java</file>
+            <file>file:/C:/Users/Dell/OneDrive/Documentos/workshops%20xd/WS29DesginaTable/FruitApp/src/ec/edu/espe/FruitApp/model/Fruit.java</file>
+            <file>file:/C:/Users/Dell/OneDrive/Documentos/workshops%20xd/WS29DesginaTable/FruitApp/src/ec/edu/espe/FruitApp/view/FrmWorker.java</file>
+            <file>file:/C:/Users/Dell/OneDrive/Documentos/workshops%20xd/WS29DesginaTable/FruitApp/src/ec/edu/espe/FruitApp/view/FrmCustomer.java</file>
+            <file>file:/C:/Users/Dell/OneDrive/Documentos/workshops%20xd/WS29DesginaTable/FruitApp/src/ec/edu/espe/FruitApp/view/FrmVegetable.java</file>
+            <file>file:/C:/Users/Dell/OneDrive/Documentos/workshops%20xd/WS29DesginaTable/FruitApp/src/ec/edu/espe/FruitApp/model/Vegetable.java</file>
+            <file>file:/C:/Users/Dell/OneDrive/Documentos/workshops%20xd/WS29DesginaTable/FruitApp/src/ec/edu/espe/FruitApp/controller/CustomerController.java</file>
+            <file>file:/C:/Users/Dell/OneDrive/Documentos/workshops%20xd/WS29DesginaTable/FruitApp/src/ec/edu/espe/FruitApp/controller/ConexionMongoDBVerdure.java</file>
+            <file>file:/C:/Users/Dell/OneDrive/Documentos/workshops%20xd/WS29DesginaTable/FruitApp/src/ec/edu/espe/FruitApp/view/FrmFruit.java</file>
+        </group>
+    </open-files>
+</project-private>
