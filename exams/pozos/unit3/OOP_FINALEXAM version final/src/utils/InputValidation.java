@@ -12,7 +12,8 @@ public class InputValidation {
       
     public void NumberValidation(JTextField txtField, java.awt.event.KeyEvent evt, JLabel lblfield, int length) {
 
-        if (evt.getKeyChar() >= '0' && evt.getKeyChar() <= '9' || Character.isISOControl(evt.getKeyChar())) {
+        
+        if (evt.getKeyChar() >= '0' && evt.getKeyChar() <= '9' || Character.isISOControl(evt.getKeyChar())||evt.getKeyChar()==',') {
             LengthValidation(txtField, evt, length);
             lblfield.setText("");
         } else {

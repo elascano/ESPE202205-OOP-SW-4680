@@ -1,11 +1,10 @@
 package espe.edu.ec.view;
-import espe.edu.ec.controller.BubbleSort;
+
 import utils.InputValidation;
-import espe.edu.ec.controller.InsertionSort;
-import espe.edu.ec.controller.QuickSort;
 import espe.edu.ec.controller.SortingContext;
+import espe.edu.ec.controller.SortingStrategy;
+import espe.edu.ec.model.elements;
 import java.util.Arrays;
-import javax.swing.JOptionPane;
 import utils.FormsHandler;
 
 /**
@@ -14,15 +13,18 @@ import utils.FormsHandler;
  */
 public class SortApp extends javax.swing.JFrame {
 
-    SortingContext contexto;
+    SortingContext context;
     InputValidation input;
     FormsHandler fmrs;
+    elements sort;
 
     public SortApp() {
         initComponents();
         input = new InputValidation();
         fmrs = new FormsHandler();
         TFsortedElements.setEditable(false);
+        TFmethod.setEditable(false);
+        sort = new elements();
     }
 
     /**
@@ -36,14 +38,14 @@ public class SortApp extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        cbxNumberOfElements = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         TFsortedElements = new javax.swing.JTextField();
         jToggleButton1 = new javax.swing.JToggleButton();
         TFElementsToBeSorted = new javax.swing.JTextField();
         lblError = new javax.swing.JLabel();
+        TFmethod = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,18 +54,12 @@ public class SortApp extends javax.swing.JFrame {
         jLabel1.setText("SortApp");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 20, -1, -1));
 
-        jLabel2.setText("Number of Elements to be sorted:");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, -1));
-
-        cbxNumberOfElements.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
-        jPanel1.add(cbxNumberOfElements, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, -1, -1));
-
-        jLabel3.setText("Elements To be Sorted(0-9)");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, -1, -1));
+        jLabel3.setText("Elements To be Sorted");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, -1, -1));
 
         jLabel4.setText("Sorted Elements");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, -1, -1));
-        jPanel1.add(TFsortedElements, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, 200, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, -1, -1));
+        jPanel1.add(TFsortedElements, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, 200, -1));
 
         jToggleButton1.setText("Sort");
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -71,17 +67,21 @@ public class SortApp extends javax.swing.JFrame {
                 jToggleButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 300, -1, -1));
+        jPanel1.add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 210, -1, -1));
 
         TFElementsToBeSorted.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 TFElementsToBeSortedKeyTyped(evt);
             }
         });
-        jPanel1.add(TFElementsToBeSorted, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, 200, -1));
+        jPanel1.add(TFElementsToBeSorted, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, 200, -1));
 
         lblError.setText("_");
-        jPanel1.add(lblError, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 170, -1, -1));
+        jPanel1.add(lblError, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 110, -1, -1));
+        jPanel1.add(TFmethod, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 170, -1));
+
+        jLabel2.setText("Used Method");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 140, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -89,15 +89,15 @@ public class SortApp extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 550, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 517, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
@@ -105,11 +105,7 @@ public class SortApp extends javax.swing.JFrame {
 
     private void TFElementsToBeSortedKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFElementsToBeSortedKeyTyped
 
-        if (cbxNumberOfElements.getSelectedIndex() == 0) {
-            TFElementsToBeSorted.setEditable(false);
-        } else {
-            input.NumberValidation(TFElementsToBeSorted, evt, lblError, cbxNumberOfElements.getSelectedIndex() - 1);
-        }
+        input.NumberValidation(TFElementsToBeSorted, evt, lblError, 100);
 
 
     }//GEN-LAST:event_TFElementsToBeSortedKeyTyped
@@ -155,8 +151,8 @@ public class SortApp extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField TFElementsToBeSorted;
+    private javax.swing.JTextField TFmethod;
     private javax.swing.JTextField TFsortedElements;
-    private javax.swing.JComboBox<String> cbxNumberOfElements;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -167,72 +163,41 @@ public class SortApp extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     void SetSortMethtod() {
+        SortingStrategy sortmethod;
+        int[] tosort;
+        int[] ordered;
 
-        int elements;
-        elements = cbxNumberOfElements.getSelectedIndex();
-        switch (elements) {
+        context = new SortingContext();
 
-            case 0 ->
-                JOptionPane.showMessageDialog(this, "Enter a valid number of elements");
-            case 1,2,3 -> {
-                bubblemehtod();
-                savetoDB(elements, bubblemehtod(), textFieldToArray(), "BubbleMethod");
-            }
-            case 4,5,6,7 -> {
-                InsertionMethod();
-                savetoDB(elements, InsertionMethod(), textFieldToArray(), "InsertionSort");
-            }
-            case 8,9,10 -> {
-                QuickSortMethod();
-                savetoDB(elements, QuickSortMethod(), textFieldToArray(), "QuickSort");
-            }
+        tosort = textFieldToArray();
+        sortmethod = context.setSortTrategy(tosort.length);
+        
+        ordered = sortmethod.sort(tosort);
+        showSortArray(ordered);
+        String name=printNameSort();
+        
+        
+        sort.setUnsorted(textFieldToArray());
+        sort.setSize(ordered.length);
+        sort.setSorted(ordered);
+        sort.setSortAlgorithm(name);
 
-        }
-
-    }
-
-    int[] bubblemehtod() {
-
-        int ordered[];
-        String toset;
-        contexto = new SortingContext(new BubbleSort());
-        ordered = contexto.setSortTrategy(textFieldToArray());
-        toset = ArrayTostring(ordered);
-        showSortArray(toset);
-
-        return ordered;
-
-    }
-
-    int[] InsertionMethod() {
-
-        int ordered[];
-        String toset;
-        contexto = new SortingContext(new InsertionSort());
-        ordered = contexto.setSortTrategy(textFieldToArray());
-        toset = ArrayTostring(ordered);
-        showSortArray(toset);
-        return ordered;
-
-    }
-
-    int[] QuickSortMethod() {
-
-        int ordered[];
-        String toset;
-        contexto = new SortingContext(new QuickSort());
-        ordered = contexto.setSortTrategy(textFieldToArray());
-        toset = ArrayTostring(ordered);
-        showSortArray(toset);
-        return ordered;
+        savetoDB(sort);
 
     }
 
     int[] textFieldToArray() {
 
-        int numbers[];
-        numbers = TFElementsToBeSorted.getText().chars().map(x -> x - '0').toArray();
-        return numbers;
+        String numbersC[];
+        numbersC = TFElementsToBeSorted.getText().split(",");
+        int numberA[] = new int[numbersC.length];
+
+        for (int i = 0; i < numbersC.length; i++) {
+            numberA[i] = Integer.parseInt(numbersC[i]);
+        }
+        
+
+        return numberA;
     }
 
     String ArrayTostring(int ordered[]) {
@@ -241,12 +206,40 @@ public class SortApp extends javax.swing.JFrame {
         return toset;
     }
 
-    void showSortArray(String toset) {
-        TFsortedElements.setText(toset);
+    void showSortArray(int ordered[]) {
+        String tosetstring;
+        tosetstring = ArrayTostring(ordered);
+        TFsortedElements.setText(tosetstring);
+
     }
 
-    void savetoDB(int size, int[] sort, int[] unsort, String algorithm) {
-        fmrs.saveElementsToDB(size, sort, unsort, algorithm);
+    void savetoDB(elements sortToDB) {
+
+        fmrs.saveElementsToDB(sortToDB);
+
+    }
+
+    String printNameSort() {
+        String name[];
+        String nameSort = null;
+        name = TFElementsToBeSorted.getText().split(",");
+        // name.length;
+        System.out.println(name.length);
+
+        if (name.length > 0 && name.length < 3) {
+            TFmethod.setText("BUBBLE SORT");
+            nameSort = "BUBBLE SORT";
+        }
+        if (name.length > 3 && name.length < 7) {
+            TFmethod.setText("INSERTION SORT");
+            nameSort = "INSERTION SORT";
+        }
+        if (name.length > 7) {
+            TFmethod.setText("QUICK SORT");
+            nameSort = "QUICK SORT";
+        }
+
+        return nameSort;
 
     }
 

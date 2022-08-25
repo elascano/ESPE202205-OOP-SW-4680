@@ -4,10 +4,10 @@ package espe.edu.ec.controller;
  *
  * @author QUILUMBAQUIN JAIRO,STEVEN POZO DCC0-ESPE: CODEX++
  */
-public class QuickSort extends SortingStrategy {
+public class QuickSort implements SortingStrategy {
 
     @Override
-    int[] sort(int[] number) {
+    public int[] sort(int[] number) {
         System.out.println("Quicsort is runnig");
         return QuickSort(number);
         
@@ -15,11 +15,11 @@ public class QuickSort extends SortingStrategy {
 
     public int[] QuickSort(int number[]) {
         final int longNumber = number.length;
-        sort1(number, 0, longNumber - 1);
+        InsertSort(number, 0, longNumber - 1);
         return number;
     }
 
-    public static void sort1(int number[], int start, int fin) {
+    public static void InsertSort(int number[], int start, int fin) {
         if (start >= fin) {
             return;
         }
@@ -45,8 +45,8 @@ public class QuickSort extends SortingStrategy {
             number[start] = number[right];
             number[right] = temporary;
         }
-        sort1(number, start, right - 1);
-        sort1(number, right + 1, fin);
+        InsertSort(number, start, right - 1);
+        InsertSort(number, right + 1, fin);
     }
 
 }

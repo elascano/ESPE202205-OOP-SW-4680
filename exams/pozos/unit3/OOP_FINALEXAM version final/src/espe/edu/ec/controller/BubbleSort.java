@@ -4,7 +4,7 @@ package espe.edu.ec.controller;
  *
  * @author QUILUMBAQUIN JAIRO,STEVEN POZO DCC0-ESPE: CODEX++
  */
-public class BubbleSort extends SortingStrategy{
+public class BubbleSort implements SortingStrategy{
 
     
     public int[] BubbleSortMehtod(int number[]){
@@ -28,7 +28,7 @@ public class BubbleSort extends SortingStrategy{
     }
 
     @Override
-    int[] sort(int[] number) {
+    public int[] sort(int[] number) {
         return BubbleSortMehtod(number);        
     }
 

@@ -4,8 +4,8 @@ package espe.edu.ec.controller;
  *
  * @author QUILUMBAQUIN JAIRO,STEVEN POZO DCC0-ESPE: CODEX++
  */
-abstract class SortingStrategy {
-    
+public interface SortingStrategy {
+
     abstract int[] sort(int number[]);
     
 }

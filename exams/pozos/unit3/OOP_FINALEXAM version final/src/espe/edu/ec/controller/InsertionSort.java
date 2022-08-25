@@ -4,10 +4,10 @@ package espe.edu.ec.controller;
  *
  * @author QUILUMBAQUIN JAIRO,STEVEN POZO DCC0-ESPE: CODEX++
  */
-public class InsertionSort extends SortingStrategy{
+public class InsertionSort implements SortingStrategy{
 
     @Override
-    int[] sort(int[] number) {
+    public int[] sort(int[] number) {
         System.out.println("Insertion is runnig");
         return InsertionMehtod(number);
     }
