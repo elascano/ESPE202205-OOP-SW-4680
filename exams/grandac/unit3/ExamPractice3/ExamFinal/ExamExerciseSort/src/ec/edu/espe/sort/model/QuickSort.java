@@ -2,7 +2,7 @@ package ec.edu.espe.sort.model;
 
 /**
  *
- * @author Carlos Granda DCCO-ESPE, Syntax Error
+ * @author Chavez Genaro DCCO-ESPE
  */
 public class QuickSort implements SortingStrategy {
 

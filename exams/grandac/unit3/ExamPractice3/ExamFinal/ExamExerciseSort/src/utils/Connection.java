@@ -7,7 +7,7 @@ import com.mongodb.client.MongoDatabase;
 
 /**
  *
- * @author Carlos Granda DCCO-ESPE, Syntax Error
+ * @author Chavez Genaro DCCO-ESPE
  */
 public class Connection {
 
