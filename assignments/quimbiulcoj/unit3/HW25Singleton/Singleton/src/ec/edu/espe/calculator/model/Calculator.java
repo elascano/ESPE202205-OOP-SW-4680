@@ -3,7 +3,7 @@ package ec.edu.espe.calculator.model;
 
 /**
  *
- * @author Juan Quimbiulco, DCCO-ESPE, CODEX++
+ * @author Diego Ponce, 
  */
 public class Calculator {
 
