@@ -2,7 +2,7 @@ package ec.edu.espe.sort.model;
 
 /**
  *
- * @author Carlos Granda DCCO-ESPE, Syntax Error
+ * @author Chavez Genaro DCCO-ESPE
  */
 public class BubbleSort implements SortingStrategy {
     public int[] sort(int data[]) {
@@ -19,4 +19,6 @@ public class BubbleSort implements SortingStrategy {
         }
         return data;
     }
+    
+  
 }

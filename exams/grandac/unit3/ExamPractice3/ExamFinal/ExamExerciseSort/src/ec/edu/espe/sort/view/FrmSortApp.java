@@ -1,6 +1,10 @@
 package ec.edu.espe.sort.view;
 
 import com.mongodb.client.MongoCollection;
+import ec.edu.espe.sort.model.BubbleSort;
+import ec.edu.espe.sort.model.SortingContext;
+import ec.edu.espe.sort.model.SortingStrategy;
+import ec.edu.espe.sort.controller.*;
 import java.util.Arrays;
 import javax.swing.JOptionPane;
 import javax.swing.SpinnerNumberModel;
@@ -12,16 +16,41 @@ import utils.Connection;
  * @author Carlos Granda DCCO-ESPE, Syntax Error
  */
 public class FrmSortApp extends javax.swing.JFrame {
-
-    MongoCollection<Document> SortNumbers = new Connection().data().getCollection("ListOfNumbers");
-
+   
     public FrmSortApp() {
         initComponents();
-        btnSort.setEnabled(false);
         SpinnerNumberModel range = new SpinnerNumberModel();
         range.setMaximum(15);
         range.setMinimum(0);
-        txtEntry.getText();
+    }
+    
+    
+    
+    public String ParsetoString(int[] v){
+      String str = Arrays.stream(v)
+                .mapToObj(String::valueOf)
+                .reduce((x, y) -> x + ", " + y)
+                .get();
+        
+        return str;
+    }
+    
+      public String ParsetoString2(String[] v){
+         StringBuffer sb = new StringBuffer();
+           for(int i = 0; i < v.length; i++) {
+               sb.append(v[i] + ",");
+            }
+      String str = sb.toString();
+        
+    return str;
+    }
+    
+    public int[] ParsetoInt(String[] data){
+    int[] values = Arrays.stream(data)
+                        .mapToInt(Integer::parseInt)
+                        .toArray();
+        
+        return values;
     }
 
     @SuppressWarnings("unchecked")
@@ -36,11 +65,11 @@ public class FrmSortApp extends javax.swing.JFrame {
         lblEnterNumbers = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
         txtListNumber = new javax.swing.JTextArea();
-        txtEntry = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
         btnClose = new javax.swing.JButton();
         txtSortNumber = new javax.swing.JTextField();
-        btnOk = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        lblType = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(51, 153, 0));
@@ -75,10 +104,6 @@ public class FrmSortApp extends javax.swing.JFrame {
         txtListNumber.setRows(5);
         jScrollPane3.setViewportView(txtListNumber);
 
-        jLabel2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("How many numbers do you want to enter?:");
-
         btnClose.setBackground(new java.awt.Color(153, 153, 153));
         btnClose.setText("Close");
         btnClose.addActionListener(new java.awt.event.ActionListener() {
@@ -87,13 +112,13 @@ public class FrmSortApp extends javax.swing.JFrame {
             }
         });
 
-        btnOk.setBackground(new java.awt.Color(153, 153, 153));
-        btnOk.setText("OK");
-        btnOk.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnOkActionPerformed(evt);
-            }
-        });
+        txtSortNumber.setEnabled(false);
+
+        jLabel3.setText("-------->");
+
+        jLabel6.setText("TIPO DE SOLUCION:");
+
+        lblType.setText("LBL");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -105,56 +130,51 @@ public class FrmSortApp extends javax.swing.JFrame {
                         .addGap(602, 602, 602)
                         .addComponent(lblEnterNumbers, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtEntry, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnOk, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(106, 106, 106)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
+                        .addGap(85, 85, 85)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel5)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(43, 43, 43)
+                            .addComponent(btnSort, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)))
+                        .addGap(6, 6, 6)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnClose, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel4)
-                            .addComponent(txtSortNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(4, 4, 4)
-                                .addComponent(btnSort, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnClose, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(lblType, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtSortNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(179, 179, 179)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(13, 13, 13)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtEntry, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnOk, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jLabel6)
+                    .addComponent(lblType))
+                .addGap(44, 44, 44)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(txtSortNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnClose, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnSort, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(124, 124, 124)
-                        .addComponent(lblEnterNumbers))
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel3))
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnSort, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnClose, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(124, 124, 124)
+                .addComponent(lblEnterNumbers)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -175,58 +195,38 @@ public class FrmSortApp extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSortActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSortActionPerformed
-        String number = txtListNumber.getText();
+        
+        FrmSortApp frm = new FrmSortApp();
+        DbManager db = new DbManager();
+        
+        String number;
+        number = txtListNumber.getText();
         number = number.trim();
-        String[] data = number.split("\n");
-        int numbers = data.length;
+        
+        String[] data;
+        data = number.split("\n");
+        
+        int[] intSorted;
+        String type;
+        
+        SortingContext sc = new SortingContext();
+        SortingStrategy sortingStrategy;
+        sortingStrategy = sc.setSortStrategy(data.length); //Liskov
+        
+        intSorted = sortingStrategy.sort(frm.ParsetoInt(data));       
+        txtSortNumber.setText(frm.ParsetoString(intSorted));
+        
+        type = sortingStrategy.getClass().getSimpleName();
+        lblType.setText(type);
+        
+        db.Insert(frm.ParsetoString2(data),String.valueOf(data.length), type,frm.ParsetoString(intSorted));
+        
+        
+        
+       
 
-        if (numbers > 0 && numbers <= 3) {
-            JOptionPane.showMessageDialog(null, "-> Apply Bubble Sort");
-
-            Arrays.sort(data);
-            for (String sortNumber : data) {
-                txtSortNumber.setText(sortNumber);
-            }
-
-            Document dataMongo = new org.bson.Document();
-            dataMongo.put("Unsorted", txtListNumber.getText());
-            dataMongo.put("Size", txtEntry.getText());
-            dataMongo.put("Sort algorithm", "Bubble Sort");
-            dataMongo.put("Sorted", txtSortNumber.getText());
-            SortNumbers.insertOne(dataMongo);
-        }
-        if (numbers > 4 && numbers <= 7) {
-            JOptionPane.showMessageDialog(null, "-> Apply Insertion Sort");
-            Arrays.sort(data);
-            for (String sortNumber : data) {
-                txtSortNumber.setText(sortNumber);
-            }
-            Document dataMongo = new org.bson.Document();
-            dataMongo.put("Unsorted", txtListNumber.getText());
-            dataMongo.put("Size", txtEntry.getText());
-            dataMongo.put("Sort algorithm", "Insertion Sort");
-            dataMongo.put("Sorted", txtSortNumber.getText());
-            SortNumbers.insertOne(dataMongo);
-        }
-        if (numbers > 7) {
-            JOptionPane.showMessageDialog(null, "-> Apply Quick Sort");
-            Arrays.sort(data);
-            for (String sortNumber : data) {
-                txtSortNumber.setText(sortNumber);
-            }
-            Document dataMongo = new org.bson.Document();
-            dataMongo.put("Unsorted", txtListNumber.getText());
-            dataMongo.put("Size", txtEntry.getText());
-            dataMongo.put("Sort algorithm", "Quick Sort");
-            dataMongo.put("Sorted", txtSortNumber.getText());
-            SortNumbers.insertOne(dataMongo);
-        }
+       
     }//GEN-LAST:event_btnSortActionPerformed
-
-    private void btnOkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOkActionPerformed
-        txtEntry.getText();
-        btnSort.setEnabled(true);
-    }//GEN-LAST:event_btnOkActionPerformed
 
     private void btnCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCloseActionPerformed
         System.exit(0);
@@ -269,16 +269,16 @@ public class FrmSortApp extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnClose;
-    private javax.swing.JButton btnOk;
     private javax.swing.JButton btnSort;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JLabel lblEnterNumbers;
-    private javax.swing.JTextField txtEntry;
+    private javax.swing.JLabel lblType;
     private javax.swing.JTextArea txtListNumber;
     private javax.swing.JTextField txtSortNumber;
     // End of variables declaration//GEN-END:variables

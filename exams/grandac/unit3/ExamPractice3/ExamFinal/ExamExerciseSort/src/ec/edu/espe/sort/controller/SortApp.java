@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 /**
  *
- * @author Carlos Granda DCCO-ESPE, Syntax Error
+ * @author Chavez Genaro DCCO-ESPE
  */
 public class SortApp {
     public static void main(String[] args) {
