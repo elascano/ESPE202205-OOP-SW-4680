@@ -1,12 +1,14 @@
 package ec.edu.espe.OrderAlgorithms.view;
 
 
-import ec.edu.espe.OrderAlgorithms.controller.MongoDB;
+import ec.edu.espe.OrderAlgorithms.controller.SortingContext;
+import ec.edu.espe.OrderAlgorithms.utils.MongoDateBase;
 import ec.edu.espe.OrderAlgorithms.model.SortApp;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.lang.reflect.Array;
+import java.util.Arrays;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -46,11 +48,10 @@ public class Sort extends javax.swing.JFrame {
         jPanel1 = new FondoPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        txtNumbers = new javax.swing.JTextField();
+        txtUnarrangedNumbers = new javax.swing.JTextField();
         btnSortNumbers = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        txtSorted = new javax.swing.JTextField();
+        txtNumberInOrder = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -62,14 +63,14 @@ public class Sort extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Insert the numbers");
 
-        txtNumbers.addActionListener(new java.awt.event.ActionListener() {
+        txtUnarrangedNumbers.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNumbersActionPerformed(evt);
+                txtUnarrangedNumbersActionPerformed(evt);
             }
         });
-        txtNumbers.addKeyListener(new java.awt.event.KeyAdapter() {
+        txtUnarrangedNumbers.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtNumbersKeyTyped(evt);
+                txtUnarrangedNumbersKeyTyped(evt);
             }
         });
 
@@ -80,16 +81,15 @@ public class Sort extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Add");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
         jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Sorted");
+
+        txtNumberInOrder.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNumberInOrderActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -106,14 +106,12 @@ public class Sort extends javax.swing.JFrame {
                     .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtNumbers, javax.swing.GroupLayout.DEFAULT_SIZE, 253, Short.MAX_VALUE)
-                    .addComponent(txtSorted)
+                    .addComponent(txtUnarrangedNumbers, javax.swing.GroupLayout.DEFAULT_SIZE, 253, Short.MAX_VALUE)
+                    .addComponent(txtNumberInOrder)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(47, 47, 47)
                         .addComponent(btnSortNumbers, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -123,15 +121,13 @@ public class Sort extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(txtNumbers, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtUnarrangedNumbers, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
-                    .addComponent(txtSorted, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtNumberInOrder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnSortNumbers, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
+                .addComponent(btnSortNumbers, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -155,36 +151,37 @@ public class Sort extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSortNumbersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSortNumbersActionPerformed
+        String unarrangedNumbers;
+        SortingContext sortingContext;
+        sortingContext = new SortingContext();
+        unarrangedNumbers = txtUnarrangedNumbers.getText();
+        SortApp sortApp = new SortApp();
+        String[] numberToSort = unarrangedNumbers.split(",");
+        int[] numbersOfList= new int[numberToSort.length];
+        sortApp.setUnarrangedNumbers(numbersOfList);
+        for (int i = 0; i < numberToSort.length; i++) {
+            // Note that this is assuming valid input
+            // If you want to check then add a try/catch 
+            // and another index for the numbers if to continue adding the others (see below)
+            numbersOfList[i] = Integer.parseInt(numberToSort[i]);
+        }
         
+        sortingContext.setSortStrategy(numbersOfList,sortApp);
+        txtNumberInOrder.setText(Arrays.toString(sortApp.getOrderlyNumbers()));
+
     }//GEN-LAST:event_btnSortNumbersActionPerformed
 
-    private void txtNumbersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNumbersActionPerformed
+    private void txtUnarrangedNumbersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUnarrangedNumbersActionPerformed
         
-    }//GEN-LAST:event_txtNumbersActionPerformed
+    }//GEN-LAST:event_txtUnarrangedNumbersActionPerformed
 
-    private void txtNumbersKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNumbersKeyTyped
-        char validar = evt.getKeyChar();
-        if(Character.isLetter(validar)){
-            getToolkit().beep();
-            
-            evt.consume();
-            JOptionPane.showMessageDialog(rootPane, "Only Numbers");
-        }
-    }//GEN-LAST:event_txtNumbersKeyTyped
+    private void txtUnarrangedNumbersKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtUnarrangedNumbersKeyTyped
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        SortApp sortApp;
-        MongoDB saveNumbers;
-        
-        sortApp = new SortApp();
-        saveNumbers = new MongoDB();
-        
-        sortApp.setAlgorithm(txtNumbers.getText());
-        sortApp.setSort(txtSorted.getText());
-        
-        saveNumbers.CreateAlgorithm(sortApp);
-        JOptionPane.showMessageDialog(rootPane,"data saved succesfully");
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_txtUnarrangedNumbersKeyTyped
+
+    private void txtNumberInOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNumberInOrderActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNumberInOrderActionPerformed
 
     /**
      * @param args the command line arguments
@@ -224,13 +221,12 @@ public class Sort extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSortNumbers;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField txtNumbers;
-    private javax.swing.JTextField txtSorted;
+    private javax.swing.JTextField txtNumberInOrder;
+    private javax.swing.JTextField txtUnarrangedNumbers;
     // End of variables declaration//GEN-END:variables
     class FondoPanel extends JPanel{
         private Image imagen;
