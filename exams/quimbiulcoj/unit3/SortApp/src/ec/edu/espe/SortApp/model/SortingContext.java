@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package ec.edu.espe.SortApp.model;
 
 /**
@@ -15,9 +11,6 @@ public int[ ] sort( int data[ ] ) {
     int size = data.length;
     sortingStrategy = setSortStrategy(size);
     return sortingStrategy.sort(data);
-
-
-
 }
 
 public SortingStrategy setSortStrategy(int n) {
@@ -29,9 +22,6 @@ public SortingStrategy setSortStrategy(int n) {
             sortingStrategy = new QuickSort();
                 if(  n > 7)
                 return sortingStrategy;
-                    return null;
-
-   
-}
-
+                    return null;  
+    }
 }

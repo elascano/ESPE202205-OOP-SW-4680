@@ -20,7 +20,7 @@ public class SortingContext {
 
     }
 
-    public SortingStrategy setSortStrategy(int listOfNumbers[], ListNumbers listNumbers) {
+    public SortingStrategy setSortStrategy(int listOfNumbers[]) {
 
         if (listOfNumbers.length < 4 && listOfNumbers.length >= 0) {
 
@@ -32,7 +32,7 @@ public class SortingContext {
 
         } else if (listOfNumbers.length > 7) {
 
-            sortingStrategy = new QuickShort();
+            sortingStrategy = new QuickSort();
 
         }
         return sortingStrategy;
