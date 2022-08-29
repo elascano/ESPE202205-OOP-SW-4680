@@ -10,6 +10,6 @@ import ec.edu.espe.finalexam.model.ListNumbers;
  *
  * @author Luis Burbano, DCCO- ESPE, BettaCoders
  */
-public abstract class SortingStrategy {
-    public void sort(ListNumbers listOfNumbers) {};
+    public abstract class SortingStrategy {
+    public abstract void sort(ListNumbers listOfNumbers);
 }

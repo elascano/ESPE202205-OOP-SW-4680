@@ -4,7 +4,7 @@
  */
 package ec.edu.espe.SortApp.view;
 
-import ec.edu.espe.SortApp.controller.MongoDBManager;
+import utils.MongoDBManager;
 import ec.edu.espe.SortApp.model.SortApp;
 import java.util.Arrays;
 import javax.swing.JOptionPane;
@@ -69,16 +69,19 @@ public class SortClient extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel3.setText("Unsorted:");
 
+        txtUnsorted.setEditable(false);
         txtUnsorted.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel4.setText("Size:");
 
+        txtSorted.setEditable(false);
         txtSorted.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel5.setText("Sorted:");
 
+        txtSize.setEditable(false);
         txtSize.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -159,6 +162,7 @@ public class SortClient extends javax.swing.JFrame {
         
         saveAlgorithms.CreateAlgorithm(sortApp);
         JOptionPane.showMessageDialog(null, "data saved succesfully");
+       SetSortMethtod();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void txtListKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtListKeyTyped
@@ -217,4 +221,8 @@ public class SortClient extends javax.swing.JFrame {
     private javax.swing.JTextField txtSorted;
     private javax.swing.JTextField txtUnsorted;
     // End of variables declaration//GEN-END:variables
+
+    private void SetSortMethtod() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

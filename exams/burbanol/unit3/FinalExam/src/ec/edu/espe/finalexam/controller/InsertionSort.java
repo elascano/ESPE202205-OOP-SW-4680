@@ -39,6 +39,6 @@ public class InsertionSort extends SortingStrategy {
         listOfNumbers.setListOfNumberOrdered(listOfNumbersAux);
         listOfNumbers.setSortAlgorithm("InsertSort");
         listOfNumbers.setSizeOfListOfNumbers(listOfNumbers.getListOfNumbersDisordered().length);
-        listOfNumbers.setListOfNumbersDisordered(Arrays.copyOf(listOfNumbersAux, listOfNumbersAux.length));
+        listOfNumbers.setListOfNumbersDisordered(Arrays.copyOf(listOfNumbers.getListOfNumbersDisordered(), listOfNumbersAux.length));
     }
 }

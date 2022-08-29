@@ -69,16 +69,19 @@ public class SortClient extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel3.setText("Unsorted:");
 
+        txtUnsorted.setEditable(false);
         txtUnsorted.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel4.setText("Size:");
 
+        txtSorted.setEditable(false);
         txtSorted.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel5.setText("Sorted:");
 
+        txtSize.setEditable(false);
         txtSize.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
