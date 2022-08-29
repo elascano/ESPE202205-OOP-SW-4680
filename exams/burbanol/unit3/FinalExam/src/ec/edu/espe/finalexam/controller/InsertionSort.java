@@ -32,9 +32,13 @@ public class InsertionSort extends SortingStrategy {
             listOfNumbersAux[j + 1] = key;
         }
         
+        insertData(listOfNumbersAux, listOfNumbers);
+    }
+    
+    private static void insertData(int listOfNumbersAux[], ListNumbers listOfNumbers) {
         listOfNumbers.setListOfNumberOrdered(listOfNumbersAux);
         listOfNumbers.setSortAlgorithm("InsertSort");
         listOfNumbers.setSizeOfListOfNumbers(listOfNumbers.getListOfNumbersDisordered().length);
+        listOfNumbers.setListOfNumbersDisordered(Arrays.copyOf(listOfNumbers.getListOfNumbersDisordered(), listOfNumbersAux.length));
     }
-
 }

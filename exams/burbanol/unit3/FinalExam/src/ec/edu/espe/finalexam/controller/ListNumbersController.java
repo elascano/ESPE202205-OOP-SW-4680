@@ -21,26 +21,26 @@ public class ListNumbersController {
 
     private MongoCollection<Document> mongoCollection;
 
-    public ListNumbersController(){
+    public ListNumbersController() {
         this.mongoCollection = mongoDatabase.getCollection("numbers");
     }
-    
+
     public void updateToDatabase(Document document) {
         mongoCollection.insertOne(document);
 
     }
+
     public MongoCollection getMongoCollection() {
         return this.mongoCollection;
     }
 
-    public Document createDocument(ListNumbers listNumbers){
-        Document document = new Document();    
+    public Document createDocument(ListNumbers listNumbers) {
+        Document document = new Document();
         document.append("listOfNumbersDisordered", Arrays.toString(listNumbers.getListOfNumbersDisordered()));
         document.append("sizeOfListOfNumbers", listNumbers.getSizeOfListOfNumbers());
         document.append("sortAlgorithm", listNumbers.getSortAlgorithm());
         document.append("listOfNumberOrdered", Arrays.toString(listNumbers.getListOfNumberOrdered()));
-       
-        
+
         return document;
     }
 

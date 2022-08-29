@@ -20,38 +20,21 @@ public class SortingContext {
 
     }
 
-    public String setSortStrategy(int listOfNumbers[],ListNumbers listNumbers) {
+    public SortingStrategy setSortStrategy(int listOfNumbers[]) {
 
-        ListNumbersController listNumbersController;
-        listNumbersController = new ListNumbersController();
- 
-        if (listOfNumbers.length < 4 && listOfNumbers.length>=0) {
-            BubbleSort bubbleSort;
-            bubbleSort = new BubbleSort();
-            bubbleSort.sort(listNumbers);
-            listNumbers.setListOfNumbersDisordered(Arrays.copyOf(listOfNumbers, listOfNumbers.length));
-            Document doc = listNumbersController.createDocument(listNumbers);
-            listNumbersController.updateToDatabase(doc);
-            
+        if (listOfNumbers.length < 4 && listOfNumbers.length >= 0) {
 
-        }else if (listOfNumbers.length >= 4 && listOfNumbers.length<=7) {
-            InsertionSort insertionSort;
-            insertionSort = new InsertionSort();
-            insertionSort.sort(listNumbers);
-            listNumbers.setListOfNumbersDisordered(listOfNumbers);
-            Document doc = listNumbersController.createDocument(listNumbers);
-            listNumbersController.updateToDatabase(doc);
-            
+            sortingStrategy = new BubbleSort();
 
-        }else if (listOfNumbers.length >7) {
-            int size;
-            size= listOfNumbers.length;
-            QuickShort.sort(listOfNumbers,0,size-1,listNumbers);
-            listNumbers.setListOfNumbersDisordered(Arrays.copyOf(listOfNumbers, listOfNumbers.length));
-            Document doc = listNumbersController.createDocument(listNumbers);
-            listNumbersController.updateToDatabase(doc);
-            
+        } else if (listOfNumbers.length >= 4 && listOfNumbers.length <= 7) {
+
+            sortingStrategy = new InsertionSort();
+
+        } else if (listOfNumbers.length > 7) {
+
+            sortingStrategy = new QuickSort();
+
         }
-        return Arrays.toString(listOfNumbers);
+        return sortingStrategy;
     }
 }
