@@ -32,7 +32,7 @@ public class SortingContext {
 
         } else if (listOfNumbers.length > 7) {
 
-            sortingStrategy = new QuickShort();
+            sortingStrategy = new QuickSort();
 
         }
         return sortingStrategy;

@@ -21,7 +21,40 @@ public class SortApp extends javax.swing.JFrame {
     public SortApp() {
         initComponents();
     }
+    public void sortNumbers(){
+        String numberInDesorder;
+        SortingContext sortingContext;
+        ListNumbers listNumbers;
+        ListNumbersController listNumbersController;
+        Document document;
+        listNumbersController = new ListNumbersController();
+        listNumbers = new ListNumbers();
+        sortingContext = new SortingContext();
+        document = new Document();
 
+        numberInDesorder = txtNumberInDesorder.getText();
+
+        
+        String[] numberToSort = numberInDesorder.split(",");
+        int[] numbersOfList = new int[numberToSort.length];
+        
+
+        for (int i = 0; i < numberToSort.length; i++) {
+            numbersOfList[i] = Integer.parseInt(numberToSort[i]);
+        }
+        listNumbers.setListOfNumbersDisordered(numbersOfList);
+        
+        SortingStrategy sortingStrategy;
+        sortingStrategy = sortingContext.setSortStrategy(numbersOfList);
+
+        sortingStrategy.sort(listNumbers);
+        document = listNumbersController.createDocument(listNumbers);
+
+        listNumbersController.updateToDatabase(document);
+
+        txtNumberInOrder.setText(Arrays.toString(listNumbers.getListOfNumberOrdered()));
+        txtAlgorithm.setText(listNumbers.getSortAlgorithm());
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -113,36 +146,7 @@ public class SortApp extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSortActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSortActionPerformed
-        String numberInDesorder;
-        SortingContext sortingContext;
-        ListNumbers listNumbers;
-        ListNumbersController listNumbersController;
-        Document document;
-        listNumbersController = new ListNumbersController();
-        listNumbers = new ListNumbers();
-        sortingContext = new SortingContext();
-        document = new Document();
-
-        numberInDesorder = txtNumberInDesorder.getText();
-
-        String[] numberToSort = numberInDesorder.split(",");
-        int[] numbersOfList = new int[numberToSort.length];
-        
-
-        for (int i = 0; i < numberToSort.length; i++) {
-            numbersOfList[i] = Integer.parseInt(numberToSort[i]);
-        }
-        listNumbers.setListOfNumbersDisordered(numbersOfList);
-        SortingStrategy sortingStrategy;
-        sortingStrategy = sortingContext.setSortStrategy(numbersOfList);
-
-        sortingStrategy.sort(listNumbers);
-        document = listNumbersController.createDocument(listNumbers);
-
-        listNumbersController.updateToDatabase(document);
-
-        txtNumberInOrder.setText(Arrays.toString(listNumbers.getListOfNumberOrdered()));
-        txtAlgorithm.setText(listNumbers.getSortAlgorithm());
+        sortNumbers();
     }//GEN-LAST:event_btnSortActionPerformed
 
     /**

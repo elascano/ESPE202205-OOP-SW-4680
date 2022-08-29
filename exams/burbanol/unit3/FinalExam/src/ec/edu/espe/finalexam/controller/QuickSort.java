@@ -11,7 +11,7 @@ import java.util.Arrays;
  *
  * @author Luis Burbano, DCCO- ESPE, BettaCoders
  */
-public class QuickShort extends SortingStrategy {
+public class QuickSort extends SortingStrategy {
 
     @Override
     public void sort(ListNumbers listOfNumbers) {
