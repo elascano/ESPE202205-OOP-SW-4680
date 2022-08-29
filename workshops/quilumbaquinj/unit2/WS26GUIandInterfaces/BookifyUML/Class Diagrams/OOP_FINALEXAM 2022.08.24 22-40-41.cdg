@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="OOP_FINALEXAM">
+  <ClassDiagramComponents>
+    <Class name="BubbleSort" package="espe.edu.ec.controller" visibility="public" isAbstract="true" xPosition="141.0" yPosition="375.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="sort" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="InsertionSort" package="espe.edu.ec.controller" visibility="public" isAbstract="true" xPosition="557.0" yPosition="375.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="sort" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="QuickSort" package="espe.edu.ec.controller" visibility="public" isAbstract="true" xPosition="957.0" yPosition="375.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="sort" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="SortingContext" package="espe.edu.ec.controller" visibility="public" xPosition="158.0" yPosition="20.0">
+      <Fields>
+        <Field name="sortStragey" type="SortingStrategy" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="StrategyContext" returnType="void" visibility="public">
+          <Argument type="SortingStrategy" name="sortStragey"/>
+        </Method>
+        <Method name="getSortStragey" returnType="SortingStrategy" visibility="public"/>
+        <Method name="setSortStragey" returnType="void" visibility="public">
+          <Argument type="SortingStrategy" name="sortStragey"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Client" package="espe.edu.ec.model" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="OOP_FINALEXAM" package="oop_finalexam" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="SortingStrategy" package="espe.edu.ec.controller" visibility="public" xPosition="927.0" yPosition="54.0">
+      <Methods>
+        <Method name="sort" returnType="void" visibility="package"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="sortStragey" source="espe.edu.ec.controller.SortingContext" target="espe.edu.ec.controller.SortingStrategy" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="espe.edu.ec.controller.QuickSort" target="espe.edu.ec.controller.SortingStrategy"/>
+    <UseRelation source="espe.edu.ec.controller.SortingContext" target="espe.edu.ec.controller.SortingStrategy" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="espe.edu.ec.controller.BubbleSort" target="espe.edu.ec.controller.SortingStrategy"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="espe.edu.ec.controller.InsertionSort" target="espe.edu.ec.controller.SortingStrategy"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
