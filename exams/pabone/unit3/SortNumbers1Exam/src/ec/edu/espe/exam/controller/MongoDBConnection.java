@@ -9,7 +9,7 @@ import com.mongodb.MongoClientSettings;
 
 /**
  *
- * @author Elkin Pabon, DCCO-ESPE, DEES Developers
+ * @author Elkin Pabon, Erick Moreira DCCO-ESPE, DEES Developers
  */
 
 public class MongoDBConnection {
@@ -18,6 +18,7 @@ public class MongoDBConnection {
     MongoClientSettings settings = MongoClientSettings.builder().applyConnectionString(connectionString).build();
     com.mongodb.client.MongoClient mongoClient = MongoClients.create(settings);
     MongoDatabase database = mongoClient.getDatabase("EXAM3P");
+    //Collection in AppDisplay JFrame
 
     
     public MongoDatabase data() {

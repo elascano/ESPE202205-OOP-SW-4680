@@ -2,12 +2,13 @@ package ec.edu.espe.exam.model;
 
 /**
  *
- * @author Elkin Pabon, DCCO-ESPE, DEES Developers
+ * @author Elkin Pabon, Erick Moreira DCCO-ESPE, DEES Developers
  */
 
-public class insertionSort{
+public class insertionSort implements sortingStrategy{
 
     public static void insertionSort(int[] array) {
+          
     for (int i = 1; i < array.length; i++) {
         int current = array[i];
         int j = i - 1;
