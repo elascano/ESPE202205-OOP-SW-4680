@@ -10,7 +10,7 @@ import java.util.Arrays;
 public class BubbleSort extends SortingStrategy {
 
     @Override
-    public void sort(SortApp sortApp) {
+    public int[] sort(SortApp sortApp) {
 
         int listOfNumbersAux[];
 
@@ -29,9 +29,13 @@ public class BubbleSort extends SortingStrategy {
                 }
             }
         }
-
+        insertData(listOfNumbersAux, sortApp);
+        return listOfNumbersAux;
+    }
+    private static void insertData(int listOfNumbersAux[], SortApp sortApp) {
         sortApp.setOrderlyNumbers(listOfNumbersAux);
         sortApp.setSort("BubbleSort");
         sortApp.setSize(sortApp.getUnarrangedNumbers().length);
+        sortApp.setUnarrangedNumbers(Arrays.copyOf(sortApp.getUnarrangedNumbers(), listOfNumbersAux.length));
     }
 }

@@ -1,7 +1,9 @@
 package ec.edu.espe.OrderAlgorithms.view;
 
 
+import ec.edu.espe.OrderAlgorithms.controller.SortAppController;
 import ec.edu.espe.OrderAlgorithms.controller.SortingContext;
+import ec.edu.espe.OrderAlgorithms.controller.SortingStrategy;
 import ec.edu.espe.OrderAlgorithms.utils.MongoDateBase;
 import ec.edu.espe.OrderAlgorithms.model.SortApp;
 import java.awt.Graphics;
@@ -12,6 +14,7 @@ import java.util.Arrays;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import org.bson.Document;
 
 /**
  *
@@ -36,6 +39,43 @@ public class Sort extends javax.swing.JFrame {
         Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("pictures/Algoritmo.jpg"));
         return retValue;
     }
+    
+        public void sortNumbers(){
+        String numberInDesorder;
+        SortingContext sortingContext;
+        SortApp sortApp;
+        SortAppController sortAppController;
+        Document document;
+        sortAppController = new SortAppController();
+        sortApp = new SortApp();
+        sortingContext = new SortingContext();
+        document = new Document();
+
+        numberInDesorder = txtUnarrangedNumbers.getText();
+
+        
+        String[] numberToSort = numberInDesorder.split(",");
+        int[] numbersOfList = new int[numberToSort.length];
+        
+
+        for (int i = 0; i < numberToSort.length; i++) {
+            numbersOfList[i] = Integer.parseInt(numberToSort[i]);
+        }
+        sortApp.setUnarrangedNumbers(numbersOfList);
+        
+        SortingStrategy sortingStrategy;
+        sortingStrategy = sortingContext.setSortStrategy(numbersOfList);
+
+        sortingStrategy.sort(sortApp);
+        
+        document = sortAppController.createDocument(sortApp);
+
+        sortAppController.updateToDatabase(document);
+
+        txtNumberInOrder.setText(Arrays.toString(sortApp.getUnarrangedNumbers()));
+        txtAlgorithm.setText(sortApp.getSort());
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -52,6 +92,8 @@ public class Sort extends javax.swing.JFrame {
         btnSortNumbers = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         txtNumberInOrder = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        txtAlgorithm = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -91,6 +133,10 @@ public class Sort extends javax.swing.JFrame {
             }
         });
 
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Algorithm");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -99,18 +145,22 @@ public class Sort extends javax.swing.JFrame {
                 .addGap(0, 271, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(166, 166, 166))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnSortNumbers, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(202, 202, 202))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabel4))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(txtUnarrangedNumbers, javax.swing.GroupLayout.DEFAULT_SIZE, 253, Short.MAX_VALUE)
                     .addComponent(txtNumberInOrder)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addComponent(btnSortNumbers, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(txtAlgorithm))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -119,16 +169,22 @@ public class Sort extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel2)
-                    .addComponent(txtUnarrangedNumbers, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(txtUnarrangedNumbers, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtNumberInOrder))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(txtNumberInOrder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(txtAlgorithm, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnSortNumbers, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(30, 30, 30))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -151,24 +207,7 @@ public class Sort extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSortNumbersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSortNumbersActionPerformed
-        String unarrangedNumbers;
-        SortingContext sortingContext;
-        sortingContext = new SortingContext();
-        unarrangedNumbers = txtUnarrangedNumbers.getText();
-        SortApp sortApp = new SortApp();
-        String[] numberToSort = unarrangedNumbers.split(",");
-        int[] numbersOfList= new int[numberToSort.length];
-        sortApp.setUnarrangedNumbers(numbersOfList);
-        for (int i = 0; i < numberToSort.length; i++) {
-            // Note that this is assuming valid input
-            // If you want to check then add a try/catch 
-            // and another index for the numbers if to continue adding the others (see below)
-            numbersOfList[i] = Integer.parseInt(numberToSort[i]);
-        }
-        
-        sortingContext.setSortStrategy(numbersOfList,sortApp);
-        txtNumberInOrder.setText(Arrays.toString(sortApp.getOrderlyNumbers()));
-
+        sortNumbers();
     }//GEN-LAST:event_btnSortNumbersActionPerformed
 
     private void txtUnarrangedNumbersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUnarrangedNumbersActionPerformed
@@ -224,7 +263,9 @@ public class Sort extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField txtAlgorithm;
     private javax.swing.JTextField txtNumberInOrder;
     private javax.swing.JTextField txtUnarrangedNumbers;
     // End of variables declaration//GEN-END:variables

@@ -8,6 +8,5 @@ import ec.edu.espe.OrderAlgorithms.model.SortApp;
  * @author Luis Burbano, DCCO- ESPE, BettaCoders
  */
 public abstract class SortingStrategy {
-    public void sort(SortApp sortApp){
-    };
+    public abstract int[] sort(SortApp sortApp);
 }
