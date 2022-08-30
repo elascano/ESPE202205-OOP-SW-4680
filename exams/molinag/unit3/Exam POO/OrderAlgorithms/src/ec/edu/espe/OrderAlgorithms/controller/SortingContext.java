@@ -12,45 +12,29 @@ import org.bson.Document;
  * @author Molina Gustavo, DCCO-ESPE GADC.msi
  */
 public class SortingContext {
+
     private SortingStrategy sortingStrategy;
 
     public void sort() {
 
     }
 
-    public String setSortStrategy(int unarrangedNumbers[],SortApp sortApp) {
+    public SortingStrategy setSortStrategy(int sortApp[]) {
 
-        SortAppController sortAppController;
-        sortAppController = new SortAppController();
- 
-        if (unarrangedNumbers.length < 4 && unarrangedNumbers.length>=0) {
-            BubbleSort bubbleSort;
-            bubbleSort = new BubbleSort();
-            bubbleSort.sort(sortApp);
-            sortApp.setUnarrangedNumbers(Arrays.copyOf(unarrangedNumbers, unarrangedNumbers.length));
-            Document doc = sortAppController.createDocument(sortApp);
-            sortAppController.updateToDatabase(doc);
-            
+        if (sortApp.length < 4 && sortApp.length >= 0) {
 
-        }else if (unarrangedNumbers.length >= 4 && unarrangedNumbers.length<=7) {
-            InsertionSort insertionSort;
-            insertionSort = new InsertionSort();
-            insertionSort.sort(sortApp);
-            sortApp.setUnarrangedNumbers(unarrangedNumbers);
-            Document doc = sortAppController.createDocument(sortApp);
-            sortAppController.updateToDatabase(doc);
-            
+            sortingStrategy = new BubbleSort();
 
-        }else if (unarrangedNumbers.length >7) {
-            int size;
-            size= unarrangedNumbers.length;
-            QuickSort.sort(unarrangedNumbers,0,size-1,sortApp);
-            sortApp.setUnarrangedNumbers(Arrays.copyOf(unarrangedNumbers, unarrangedNumbers.length));
-            Document doc = sortAppController.createDocument(sortApp);
-            sortAppController.updateToDatabase(doc);
-            
+        } else if (sortApp.length >= 4 && sortApp.length <= 7) {
+
+            sortingStrategy = new InsertionSort();
+
+        } else if (sortApp.length > 7) {
+
+            sortingStrategy = new QuickSort();
+
         }
-        return Arrays.toString(unarrangedNumbers);
+        return sortingStrategy;
     }
 }    
     
