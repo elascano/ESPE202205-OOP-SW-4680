@@ -2,18 +2,15 @@ package ec.edu.espe.SortApp.model;
 
 /**
  *
- * @author Carlos Rivera, DCCO-ESPE, CODEX++
+ * @author Daniela Tituaña, DCCO-ESPE, MyWayCode
  */
-public class Numbers{
+public class NumbersBase{
         
-        private int NumbersDisordered[] ;
+        private int[] NumbersDisordered ;
         private int sizeNumbers;
         private String sortAlgorithm;
         private int[] NumberOrdered;
-
-     
-        
-        
+ 
         public int[] getNumbersDisordered() {
             return NumbersDisordered;
         }
@@ -51,8 +48,5 @@ public class Numbers{
         return "ListNumbers{" + "listOfNumbersDisordered=" + NumbersDisordered + ", sizeOfListOfNumbers=" + sizeNumbers + ", sortAlgorithm=" + sortAlgorithm + ", listOfNumberOrdered=" + NumberOrdered + '}';
     }
       
-        
-        
-        
     }
     
