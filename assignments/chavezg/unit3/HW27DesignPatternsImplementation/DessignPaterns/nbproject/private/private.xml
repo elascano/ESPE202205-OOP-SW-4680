@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Gdavidce/Desktop/OPP/02CODE/ESPE202205-OOP-SW-4680/assignments/chavezg/unit3/HW27DesignPatternsImplementation/DessignPaterns/src/FactoryMethod/Client.java</file>
+            <file>file:/C:/Users/Gdavidce/Desktop/OPP/02CODE/ESPE202205-OOP-SW-4680/assignments/chavezg/unit3/HW27DesignPatternsImplementation/DessignPaterns/src/AbstractFactory/WinFactory.java</file>
+            <file>file:/C:/Users/Gdavidce/Desktop/OPP/02CODE/ESPE202205-OOP-SW-4680/assignments/chavezg/unit3/HW27DesignPatternsImplementation/DessignPaterns/src/FactoryMethod/FactoryandFactoryOne.java</file>
+            <file>file:/C:/Users/Gdavidce/Desktop/OPP/02CODE/ESPE202205-OOP-SW-4680/assignments/chavezg/unit3/HW27DesignPatternsImplementation/DessignPaterns/src/AbstractFactory/GUIFactory.java</file>
+            <file>file:/C:/Users/Gdavidce/Desktop/OPP/02CODE/ESPE202205-OOP-SW-4680/assignments/chavezg/unit3/HW27DesignPatternsImplementation/DessignPaterns/src/AbstractFactory/ClientApp.java</file>
+            <file>file:/C:/Users/Gdavidce/Desktop/OPP/02CODE/ESPE202205-OOP-SW-4680/assignments/chavezg/unit3/HW27DesignPatternsImplementation/DessignPaterns/src/Singleton/USTax.java</file>
+            <file>file:/C:/Users/Gdavidce/Desktop/OPP/02CODE/ESPE202205-OOP-SW-4680/assignments/chavezg/unit3/HW27DesignPatternsImplementation/DessignPaterns/src/AbstractFactory/LinuxMenu.java</file>
+            <file>file:/C:/Users/Gdavidce/Desktop/OPP/02CODE/ESPE202205-OOP-SW-4680/assignments/chavezg/unit3/HW27DesignPatternsImplementation/DessignPaterns/src/AbstractFactory/Menu.java</file>
+            <file>file:/C:/Users/Gdavidce/Desktop/OPP/02CODE/ESPE202205-OOP-SW-4680/assignments/chavezg/unit3/HW27DesignPatternsImplementation/DessignPaterns/src/AbstractFactory/LinuxFactory.java</file>
+            <file>file:/C:/Users/Gdavidce/Desktop/OPP/02CODE/ESPE202205-OOP-SW-4680/assignments/chavezg/unit3/HW27DesignPatternsImplementation/DessignPaterns/src/AbstractFactory/Button.java</file>
+            <file>file:/C:/Users/Gdavidce/Desktop/OPP/02CODE/ESPE202205-OOP-SW-4680/assignments/chavezg/unit3/HW27DesignPatternsImplementation/DessignPaterns/src/FactoryMethod/MySqlConnection.java</file>
+            <file>file:/C:/Users/Gdavidce/Desktop/OPP/02CODE/ESPE202205-OOP-SW-4680/assignments/chavezg/unit3/HW27DesignPatternsImplementation/DessignPaterns/src/AbstractFactory/LinuxButton.java</file>
+            <file>file:/C:/Users/Gdavidce/Desktop/OPP/02CODE/ESPE202205-OOP-SW-4680/assignments/chavezg/unit3/HW27DesignPatternsImplementation/DessignPaterns/src/AbstractFactory/WinMenu.java</file>
+            <file>file:/C:/Users/Gdavidce/Desktop/OPP/02CODE/ESPE202205-OOP-SW-4680/assignments/chavezg/unit3/HW27DesignPatternsImplementation/DessignPaterns/src/FactoryMethod/Connection.java</file>
+            <file>file:/C:/Users/Gdavidce/Desktop/OPP/02CODE/ESPE202205-OOP-SW-4680/assignments/chavezg/unit3/HW27DesignPatternsImplementation/DessignPaterns/src/Singleton/Calculator.java</file>
+            <file>file:/C:/Users/Gdavidce/Desktop/OPP/02CODE/ESPE202205-OOP-SW-4680/assignments/chavezg/unit3/HW27DesignPatternsImplementation/DessignPaterns/src/AbstractFactory/WinButton.java</file>
+            <file>file:/C:/Users/Gdavidce/Desktop/OPP/02CODE/ESPE202205-OOP-SW-4680/assignments/chavezg/unit3/HW27DesignPatternsImplementation/DessignPaterns/src/FactoryMethod/OracleConnection.java</file>
+        </group>
+    </open-files>
+</project-private>
