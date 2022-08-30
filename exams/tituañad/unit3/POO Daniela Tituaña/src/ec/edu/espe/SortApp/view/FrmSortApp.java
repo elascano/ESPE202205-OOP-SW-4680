@@ -3,7 +3,7 @@ package ec.edu.espe.SortApp.view;
 
 import ec.edu.espe.SortApp.controller.SortingContext;
 import ec.edu.espe.SortApp.controller.ValidationController;
-import ec.edu.espe.SortApp.model.Numbers;
+import ec.edu.espe.SortApp.model.NumbersBase;
 import java.util.Arrays;
 import javax.swing.JOptionPane;
 
@@ -47,11 +47,11 @@ public class FrmSortApp extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lbSorting.setFont(new java.awt.Font("Baskerville Old Face", 1, 24)); // NOI18N
-        lbSorting.setText("Sorting Algorithms");
-        getContentPane().add(lbSorting, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 30, -1, -1));
+        lbSorting.setText("Sort App");
+        getContentPane().add(lbSorting, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, -1, -1));
 
         lbDisorderedNumbers.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
-        lbDisorderedNumbers.setText("Disordered Numbers:");
+        lbDisorderedNumbers.setText("Your Numbers:");
         getContentPane().add(lbDisorderedNumbers, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 170, -1));
 
         lbOrderedNumbers.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
@@ -85,13 +85,13 @@ public class FrmSortApp extends javax.swing.JFrame {
                 txtDisorderedNumbersKeyTyped(evt);
             }
         });
-        getContentPane().add(txtDisorderedNumbers, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 180, -1));
+        getContentPane().add(txtDisorderedNumbers, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, 180, -1));
 
         txtNumberInOrder.setEnabled(false);
-        getContentPane().add(txtNumberInOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, 180, -1));
+        getContentPane().add(txtNumberInOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 120, 180, -1));
 
         txtAlgorithm.setEnabled(false);
-        getContentPane().add(txtAlgorithm, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 160, 180, -1));
+        getContentPane().add(txtAlgorithm, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 160, 180, -1));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/SortApp/icon/unnamed.png"))); // NOI18N
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 510, 240));
@@ -104,7 +104,7 @@ public class FrmSortApp extends javax.swing.JFrame {
         SortingContext sortingContext;
         sortingContext = new SortingContext();
         numberInDesorder = txtDisorderedNumbers.getText();
-        Numbers Numbers = new Numbers();
+        NumbersBase Numbers = new NumbersBase();
         String[] numberToSort = numberInDesorder.split(",");
         int[] numbersOfList= new int[numberToSort.length];
         Numbers.setNumbersDisordered(numbersOfList);

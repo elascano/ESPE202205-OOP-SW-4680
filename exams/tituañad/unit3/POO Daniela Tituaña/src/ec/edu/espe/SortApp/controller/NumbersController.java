@@ -2,7 +2,7 @@ package ec.edu.espe.SortApp.controller;
 
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
-import ec.edu.espe.SortApp.model.Numbers;
+import ec.edu.espe.SortApp.model.NumbersBase;
 import ec.edu.espe.SortApp.utils.CDatabase;
 import java.util.Arrays;
 import org.bson.Document;
@@ -18,7 +18,7 @@ public class NumbersController {
     private MongoCollection<Document> mongoCollection;
 
     public NumbersController(){
-        this.mongoCollection = mongoDatabase.getCollection("Algorithm");
+        this.mongoCollection = mongoDatabase.getCollection("MyAlgorithmData");
     }
     
     public void updateToDatabase(Document document) {
@@ -29,12 +29,12 @@ public class NumbersController {
         return this.mongoCollection;
     }
 
-    public Document createDocument(Numbers listNumbers){
+    public Document createDocument(NumbersBase listNumbers){
         Document document = new Document();    
-        document.append("listOfNumbersDisordered", Arrays.toString(listNumbers.getNumbersDisordered()));
-        document.append("sizeOfListOfNumbers", listNumbers.getSizeNumbers());
+        document.append("NumbersDisordered", Arrays.toString(listNumbers.getNumbersDisordered()));
+        document.append("sizeNumbers", listNumbers.getSizeNumbers());
         document.append("sortAlgorithm", listNumbers.getSortAlgorithm());
-        document.append("listOfNumberOrdered", Arrays.toString(listNumbers.getNumberOrdered()));
+        document.append("NumberOrdered", Arrays.toString(listNumbers.getNumberOrdered()));
        
         
         return document;

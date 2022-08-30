@@ -1,6 +1,6 @@
 package ec.edu.espe.SortApp.controller;
 
-import ec.edu.espe.SortApp.model.Numbers;
+import ec.edu.espe.SortApp.model.NumbersBase;
 import java.util.Arrays;
 
 /**
@@ -11,7 +11,7 @@ public class BubbleSort extends SortingStrategy {
     
     
     @Override
-    public void sort(Numbers numbers) {
+    public void sort(NumbersBase numbers) {
         
         int listOfNumbersAux[];
         
@@ -30,7 +30,6 @@ public class BubbleSort extends SortingStrategy {
                 }
             }
         }
-        
         numbers.setNumberOrdered(listOfNumbersAux);
         numbers.setSortAlgorithm("BubbleSort");
         numbers.setSizeNumbers(numbers.getNumbersDisordered().length);
